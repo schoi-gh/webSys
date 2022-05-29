@@ -68,16 +68,15 @@ var Shake = (function() {   //초파리에게 영향을 줌
     return StunStrategy;
   })();
   
-  var start = new Shake();
+  var context = new Shake();
   var attack = new AttackStrategy();
   var stab = new StabStrategy();
   var cold = new ColdStrategy();
   var feed = new FeedStrategy();
   var stun = new StunStrategy();
   
-  start.setShake(attack);
-  start.execute();
-  
-  start.setShake(cold); // 전략을 바꿈
-  start.execute(); // 어떤 전략이든 설정된 것을 실행
+  context.setShake(attack);
+  context.execute();
+  context.setShake(cold); // 전략을 바꿈
+  context.execute(); // 어떤 전략이든 설정된 것을 실행
   // 초파리에게 디버프!

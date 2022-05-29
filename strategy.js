@@ -5,7 +5,7 @@ var Shake = (function() { //초파리에게 공격, 디버프 등의 영향을 �
     Shake.prototype.setShake = function(shake) { //초파리에게 영향을 줄 내용을 최신화
         this.shake = shake;
     };
-    Shake.prototype.execute = function() { //선택된 내용일 실행
+    Shake.prototype.execute = function() { //선택된 내용을 실행
         this.shake.execute();
     };
     return Shake;
@@ -32,11 +32,11 @@ var DebuffStrategy = (function() {
     return DebuffStrategy;
 })();
 
-var start = new Shake(); //초파리에게
+var context = new Shake(); //초파리에게
 var attak = new AttackStrategy();
 var debuff = new DebuffStrategy();
-start.setShake(attak);
-start.execute();
-start.setShake(debuff); // 전략을 바꿈
-start.execute(); // 어떤 전략이든 설정된 것을 실행
+context.setShake(attak);
+context.execute();
+context.setShake(debuff); // 전략을 바꿈
+context.execute(); // 어떤 전략이든 설정된 것을 실행
 // 초파리에게 디버프!
