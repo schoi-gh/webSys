@@ -32,11 +32,11 @@ var DebuffStrategy = (function() {
     return DebuffStrategy;
 })();
 
-var start = new Shake(); //초파리에게
+var context = new Shake(); //초파리에게
 var attak = new AttackStrategy();
 var debuff = new DebuffStrategy();
-start.setShake(attak);
-start.execute();
-start.setShake(debuff); // 전략을 바꿈
-start.execute(); // 어떤 전략이든 설정된 것을 실행
+context.setShake(attak);
+context.execute();
+context.setShake(debuff); // 전략을 바꿈
+context.execute(); // 어떤 전략이든 설정된 것을 실행
 // 초파리에게 디버프!
