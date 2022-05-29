@@ -5,7 +5,7 @@ var Shake = (function() { //초파리에게 공격, 디버프 등의 영향을 �
     Shake.prototype.setShake = function(shake) { //초파리에게 영향을 줄 내용을 최신화
         this.shake = shake;
     };
-    Shake.prototype.execute = function() { //선택된 내용일 실행
+    Shake.prototype.execute = function() { //선택된 내용을 실행
         this.shake.execute();
     };
     return Shake;
