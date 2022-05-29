@@ -15,8 +15,8 @@ Subject.prototype.notifyObservers = function(data) {
 
 function Observer(){
     this.update = function(data){
-        console.log('%s에게 데미지 : ', this.name, + data)
-        console.log('파리 %s의 체력 : ', (this.name), + (this.hp + data));
+        console.log('%s에게 데미지 : %d', this.name, data)
+        console.log('파리 %s의 체력 : %d\n', (this.name), (this.hp + data));
         this.hp = this.hp + data
     }
 }
