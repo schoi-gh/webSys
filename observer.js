@@ -12,7 +12,7 @@ Subject.prototype.notifyObservers = function(data) {
 }
 
 function Observer() {} // Observer
-Observer.prototype.update = function (data) { //update 구현된 부분이 파리 prototype에서 구현되어야함
+Observer.prototype.update = function (data) { //update 구현된 부분이 파리 prototype에서 구현되어야한다.
     console.log('%s에게 데미지 : %d', this.name, data)
     console.log('%s의 체력 : %d\n', (this.name), (this.hp + data));
     this.hp = this.hp + data
