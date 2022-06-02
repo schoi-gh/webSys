@@ -2,7 +2,7 @@
 22-01 웹시 기말프로젝트
 
 # 옵저버 패턴
-![image](https://user-images.githubusercontent.com/39523433/171597077-ade656fa-1938-4d05-95ca-6c8fb2dc92ed.png)
+![image](https://user-images.githubusercontent.com/39523433/171597209-41e76382-ef46-4ace-8eb1-243f19508a19.png)
 
 # 전략 패턴
 ![image](https://user-images.githubusercontent.com/39523433/171585543-59b49ea2-367c-4360-bc2f-54696605a3c4.png)
