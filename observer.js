@@ -66,7 +66,7 @@ rl.on('line', function (line){
     }
     // line으로 하거나 따로 입력을 받아서 te로 인자를 전달해 줘도 됨
     */
-    rl.close();
+    //rl.close(); // 얘 없으면 계속 입력 가능 -> 데미지 계속 넣을 수 있음
 
 });
 
