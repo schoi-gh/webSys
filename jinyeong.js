@@ -1,3 +1,7 @@
+export {Action, context, attack, stab, cold, feed, stun, AttackStrategy, StabStrategy, ColdStrategy, FeedStrategy, StunStrategy, i}
+
+var i; // 디버프 난수 생성
+
 var Action = (function() {   //초파리에게 영향을 줌
     function Action() {
         this.strategy = null;
@@ -14,10 +18,7 @@ var Action = (function() {   //초파리에게 영향을 줌
 var AttackStrategy = (function() {
     function AttackStrategy() {}
     AttackStrategy.prototype.execute = function() {
-        console.log('초파리를 물리공격!');
-        var i = Math.floor(Math.random() * 5) + 1;
-        console.log(i,"의 데미지를 입혔다!");
-        // ex = 초파리에게 1~5 데미지를 줌
+        console.log('초파리를 물리공격!'); // 각 개체마다 난수 데미지 계산
     };
     return AttackStrategy;
 })();
@@ -36,7 +37,7 @@ var ColdStrategy = (function() {
     function ColdStrategy() {}
     ColdStrategy.prototype.execute = function() {
         console.log('초파리에게 냉동빔!');
-        var i = Math.floor(Math.random() * 3) + 1;
+        i = Math.floor(Math.random() * 5) + 1;
         console.log("초파리의 방어력이 %d 만큼 낮아졌다!", i);
         // ex = 초파리의 방어력을 1~3 감소시킴 (데미지 없음)
     };
@@ -70,8 +71,10 @@ var cold = new ColdStrategy();
 var feed = new FeedStrategy();
 var stun = new StunStrategy();
 
-context.setAction(attack);
+context.setAction(cold);
 context.execute();
+console.log(i)
 context.setAction(cold); // 전략을 바꿈
 context.execute(); // 어떤 전략이든 설정된 것을 실행
+console.log(i)
 // 초파리에게 디버프!

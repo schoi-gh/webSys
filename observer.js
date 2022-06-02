@@ -1,3 +1,5 @@
+import {Action, context, attack, stab, cold, feed, stun, AttackStrategy, StabStrategy, ColdStrategy, FeedStrategy, StunStrategy, i} from './jinyeong.js'
+
 function Subject() { // Subject
     this.observers = [];
 }
@@ -11,7 +13,7 @@ Subject.prototype.notifyObservers = function(data) {
     this.observers.forEach(observer => observer.update(data));
 }
 
-function Observer() {} // Observer
+function Observer() {} // 파리
 Observer.prototype.update = function (data) { //update 구현된 부분이 파리 prototype에서 구현되어야한다.
     console.log('%s에게 데미지 : %d', this.name, data)
     console.log('%s의 체력 : %d\n', (this.name), (this.hp + data));
@@ -35,4 +37,6 @@ subject.notifyObservers(Math.floor(Math.random() * ((-10) - (-1)) + (-1)));
 
 subject.detachObserver(observer1);
 subject.notifyObservers(Math.floor(Math.random() * ((-10) - (-1)) + (-1)));
+subject.notifyObservers(Math.floor(Math.random() * ((-10) - (-1)) + (-1)));
 
+//체력, 방어력, 디버프, 체력회복
