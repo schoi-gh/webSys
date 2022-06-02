@@ -31,10 +31,42 @@ observer2.name = "꿀빠는 꿀벌"
 subject.attachObserver(observer1);
 subject.attachObserver(observer2);
 
-subject.notifyObservers(Math.floor(Math.random() * ((-10) - (-1)) + (-1)));
+//subject.notifyObservers(Math.floor(Math.random() * ((-10) - (-1)) + (-1)));
 
-subject.detachObserver(observer1);
-subject.notifyObservers(Math.floor(Math.random() * ((-10) - (-1)) + (-1)));
+//subject.detachObserver(observer1);
+//subject.notifyObservers(Math.floor(Math.random() * ((-10) - (-1)) + (-1)));
+
+const readline = require('readline');
 
 
+
+const rl = readline.createInterface({
+    input: process.stdin,
+
+    output: process.stdout
+
+});
+
+
+
+rl.setPrompt('> ');
+
+rl.prompt();
+
+rl.on('line', function (line){
+    let te = line;
+
+    if (te === "1"){
+        subject.notifyObservers(Math.floor(Math.random() * ((-10) - (-1)) + (-1)));
+    }
+
+    /*
+    if (line === "1"){
+        subject.notifyObservers(Math.floor(Math.random() * ((-10) - (-1)) + (-1)));
+    }
+    // line으로 하거나 따로 입력을 받아서 te로 인자를 전달해 줘도 됨
+    */
+    rl.close();
+
+});
 
