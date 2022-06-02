@@ -2,13 +2,13 @@ function Subject() { // Subject
     this.observers = [];
 }
 Subject.prototype.attachObserver = function(observer) {
-        this.observers.push(observer);
+    this.observers.push(observer);
 }
 Subject.prototype.detachObserver = function(observer) {
-        this.observers = this.observers.filter(attachedObserver => attachedObserver !== observer);
+    this.observers = this.observers.filter(attachedObserver => attachedObserver !== observer);
 }
 Subject.prototype.notifyObservers = function(data) {
-        this.observers.forEach(observer => observer.update(data));
+    this.observers.forEach(observer => observer.update(data));
 }
 
 function Observer() {} // Observer
@@ -35,3 +35,4 @@ subject.notifyObservers(Math.floor(Math.random() * ((-10) - (-1)) + (-1)));
 
 subject.detachObserver(observer1);
 subject.notifyObservers(Math.floor(Math.random() * ((-10) - (-1)) + (-1)));
+
