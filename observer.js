@@ -17,7 +17,7 @@ function Observer() {} // 파리
 Observer.prototype.update = function (data) { //update 구현된 부분이 파리 prototype에서 구현되어야한다.
     console.log('%s에게 데미지 : %d', this.name, data)
     console.log('%s의 체력 : %d\n', (this.name), (this.hp + data));
-    this.hp = this.hp + data
+    this.hp = this.hp + data //커링으로 바꿔야함
 }
 
 const subject = new Subject(); // ConcreteSubject
@@ -29,18 +29,6 @@ observer1.name = "바알제붑"
 const observer2 = new Observer(); // ConcreteObserver 2
 observer2.hp = 45
 observer2.name = "꿀빠는 꿀벌"
-
-// 생성자 빌려 쓰고 프로토타입 지정해주기
-function Korean(name, data){
-    this.hp = data;
-    this.name = name;
-}
-Korean.prototype = new Observer();
-
-var kor1 = new Korean("위잉", 33);
-console.log("hp :",kor1.hp); // hp
-console.log("이름 :",kor1.name); // 이름
-console.log("출력 :",kor1); // 객체 배열
 
 // 프로토타입공유
 function Japanese(name, data){
@@ -54,15 +42,14 @@ console.log("hp :",jap1.hp); // hp
 console.log("이름 :",jap1.name); // 이름
 console.log("출력 :",jap1); // 객체 배열
 
-// prototypal한 방식의 재사용
-
-
 subject.attachObserver(observer1);
 subject.attachObserver(observer2);
+subject.attachObserver(jap1);
 
 subject.notifyObservers(Math.floor(Math.random() * ((-10) - (-1)) + (-1)));
 
 subject.detachObserver(observer1);
+subject.detachObserver(observer2);
 subject.notifyObservers(Math.floor(Math.random() * ((-10) - (-1)) + (-1)));
 subject.notifyObservers(Math.floor(Math.random() * ((-10) - (-1)) + (-1)));
 
