@@ -56,4 +56,6 @@ subject.notifyObservers(Math.floor(Math.random() * ((-10) - (-1)) + (-1)));
 subject.notifyObservers(Math.floor(Math.random() * ((-10) - (-1)) + (-1)));
 subject.notifyObservers(Math.floor(Math.random() * ((-10) - (-1)) + (-1)));
 
+
+
 //체력, 방어력, 디버프, 체력회복

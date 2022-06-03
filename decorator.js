@@ -85,7 +85,7 @@ defDecorator.prototype.showState = function() {
     for (i = 0; i < state.length; i++) {
         console.log("이름 : %s,  hp : %d,  def : %d", state[i][0], state[i][1], state[i][2])
     }
-    //console.table(state) // 테이블 형태로 출력하려면 value 변경해야함
+    console.table(state) // 테이블 형태로 출력하려면 value 변경해야함
     // 참조 : https://developer.mozilla.org/en-US/docs/Web/API/console/table
 }
 
