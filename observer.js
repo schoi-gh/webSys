@@ -30,6 +30,33 @@ const observer2 = new Observer(); // ConcreteObserver 2
 observer2.hp = 45
 observer2.name = "꿀빠는 꿀벌"
 
+// 생성자 빌려 쓰고 프로토타입 지정해주기
+function Korean(name, data){
+    this.hp = data;
+    this.name = name;
+}
+Korean.prototype = new Observer();
+
+var kor1 = new Korean("위잉", 33);
+console.log("hp :",kor1.hp); // hp
+console.log("이름 :",kor1.name); // 이름
+console.log("출력 :",kor1); // 객체 배열
+
+// 프로토타입공유
+function Japanese(name, data){
+    this.hp = data;
+    this.name = name;
+}
+Japanese.prototype = Observer.prototype;
+
+var jap1 = new Japanese("지수", 44);
+console.log("hp :",jap1.hp); // hp
+console.log("이름 :",jap1.name); // 이름
+console.log("출력 :",jap1); // 객체 배열
+
+// prototypal한 방식의 재사용
+
+
 subject.attachObserver(observer1);
 subject.attachObserver(observer2);
 
