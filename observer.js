@@ -1,5 +1,5 @@
 import {Action, context, attack, stab, cold, feed, stun, AttackStrategy, StabStrategy, ColdStrategy, FeedStrategy, StunStrategy, i} from './jinyeong.js'
-
+export {Subject, Observer, subject, observer1, observer2, Japanese, jap1}
 function Subject() { // Subject
     this.observers = [];
 }
@@ -24,20 +24,23 @@ const subject = new Subject(); // ConcreteSubject
 
 const observer1 = new Observer(); // ConcreteObserver 1
 observer1.hp = 50
+observer1.def = 5
 observer1.name = "바알제붑"
 
 const observer2 = new Observer(); // ConcreteObserver 2
 observer2.hp = 45
+observer2.def = 12
 observer2.name = "꿀빠는 꿀벌"
 
 // 프로토타입공유
-function Japanese(name, data){
+function Japanese(name, data, def){
     this.hp = data;
     this.name = name;
+    this.def = def;
 }
 Japanese.prototype = Observer.prototype;
 
-var jap1 = new Japanese("지수", 44);
+var jap1 = new Japanese("지수", 44, 10);
 console.log("hp :",jap1.hp); // hp
 console.log("이름 :",jap1.name); // 이름
 console.log("출력 :",jap1); // 객체 배열
@@ -48,8 +51,8 @@ subject.attachObserver(jap1);
 
 subject.notifyObservers(Math.floor(Math.random() * ((-10) - (-1)) + (-1)));
 
-subject.detachObserver(observer1);
-subject.detachObserver(observer2);
+//subject.detachObserver(observer1);
+//subject.detachObserver(observer2);
 subject.notifyObservers(Math.floor(Math.random() * ((-10) - (-1)) + (-1)));
 subject.notifyObservers(Math.floor(Math.random() * ((-10) - (-1)) + (-1)));
 
