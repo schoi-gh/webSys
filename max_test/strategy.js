@@ -1,22 +1,24 @@
-function Strategy(){}
+function Strategy(){} //interface
 Strategy.prototype.execute = function (a,b) {}
 
 
-function AddStrategy(context) {
+function AttackStrategy(context) {  // AddStrategy -> AttackStrategy
     Strategy.this;
 }
 
-AddStrategy.prototype.execute = function(a, b) {
-    console.log(a + ' + '+ b + " = " + (a+b));
+AttackStrategy.prototype.execute = function(a, b) {
+    // console.log(a + ' + '+ b + " = " + (a+b));
+    // 출력문만
 }
 
 
-function SubtractStrategy(context) {
+function ColdStrategy(context) {    // SubstractStrategy -> ColdStrategy
     Strategy.this;
 }
 
-SubtractStrategy.prototype.execute = function(a, b) {
-    console.log(a + ' - '+ b + " = " + (a-b));
+ColdStrategy.prototype.execute = function(a, b) {
+    //console.log(a + ' - '+ b + " = " + (a-b));
+    // 출력문만
 }
 
 function Context(strategy) {
@@ -36,13 +38,13 @@ function Client(){}
 
 Client.prototype.test = function() {
     var a = 10, b = 5;
-    var addStrategy = new AddStrategy();
-    var subtractStrategy = new SubtractStrategy();
-    var context1 = new Context(addStrategy);
-    var context2 = new Context(subtractStrategy);
-    context1.execute(a, b);
-    context2.setStrategy(addStrategy)
-    context2.execute(a, b);
+    var attack = new AttackStrategy();
+    var cold = new ColdStrategy();
+    var context1 = new Context(attack);
+    //var context2 = new Context(cold);
+    context1.execute(a, b); // attack
+    context1.setStrategy(cold)  // setStrategy
+    context1.execute(a, b); // cold
 }
 
 new Client().test();
