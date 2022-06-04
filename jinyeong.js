@@ -14,7 +14,7 @@ var Action = (function() {   //초파리에게 영향을 줌
 var AttackStrategy = (function() {
     function AttackStrategy() {}
     AttackStrategy.prototype.execute = function() {
-        //console.log('초파리를 물리공격!'); // 각 개체마다 난수 데미지 계산
+        console.log('초파리를 물리공격!'); // 각 개체마다 난수 데미지 계산
         this.i = 0;
     };
     return AttackStrategy;
@@ -33,7 +33,7 @@ var StabStrategy = (function() {
 var ColdStrategy = (function() {
     function ColdStrategy() {}
     ColdStrategy.prototype.execute = function() {
-        //console.log('초파리에게 냉동빔!');
+        console.log('초파리에게 냉동빔!');
         this.i = Math.floor(Math.random() * 5) + 1;
         //console.log("초파리의 방어력이 %d 만큼 낮아졌다!", this.i);
         // ex = 초파리의 방어력을 1~3 감소시킴 (데미지 없음)
@@ -73,6 +73,7 @@ context.execute(); // 어떤 전략이든 설정된 것을 실행
 
 context.setAction(cold);
 context.execute();
+console.log(context.execute)
 
 //console.log(context.strategy.constructor.name) // 전략 Object 이름
 //console.log(Object.values(context.strategy))

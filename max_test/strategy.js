@@ -1,24 +1,27 @@
+import {ActionToFly, subject} from "./Observer.js"
+
 function Strategy(){} //interface
-Strategy.prototype.execute = function (a,b) {}
+Strategy.prototype.execute = function () {}
 
 
-function AttackStrategy(context) {  // AddStrategy -> AttackStrategy
+function AttackStrategy() {  // AddStrategy -> AttackStrategy
     Strategy.this;
 }
 
-AttackStrategy.prototype.execute = function(a, b) {
-    // console.log(a + ' + '+ b + " = " + (a+b));
+AttackStrategy.prototype.execute = function() {
+    console.log('초파리를 물리공격!');
+    subject.generateState()
     // 출력문만
 }
 
 
-function ColdStrategy(context) {    // SubstractStrategy -> ColdStrategy
+function ColdStrategy() {    // SubstractStrategy -> ColdStrategy
     Strategy.this;
 }
 
-ColdStrategy.prototype.execute = function(a, b) {
-    //console.log(a + ' - '+ b + " = " + (a-b));
-    // 출력문만
+ColdStrategy.prototype.execute = function() {
+    console.log('초파리에게 냉동빔!');
+    subject.generateState()
 }
 
 function Context(strategy) {
@@ -29,28 +32,21 @@ Context.prototype.setStrategy = function (strategy) {
     this.strategy = strategy;
 }
 
-Context.prototype.execute = function(a, b) {
-    this.strategy.execute(a, b);
-}
+Context.prototype.execute = function() {
+    this.name = this.strategy.constructor.name;
+    this.strategy.execute()
+
+};
 
 
-function Client(){}
+var attack = new AttackStrategy();
+var cold = new ColdStrategy();
+var context1 = new Context(attack);
+//var context2 = new Context(cold);
+context1.execute(); // attack
+//console.log(context1.name)
+context1.setStrategy(cold)  // setStrategy
+context1.execute(); // cold
+//console.log(Context.name)
 
-Client.prototype.test = function() {
-    var a = 10, b = 5;
-    var attack = new AttackStrategy();
-    var cold = new ColdStrategy();
-    var context1 = new Context(attack);
-    //var context2 = new Context(cold);
-    context1.execute(a, b); // attack
-    context1.setStrategy(cold)  // setStrategy
-    context1.execute(a, b); // cold
-}
-
-new Client().test();
-
-// 결과 출력
-
-// 10 + 5 = 15
-
-// 10 - 5 = 5
+export {context1}
