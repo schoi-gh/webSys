@@ -1,4 +1,4 @@
-import {context1} from "./strategy.js";
+import {context1,attack,cold} from "./strategy.js";
 
 function Subject(){} // Publisher -> Subject
 Subject.prototype.attach = function(subject){} // publisher -> subject, subscribe -> attach
@@ -13,7 +13,7 @@ function ActionToFly(state) { // NumberPublisher -> ActionToFly, state -> strate
 }
 
 ActionToFly.prototype.attach = function(observer) {
-    console.log("ActionToFly가 observer를 추가한다.");
+    //console.log("ActionToFly가 observer를 추가한다.");
     this.observers.push(observer);
 }
 
@@ -33,7 +33,7 @@ ActionToFly.prototype.notifyObservers = function(observer) {
 }
 
 ActionToFly.prototype.generateState = function () {
-    console.log("ActionToFly가 상태를 변경한다.");
+    //console.log("ActionToFly가 상태를 변경한다.");
     this.notifyObservers();
 }
 
@@ -78,7 +78,15 @@ var even = new EvenSubscriber();
 var odd = new OddSubscriber();
 subject.attach(even);
 subject.attach(odd);
-//subject.generateState();
+
+//var context2 = new Context(cold);
+context1.setStrategy(attack)  // setStrategy
+context1.execute(); // attack
+//console.log(context1.name)
+context1.setStrategy(cold)  // setStrategy
+context1.execute(); // cold
+//console.log(Context.name)
+
 
 
 
