@@ -1,9 +1,10 @@
 import {context1,attack,cold} from "./strategy.js";
-import {subject, even, odd} from "./Observer.js";
+import {subject, even, odd, jap1} from "./Observer.js";
 
 
 subject.attach(even);
 subject.attach(odd);
+subject.attach(jap1)
 
 //var context2 = new Context(cold);
 context1.setStrategy(attack)  // setStrategy

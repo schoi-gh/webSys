@@ -26,7 +26,7 @@ ActionToFly.prototype.detach = function(observer) {
 }
 
 ActionToFly.prototype.notifyObservers = function(observer) {
-    console.log("ActionToFly가 observer에게 notifyObservers한다.");
+    //console.log("ActionToFly가 observer에게 notifyObservers한다.");
     for(var observer of this.observers) {
         observer.update(this);
     }
@@ -51,6 +51,7 @@ function EvenSubscriber(name, hp, def) { // Fly
 EvenSubscriber.prototype.update = function(subject) {
     if(context1.name === "AttackStrategy") {
         console.log("너무 아파요")
+        console.log("%s의 현재 체력 : %d",this.name, this.hp)
         let damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1))
         console.log('%s에게 데미지 : %d', this.name, damage)
         console.log('%s의 체력 : %d\n', (this.name), (this.hp + damage));
@@ -58,6 +59,7 @@ EvenSubscriber.prototype.update = function(subject) {
     }
     else if(context1.name === "ColdStrategy") {
         console.log("손이 꽁꽁꽁")
+        console.log("%s의 현재 방어력 : %d",this.name, this.def)
         let downdef = Math.floor(Math.random() * ((-10) - (-1)) + (-1))
         console.log('%s에게 방어력 하락 : %d', this.name, downdef)
         console.log('%s의 방어력 : %d\n', (this.name), (this.def + downdef));
@@ -76,6 +78,7 @@ function OddSubscriber(name, hp, def) { // Fly
 OddSubscriber.prototype.update = function(subject) {
     if(context1.name === "AttackStrategy") {
         console.log("너무 아파요")
+        console.log("%s의 현재 체력 : %d",this.name, this.hp)
         let damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1))
         console.log('%s에게 데미지 : %d', this.name, damage)
         console.log('%s의 체력 : %d\n', (this.name), (this.hp + damage));
@@ -83,6 +86,7 @@ OddSubscriber.prototype.update = function(subject) {
     }
     else if(context1.name === "ColdStrategy") {
         console.log("손이 꽁꽁꽁")
+        console.log("%s의 현재 방어력 : %d",this.name, this.def)
         let downdef = Math.floor(Math.random() * ((-10) - (-1)) + (-1))
         console.log('%s에게 방어력 하락 : %d', this.name, downdef)
         console.log('%s의 방어력 : %d\n', (this.name), (this.def + downdef));
@@ -90,7 +94,14 @@ OddSubscriber.prototype.update = function(subject) {
     }
 }
 
+function Japanese(name, hp, def){
+    this.hp = hp;
+    this.name = name;
+    this.def = def;
+}
+Japanese.prototype = EvenSubscriber.prototype;
 
+var jap1 = new Japanese("지수", 44, 10);
 
 var subject = new ActionToFly(0);
 var even = new EvenSubscriber("바알제붑",20,5);
@@ -111,4 +122,4 @@ context1.execute(); // cold
  */
 
 
-export {subject, even, odd}
+export {subject, even, odd, jap1}
