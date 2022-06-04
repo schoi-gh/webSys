@@ -1,64 +1,57 @@
 import {context1} from "./strategy.js";
 
-function Subject(){} // Publisher -> Subject
-Subject.prototype.attach = function(observer){} // publisher -> observer, subscribe -> attach
-Subject.prototype.detach = function(observer){} // detach -> detach
-Subject.prototype.notifyObservers = function(){} // notifyObservers -> notifyObservers
+function Subject(){}
+Subject.prototype.attach = function(observer){}
+Subject.prototype.detach = function(observer){}
+Subject.prototype.notifyObservers = function(){}
 
 
-function ActionToFly() { // NumberPublisher -> ActionToFly, state -> strategy
+function ActionToFly() {
     Subject.this;
     this.observers = [];
     this.detachobservers = [];
 }
 
-ActionToFly.prototype.attach = function(observer) {
-    //console.log("ActionToFly가 observer를 추가한다.");
+ActionToFly.prototype.attach = function(observer) { //observers 배열에 observer 추가
     this.observers.push(observer);
 }
 
-ActionToFly.prototype.detach = function(observer) {
-    var index = this.observers.indexOf(observer);
-    if (index > -1) {
-        this.observers.splice(index, 1);
-    }
+ActionToFly.prototype.detach = function(observer) { //observers 배열에서 observer 제거
+    this.observers = this.observers.filter(attachedObserver => attachedObserver !== observer);
 }
 
-ActionToFly.prototype.notifyObservers = function() {
-    //console.log("ActionToFly가 observer에게 notifyObservers한다.");
+ActionToFly.prototype.notifyObservers = function() {    //observers 배열에 있는 observer들의 update() 실행
     this.observers.forEach(observer => observer.update());
 }
 
 
-function Observer(){} // Subscriber -> Observer
+function Observer(){}
 
 Observer.prototype.update = function () {}
 
 
-function EvenSubscriber(name, hp, def) { // Fly
-    Observer.this;
+function EvenSubscriber(name, hp, def) {
+    Observer.this;  // function Observer()를 구현, like 인터페이스
     this.name = name;
     this.hp = hp;
     this.def = def;
 }
 
 EvenSubscriber.prototype.update = function() {
-    if(context1.name === "AttackStrategy") {
-        console.log("너무 아파요")
+    if(context1.name === "AttackStrategy") {    // AttackStrategy인 경우
         console.log("%s의 현재 체력 : %d",this.name, this.hp)
         let damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1))
         console.log('%s에게 데미지 : %d', this.name, damage)
         console.log('%s의 체력 : %d\n', (this.name), (this.hp + damage));
-        this.hp = this.hp + damage
+        this.hp = this.hp + damage // 체력, 방어력, 데미지 커링함수로
 
-        if (this.hp <= 0) {
-            subject.detach(this)
+        if (this.hp <= 0) { // 체력이 0이하인 경우
+            subject.detach(this)    // attachedobserver를 deatch한 상태 변경
             console.log("%s은(는) 죽었습니다.\n",this.name);
-            subject.detachobservers.push(this.name);
+            subject.detachobservers.push(this.name);    // 죽은 객체의 이름을 배열에 push
         }
     }
-    else if(context1.name === "ColdStrategy") {
-        console.log("손이 꽁꽁꽁")
+    else if(context1.name === "ColdStrategy") { // ColdStrategy인 경우
         console.log("%s의 현재 방어력 : %d",this.name, this.def)
         let downdef = Math.floor(Math.random() * ((-10) - (-1)) + (-1))
         console.log('%s에게 방어력 하락 : %d', this.name, downdef)
@@ -68,7 +61,7 @@ EvenSubscriber.prototype.update = function() {
 }
 
 
-function OddSubscriber(name, hp, def) { // Fly
+function OddSubscriber(name, hp, def) {
     Observer.this;
     this.name = name;
     this.hp = hp;
@@ -77,7 +70,6 @@ function OddSubscriber(name, hp, def) { // Fly
 
 OddSubscriber.prototype.update = function() {
     if(context1.name === "AttackStrategy") {
-        console.log("너무 아파요")
         console.log("%s의 현재 체력 : %d",this.name, this.hp)
         let damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1))
         console.log('%s에게 데미지 : %d', this.name, damage)
@@ -91,7 +83,6 @@ OddSubscriber.prototype.update = function() {
         }
     }
     else if(context1.name === "ColdStrategy") {
-        console.log("손이 꽁꽁꽁")
         console.log("%s의 현재 방어력 : %d",this.name, this.def)
         let downdef = Math.floor(Math.random() * ((-10) - (-1)) + (-1))
         console.log('%s에게 방어력 하락 : %d', this.name, downdef)
@@ -103,14 +94,14 @@ OddSubscriber.prototype.update = function() {
 
 
 // 생성자 빌려 쓰고 프로토타입 지정해주기
-function Korean(name, hp, def){
+function Korean(name, hp, def){ // 노션에 설명 있음
     EvenSubscriber.apply(this, arguments);
 }
 Korean.prototype = new EvenSubscriber()
 
 
 // 프로토타입공유
-function Japanese(name, hp, def){
+function Japanese(name, hp, def){   // 노션에 설명 있음
     this.hp = hp;
     this.name = name;
     this.def = def;

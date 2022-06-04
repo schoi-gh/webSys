@@ -1,11 +1,11 @@
 import {subject} from "./Observer.js";
 
-function StatsInterface(){} // ServiceInterface -> StatsInterface
+function StatsInterface(){}
 
 StatsInterface.prototype.request = function(){}
 
 
-function ShowStats() { // Service -> ShowStats
+function ShowStats() {
     StatsInterface.this;
 }
 

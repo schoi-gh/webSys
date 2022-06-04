@@ -8,4 +8,4 @@
 ![image](https://user-images.githubusercontent.com/39523433/171597891-0fbe31ec-9b34-4dd7-bbe0-a0092cc7dd6b.png)
 
 # UML
-![img.png](img.png)
+![img.png](img/uml.png)
