@@ -1,5 +1,6 @@
 import {context1,attack,cold} from "./strategy.js";
 import {subject, even, odd, jap1} from "./Observer.js";
+import {showStats, proxy} from "./proxy.js"
 
 
 subject.attach(even);
@@ -15,3 +16,9 @@ context1.execute(); // cold
 context1.setStrategy(attack)
 context1.execute()
 //console.log(Context.name)
+
+showStats.request();
+
+console.log("---------------------");
+
+proxy.request(); // console.table() <- subject.observers

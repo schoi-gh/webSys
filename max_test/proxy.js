@@ -1,3 +1,5 @@
+import {subject} from "./Observer.js";
+
 function StatsInterface(){} // ServiceInterface -> StatsInterface
 StatsInterface.prototype.request = function(){}
 
@@ -7,7 +9,7 @@ function ShowStats() { // Service -> ShowStats
 }
 
 ShowStats.prototype.request = function() {
-    console.log("[ShowStats 클래스] request 메서드 호출")
+    console.log("죽은 파리 : " + subject.detachobservers) // 여기다 뭘 넣을까
 }
 
 
@@ -28,25 +30,14 @@ Proxy.prototype.beforeProc = function() {
 
 Proxy.prototype.afterProc = function() {
     console.log("[Proxy] afterProc 메서드 호출")
+    console.table(subject.observers)
 }
 
 
-function Client(){}
+var showStats = new ShowStats();
+var proxy = new Proxy(showStats);
 
-Client.prototype.test = function() {
-    var showStats = new ShowStats();
-    showStats.request();
-
-    console.log("---------------------");
-
-    var proxy = new Proxy(showStats);
-    proxy.request(); // console.table() <- subject.observers
-
-}
-
-
-new Client().test();
-
+export {showStats, proxy}
 
 // 결과 출력
 

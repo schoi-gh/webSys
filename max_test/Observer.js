@@ -6,10 +6,10 @@ Subject.prototype.detach = function(subject){} // detach -> detach
 Subject.prototype.notifyObservers = function(){} // notifyObservers -> notifyObservers
 
 
-function ActionToFly(state) { // NumberPublisher -> ActionToFly, state -> strategy
+function ActionToFly() { // NumberPublisher -> ActionToFly, state -> strategy
     Subject.this;
-    this.state = state;
     this.observers = [];
+    this.detachobservers = [];
 }
 
 ActionToFly.prototype.attach = function(observer) {
@@ -53,6 +53,8 @@ EvenSubscriber.prototype.update = function(subject) {
 
         if (this.hp <= 0) {
             subject.detach(this)
+            console.log("%s은(는) 죽었습니다.\n",this.name);
+            subject.detachobservers.push(this.name);
         }
     }
     else if(context1.name === "ColdStrategy") {
@@ -85,6 +87,8 @@ OddSubscriber.prototype.update = function(subject) {
         if (this.hp <= 0) {
             subject.detach(this)
             console.log("%s은(는) 죽었습니다.\n",this.name);
+            subject.detachobservers.push(this.name);
+
         }
     }
     else if(context1.name === "ColdStrategy") {
@@ -106,7 +110,7 @@ Japanese.prototype = EvenSubscriber.prototype;
 
 var jap1 = new Japanese("지수", 44, 10);
 
-var subject = new ActionToFly(0);
+var subject = new ActionToFly();
 var even = new EvenSubscriber("바알제붑",20,5);
 var odd = new OddSubscriber("꿀빠는 꿀벌",3,10);
 
