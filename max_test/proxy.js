@@ -1,18 +1,18 @@
-function ServiceInterface(){}
-ServiceInterface.prototype.request = function(){}
+function StatsInterface(){} // ServiceInterface -> StatsInterface
+StatsInterface.prototype.request = function(){}
 
 
-function Service() {
-    ServiceInterface.this;
+function ShowStats() { // Service -> ShowStats
+    StatsInterface.this;
 }
 
-Service.prototype.request = function() {
-    console.log("[Service 클래스] request 메서드 호출")
+ShowStats.prototype.request = function() {
+    console.log("[ShowStats 클래스] request 메서드 호출")
 }
 
 
 function Proxy(service) {
-    ServiceInterface.this;
+    StatsInterface.this;
     this.service = service;
 }
 
@@ -34,13 +34,13 @@ Proxy.prototype.afterProc = function() {
 function Client(){}
 
 Client.prototype.test = function() {
-    var service = new Service();
-    service.request();
+    var showStats = new ShowStats();
+    showStats.request();
 
     console.log("---------------------");
 
-    var proxy = new Proxy(service);
-    proxy.request();
+    var proxy = new Proxy(showStats);
+    proxy.request(); // console.table() <- subject.observers
 
 }
 
@@ -50,12 +50,12 @@ new Client().test();
 
 // 결과 출력
 
-// [Service 클래스] request 메서드 호출
+// [ShowStats 클래스] request 메서드 호출
 
 // ---------------------
 
 // [Proxy] beforeProc 메서드 호출
 
-// [Service 클래스] request 메서드 호출
+// [ShowStats 클래스] request 메서드 호출
 
 // [Proxy] afterProc 메서드 호출
