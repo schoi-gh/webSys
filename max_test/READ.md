@@ -1,6 +1,6 @@
-# command UML
+# proxy UML
 ![img.png](img/img.png)
-출처 : https://m.blog.naver.com/mycho/221860755279
+출처 : https://m.blog.naver.com/mycho/221857247686
 
 # observer UML
 ![img_2.png](img/img_2.png)
