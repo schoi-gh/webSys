@@ -41,41 +41,63 @@ function Observer(){} // Subscriber -> Observer
         // 인터페이스 정의 메서드
 Observer.prototype.update = function () {}
 
-function EvenSubscriber() { // Fly
+function EvenSubscriber(name, hp, def) { // Fly
     Observer.this;
+    this.name = name;
+    this.hp = hp;
+    this.def = def;
 }
 
 EvenSubscriber.prototype.update = function(subject) {
     if(context1.name === "AttackStrategy") {
         console.log("너무 아파요")
-        /*
         let damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1))
         console.log('%s에게 데미지 : %d', this.name, damage)
         console.log('%s의 체력 : %d\n', (this.name), (this.hp + damage));
-        this.hp = this.hp + context.strategy.i
-         */
+        this.hp = this.hp + damage
     }
     else if(context1.name === "ColdStrategy") {
         console.log("손이 꽁꽁꽁")
+        let downdef = Math.floor(Math.random() * ((-10) - (-1)) + (-1))
+        console.log('%s에게 방어력 하락 : %d', this.name, downdef)
+        console.log('%s의 방어력 : %d\n', (this.name), (this.def + downdef));
+        this.def = this.def + downdef
     }
 }
 
 
-function OddSubscriber() { // Fly
+function OddSubscriber(name, hp, def) { // Fly
     Observer.this;
+    this.name = name;
+    this.hp = hp;
+    this.def = def;
 }
 
 OddSubscriber.prototype.update = function(subject) {
-    if(subject.state % 2 == 1) {
-        console.log("OddSubscriber가 일을 한다.");
+    if(context1.name === "AttackStrategy") {
+        console.log("너무 아파요")
+        let damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1))
+        console.log('%s에게 데미지 : %d', this.name, damage)
+        console.log('%s의 체력 : %d\n', (this.name), (this.hp + damage));
+        this.hp = this.hp + damage
+    }
+    else if(context1.name === "ColdStrategy") {
+        console.log("손이 꽁꽁꽁")
+        let downdef = Math.floor(Math.random() * ((-10) - (-1)) + (-1))
+        console.log('%s에게 방어력 하락 : %d', this.name, downdef)
+        console.log('%s의 방어력 : %d\n', (this.name), (this.def + downdef));
+        this.def = this.def + downdef
     }
 }
 
 
 
 var subject = new ActionToFly(0);
-var even = new EvenSubscriber();
-var odd = new OddSubscriber();
+var even = new EvenSubscriber("바알제붑",20,5);
+var odd = new OddSubscriber("꿀빠는 꿀벌",10,10);
+
+
+/*
 subject.attach(even);
 subject.attach(odd);
 
@@ -86,18 +108,7 @@ context1.execute(); // attack
 context1.setStrategy(cold)  // setStrategy
 context1.execute(); // cold
 //console.log(Context.name)
+ */
 
 
-
-
-
-export {ActionToFly, subject}
-
-
-// 결과 출력
-// NumberPublisher가 subscriber를 추가한다.
-// NumberPublisher가 subscriber를 추가한다.
-// NumberPublisher가 상태를 변경한다.
-// 상태 : 5
-// NumberPublisher가 subscribers에게 notify한다.
-// OddSubscriber가 일을 한다.
+export {subject, even, odd}
