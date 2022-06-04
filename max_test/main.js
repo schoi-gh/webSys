@@ -1,24 +1,22 @@
 import {context1,attack,cold} from "./strategy.js";
-import {subject, even, odd, jap1} from "./Observer.js";
+import {subject, even, odd, jap1, kor1} from "./Observer.js";
 import {showStats, proxy} from "./proxy.js"
 
-
+// Observer
 subject.attach(even);
 subject.attach(odd);
-subject.attach(jap1)
+subject.attach(jap1);
+subject.attach(kor1);
 
-//var context2 = new Context(cold);
-context1.setStrategy(attack)  // setStrategy
+// Strategy
+context1.setStrategy(attack)
 context1.execute(); // attack
-//console.log(context1.name)
-context1.setStrategy(cold)  // setStrategy
+context1.setStrategy(cold)
 context1.execute(); // cold
 context1.setStrategy(attack)
 context1.execute()
-//console.log(Context.name)
 
+//Proxy
 showStats.request();
-
 console.log("---------------------");
-
-proxy.request(); // console.table() <- subject.observers
+proxy.request();

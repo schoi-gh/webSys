@@ -1,6 +1,7 @@
 import {subject} from "./Observer.js";
 
 function StatsInterface(){} // ServiceInterface -> StatsInterface
+
 StatsInterface.prototype.request = function(){}
 
 
@@ -13,14 +14,14 @@ ShowStats.prototype.request = function() {
 }
 
 
-function Proxy(service) {
+function Proxy(showState) {
     StatsInterface.this;
-    this.service = service;
+    this.showState = showState;
 }
 
 Proxy.prototype.request = function() {
     this.beforeProc();
-    this.service.request();
+    this.showState.request();
     this.afterProc();
 }
 

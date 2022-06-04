@@ -1,8 +1,8 @@
 import {context1} from "./strategy.js";
 
 function Subject(){} // Publisher -> Subject
-Subject.prototype.attach = function(subject){} // publisher -> subject, subscribe -> attach
-Subject.prototype.detach = function(subject){} // detach -> detach
+Subject.prototype.attach = function(observer){} // publisher -> observer, subscribe -> attach
+Subject.prototype.detach = function(observer){} // detach -> detach
 Subject.prototype.notifyObservers = function(){} // notifyObservers -> notifyObservers
 
 
@@ -26,14 +26,14 @@ ActionToFly.prototype.detach = function(observer) {
 
 ActionToFly.prototype.notifyObservers = function() {
     //console.log("ActionToFly가 observer에게 notifyObservers한다.");
-    for(var observer of this.observers) {
-        observer.update(this);
-    }
+    this.observers.forEach(observer => observer.update());
 }
 
+
 function Observer(){} // Subscriber -> Observer
-        // 인터페이스 정의 메서드
+
 Observer.prototype.update = function () {}
+
 
 function EvenSubscriber(name, hp, def) { // Fly
     Observer.this;
@@ -42,7 +42,7 @@ function EvenSubscriber(name, hp, def) { // Fly
     this.def = def;
 }
 
-EvenSubscriber.prototype.update = function(subject) {
+EvenSubscriber.prototype.update = function() {
     if(context1.name === "AttackStrategy") {
         console.log("너무 아파요")
         console.log("%s의 현재 체력 : %d",this.name, this.hp)
@@ -75,7 +75,7 @@ function OddSubscriber(name, hp, def) { // Fly
     this.def = def;
 }
 
-OddSubscriber.prototype.update = function(subject) {
+OddSubscriber.prototype.update = function() {
     if(context1.name === "AttackStrategy") {
         console.log("너무 아파요")
         console.log("%s의 현재 체력 : %d",this.name, this.hp)
@@ -88,7 +88,6 @@ OddSubscriber.prototype.update = function(subject) {
             subject.detach(this)
             console.log("%s은(는) 죽었습니다.\n",this.name);
             subject.detachobservers.push(this.name);
-
         }
     }
     else if(context1.name === "ColdStrategy") {
@@ -99,8 +98,18 @@ OddSubscriber.prototype.update = function(subject) {
         console.log('%s의 방어력 : %d\n', (this.name), (this.def + downdef));
         this.def = this.def + downdef
     }
+
 }
 
+
+// 생성자 빌려 쓰고 프로토타입 지정해주기
+function Korean(name, hp, def){
+    EvenSubscriber.apply(this, arguments);
+}
+Korean.prototype = new EvenSubscriber()
+
+
+// 프로토타입공유
 function Japanese(name, hp, def){
     this.hp = hp;
     this.name = name;
@@ -108,25 +117,12 @@ function Japanese(name, hp, def){
 }
 Japanese.prototype = EvenSubscriber.prototype;
 
-var jap1 = new Japanese("지수", 44, 10);
 
 var subject = new ActionToFly();
 var even = new EvenSubscriber("바알제붑",20,5);
 var odd = new OddSubscriber("꿀빠는 꿀벌",3,10);
+var kor1 = new Korean("민수", 33, 33);
+var jap1 = new Japanese("지수", 44, 10);
 
 
-/*
-subject.attach(even);
-subject.attach(odd);
-
-//var context2 = new Context(cold);
-context1.setStrategy(attack)  // setStrategy
-context1.execute(); // attack
-//console.log(context1.name)
-context1.setStrategy(cold)  // setStrategy
-context1.execute(); // cold
-//console.log(Context.name)
- */
-
-
-export {subject, even, odd, jap1}
+export {subject, even, odd, jap1, kor1}
