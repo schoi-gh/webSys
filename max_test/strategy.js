@@ -10,7 +10,7 @@ function AttackStrategy() {  // AddStrategy -> AttackStrategy
 
 AttackStrategy.prototype.execute = function() {
     console.log('초파리를 물리공격!');
-    subject.generateState();
+    subject.notifyObservers();
 
     // 출력문만
 }
@@ -22,7 +22,7 @@ function ColdStrategy() {    // SubstractStrategy -> ColdStrategy
 
 ColdStrategy.prototype.execute = function() {
     console.log('초파리에게 냉동빔!');
-    subject.generateState();
+    subject.notifyObservers();
 
 }
 

@@ -12,4 +12,6 @@ context1.execute(); // attack
 //console.log(context1.name)
 context1.setStrategy(cold)  // setStrategy
 context1.execute(); // cold
+context1.setStrategy(attack)
+context1.execute()
 //console.log(Context.name)
