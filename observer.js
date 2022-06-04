@@ -65,4 +65,4 @@ subject.notifyObservers(context.strategy);
 
 //체력, 방어력, 디버프, 체력회복
 
-export {Subject, Observer, Japanese}
+export {Subject, Observer, Japanese, subject, observer1, observer2, jap1}

@@ -1,4 +1,4 @@
-import {Observer, subject, observer1, observer2, jap1} from './observer.js'
+import {Subject, Observer, Japanese, subject, observer1, observer2, jap1} from './observer.js'
 
 let state = []
 
