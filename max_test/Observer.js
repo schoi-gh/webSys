@@ -1,21 +1,21 @@
-function Publisher(){}
-Publisher.prototype.subscribe = function(publisher){}
-Publisher.prototype.unsubscribe = function(publisher){}
-Publisher.prototype.notify = function(){}
+function Subject(){} // Publisher -> Subject
+Subject.prototype.subscribe = function(subject){} // publisher -> subject
+Subject.prototype.unsubscribe = function(subject){}
+Subject.prototype.notify = function(){}
 
 
-function NumberPublisher(state) {
-    Publisher.this;
+function ActionToFly(state) { // NumberPublisher -> ActionToFly, state -> strategy
+    Subject.this;
     this.state = state;
     this.subscribers = [];
 }
 
-NumberPublisher.prototype.subscribe = function(subscriber) {
+ActionToFly.prototype.subscribe = function(subscriber) {
     console.log("NumberPublisher가 subscriber를 추가한다.");
     this.subscribers.push(subscriber);
 }
 
-NumberPublisher.prototype.unsubscribe = function(subscriber) {
+ActionToFly.prototype.unsubscribe = function(subscriber) {
     console.log("NumberPublisher가 subscriber를 삭제한다.");
     var index = this.subscribers.indexOf(subscriber);
     if (index > -1) {
@@ -23,14 +23,14 @@ NumberPublisher.prototype.unsubscribe = function(subscriber) {
     }
 }
 
-NumberPublisher.prototype.notify = function(subscriber) {
+ActionToFly.prototype.notify = function(subscriber) {
     console.log("NumberPublisher가 subscribers에게 notify한다.");
     for(var subscriber of this.subscribers) {
         subscriber.update(this);
     }
 }
 
-NumberPublisher.prototype.generateState = function () {
+ActionToFly.prototype.generateState = function () {
     console.log("NumberPublisher가 상태를 변경한다.");
     var min = 1, max = 10;
     this.state = Math.floor(Math.random()*(max-min+1)) + min;
@@ -39,27 +39,27 @@ NumberPublisher.prototype.generateState = function () {
 }
 
 
-function Subscriber(){}
+function Observer(){} // Subscriber -> Observer
         // 인터페이스 정의 메서드
-Subscriber.prototype.update = function () {}
+Observer.prototype.update = function () {}
 
-function EvenSubscriber() {
-    Subscriber.this;
+function EvenSubscriber() { // Fly
+    Observer.this;
 }
 
-EvenSubscriber.prototype.update = function(publisher) {
-    if(publisher.state % 2 == 0) {
+EvenSubscriber.prototype.update = function(subject) {
+    if(subject.state % 2 == 0) {
         console.log("EvenSubscriber가 일을 한다.");
     }
 }
 
 
-function OddSubscriber() {
-    Subscriber.this;
+function OddSubscriber() { // Fly
+    Observer.this;
 }
 
-OddSubscriber.prototype.update = function(publisher) {
-    if(publisher.state % 2 == 1) {
+OddSubscriber.prototype.update = function(subject) {
+    if(subject.state % 2 == 1) {
         console.log("OddSubscriber가 일을 한다.");
     }
 }
@@ -68,12 +68,12 @@ OddSubscriber.prototype.update = function(publisher) {
 function Client(){}
 
 Client.prototype.test = function() {
-    var publisher = new NumberPublisher(0);
+    var subject = new ActionToFly(0);
     var even = new EvenSubscriber();
     var odd = new OddSubscriber();
-    publisher.subscribe(even);
-    publisher.subscribe(odd);
-    publisher.generateState();
+    subject.subscribe(even);
+    subject.subscribe(odd);
+    subject.generateState();
 }
 
 
