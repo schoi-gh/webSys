@@ -26,12 +26,13 @@ Proxy.prototype.request = function() {
 }
 
 Proxy.prototype.beforeProc = function() {
-    console.log("[Proxy] beforeProc 메서드 호출")
+    //console.log("[Proxy] beforeProc 메서드 호출")
 }
 
 Proxy.prototype.afterProc = function() {
-    console.log("[Proxy] afterProc 메서드 호출")
+    //console.log("[Proxy] afterProc 메서드 호출")
     console.table(subject.observers)
+    console.log("\n")
 }
 
 
