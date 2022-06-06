@@ -1,4 +1,4 @@
-import {targetFly} from "./Observer.js";
+import {subject} from "./Observer.js";
 import {attack, cold} from "./strategy.js";
 
 function StatsInterface(){}
@@ -32,7 +32,7 @@ Proxy.prototype.beforeProc = function() {
 
 Proxy.prototype.afterProc = function() {
     //console.log("[Proxy] afterProc 메서드 호출")
-    console.table(targetFly.flies)
+    console.table(subject.observers)
     console.log("\n")
 
 
