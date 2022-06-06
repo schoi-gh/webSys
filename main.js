@@ -22,15 +22,3 @@ slot1.execute(); // cold
 showStats.request(); //로딩화면
 console.log("---------------------");
 proxy.request();
-
-slot1.setSkill(attack)
-slot1.execute()
-showStats.request(); //로딩화면
-console.log("---------------------");
-proxy.request();
-
-slot1.setSkill(cold)
-slot1.execute(); // cold
-showStats.request(); //로딩화면
-console.log("---------------------");
-proxy.request();

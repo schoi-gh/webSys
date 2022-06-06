@@ -6,12 +6,10 @@ function StatsInterface(){}
 StatsInterface.prototype.request = function(){}
 
 
-function ShowStats() {
-    StatsInterface.this;
-}
+function ShowStats() {}
 
 ShowStats.prototype.request = function() {
-    console.log("show데미지 총합 : " + attack.damage) // 여기다 뭘 넣을까
+    console.log("데미지 총합 : " + attack.damage) // 여기다 뭘 넣을까
 }
 
 
