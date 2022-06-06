@@ -15,6 +15,8 @@ Subject.prototype.notifyObservers = function(data) {
 
 function Observer() {} // 파리
 Observer.prototype.update = function () { //update 구현된 부분이 파리 prototype에서 구현되어야한다.
+    console.log(this.name);
+    /*
     if (context.strategy.constructor.name === 'AttackStrategy' && typeof (context.strategy.i) === 'number') {
         context.strategy.i = Math.floor(Math.random() * ((-10) - (-1)) + (-1))
         console.log('%s에게 데미지 : %d', this.name, context.strategy.i)
@@ -27,6 +29,7 @@ Observer.prototype.update = function () { //update 구현된 부분이 파리 pr
         console.log("%s의 방어력 : %d\n", this.name, this.def - context.strategy.i)
         this.def = this.def - context.strategy.i
     }
+    */
 }
 
 const subject = new Subject(); // ConcreteSubject

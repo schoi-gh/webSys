@@ -7,12 +7,13 @@ Strategy.prototype.execute = function () {} // 선택한 전략 실행 메소드
 
 function AttackStrategy() {  // 데미지를 주는 전술
     Strategy.this; // function Strategy()를 구현, like 인터페이스
-    this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
+    this.damage
     // 조건문 안쓰려면 여기에 공격전략 구현해야함
 
 }
 
 AttackStrategy.prototype.execute = function() {
+    this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
     console.log('초파리에게 [%d] 물리공격!', attack.damage);
 }
 
@@ -45,11 +46,7 @@ var attack = new AttackStrategy();
 var cold = new ColdStrategy();
 var context1 = new Context();
 
-/*
-context1.setStrategy(attack)
-context1.execute()
-console.log(context1)
- */
+
 
 
 export {context1,attack,cold}

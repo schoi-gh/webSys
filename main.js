@@ -13,29 +13,18 @@ subject.attach(kor1);
 // Strategy
 context1.setStrategy(attack)
 context1.execute(); // attack
+showStats.request(); //로딩화면
+console.log("---------------------");
 proxy.request();
 
 context1.setStrategy(cold)
 context1.execute(); // cold
+showStats.request(); //로딩화면
+console.log("---------------------");
 proxy.request();
 
 context1.setStrategy(attack)
 context1.execute()
-proxy.request();
-
-
-/*
-// Command
-invoker.setCommand(attack);
-invoker.executeCommand();
-proxy.request();
-
-invoker.setCommand(cold);
-invoker.executeCommand();
-proxy.request();
- */
-
-//Proxy
-showStats.request();
+showStats.request(); //로딩화면
 console.log("---------------------");
 proxy.request();
