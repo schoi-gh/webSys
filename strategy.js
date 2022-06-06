@@ -20,10 +20,11 @@ AttackStrategy.prototype.execute = function() {
 
 function ColdStrategy() {   // 방어력을 깎는 전술
     Strategy.this;  // function Strategy()를 구현, like 인터페이스
-    this.downdef = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
+    this.downdef
 }
 
 ColdStrategy.prototype.execute = function() {
+    this.downdef = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
     console.log('초파리에게 [%d] 냉동빔!', cold.downdef);
 }
 

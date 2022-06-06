@@ -28,3 +28,9 @@ context1.execute()
 showStats.request(); //로딩화면
 console.log("---------------------");
 proxy.request();
+
+context1.setStrategy(cold)
+context1.execute(); // cold
+showStats.request(); //로딩화면
+console.log("---------------------");
+proxy.request();
