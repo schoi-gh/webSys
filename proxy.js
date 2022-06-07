@@ -1,5 +1,4 @@
 import {targetFly} from "./Observer.js";
-import {attack, cold} from "./strategy.js";
 
 function StatsInterface(){}
 

@@ -21,8 +21,8 @@ ActionToFly.prototype.detach = function(fly) { //mobs 배열에서 fly 제거
     this.mobs = this.mobs.filter(attachedObserver => attachedObserver !== fly);
 }
 
-ActionToFly.prototype.notifyMobs = function() {    //mobs 배열에 있는 fly들의 update() 실행
-    this.mobs.forEach(fly => fly.update());
+ActionToFly.prototype.notifyMobs = function(User) {    //mobs 배열에 있는 fly들의 update() 실행
+    this.mobs.forEach(fly => fly.update(User));
 }
 
 
@@ -32,7 +32,11 @@ function DemonFly(name, hp, def) {
     this.def = def;
 }
 
-DemonFly.prototype.update = function() {
+DemonFly.prototype.update = function(User) {
+    this.last_skill = [];
+    this.last_skill.push(JSON.stringify(User))
+    //targetFly.mobs.forEach();
+    /*
     if(user.skill.constructor.name === "AttackSkill") {
         console.log("%s의 현재 체력 : %d",this.name, this.hp)
         console.log('%s에게 체력 하락 : %d', this.name, attack.damage)
@@ -50,41 +54,8 @@ DemonFly.prototype.update = function() {
         console.log('%s의 방어력 : %d\n', (this.name), (this.def + cold.downdef));
         this.def = this.def + cold.downdef
     }
+     */
 }
-
-/*
-function OddSubscriber(name, hp, def) {
-    Observer.this;
-    this.name = name;
-    this.hp = hp;
-    this.def = def;
-}
-
-OddSubscriber.prototype.update = function() {
-    if(context1.name === "AttackStrategy") {
-        console.log("%s의 현재 체력 : %d",this.name, this.hp)
-        let damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1))
-        console.log('%s에게 체력 하락 : %d', this.name, damage)
-        console.log('%s의 체력 : %d\n', (this.name), (this.hp + damage));
-        this.hp = this.hp + damage
-    }
-
-        if (this.hp <= 0) {
-            subject.detach(this)
-            console.log("%s은(는) 죽었습니다.\n",this.name);
-            subject.detachobservers.push(this.name);
-        }
-    }
-    else if(context1.name === "ColdStrategy") {
-        console.log("%s의 현재 방어력 : %d",this.name, this.def)
-        let downdef = Math.floor(Math.random() * ((-10) - (-1)) + (-1))
-        console.log('%s에게 방어력 하락 : %d', this.name, downdef)
-        console.log('%s의 방어력 : %d\n', (this.name), (this.def + downdef));
-        this.def = this.def + downdef
-    }
-
-}
- */
 
 
 // 프로토타입공유
