@@ -25,41 +25,21 @@ ActionToFly.prototype.notifyMobs = function(User) {    //mobs 배열에 있는 f
 
 function DemonFly(name, hp, def) {
     this.name = name;
-    this.hp = hp;
-    this.def = def;
+    // this.hp = hp;
+    // this.def = def;
 }
 
 DemonFly.prototype.update = function(User) {
     this.last_skill = [];
     this.last_skill.push(JSON.stringify(User))
-    //targetFly.mobs.forEach();
-    /*
-    if(user.skill.constructor.name === "AttackSkill") {
-        console.log("%s의 현재 체력 : %d",this.name, this.hp)
-        console.log('%s에게 체력 하락 : %d', this.name, attack.damage)
-        console.log('%s의 체력 : %d\n', (this.name), (this.hp + attack.damage));
-        this.hp = this.hp + attack.damage
-    }
-        if (this.hp <= 0) {
-            targetFly.detach(this)
-            console.log("%s은(는) 죽었습니다.\n",this.name);
-            targetFly.detachMobs.push(this.name);
-        }
-    else if(user.skill.constructor.name === "ColdSkill") {
-        console.log("%s의 현재 방어력 : %d",this.name, this.def)
-        console.log('%s에게 방어력 하락 : %d', this.name, cold.downdef)
-        console.log('%s의 방어력 : %d\n', (this.name), (this.def + cold.downdef));
-        this.def = this.def + cold.downdef
-    }
-     */
 }
 
 
 // 프로토타입공유
 function Syrphid(name, hp, def){   // 노션에 설명 있음
     this.name = name;
-    this.hp = hp;
-    this.def = def;
+    // this.hp = hp;
+    // this.def = def;
 }
 Syrphid.prototype = DemonFly.prototype;
 

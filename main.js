@@ -1,7 +1,7 @@
 import {eevee,pikachu,meowth,pidgeot,snorlax,gengar,squirtle,bulbasaur,snorunt,charizard,gyarados,alakazam,koffing,rattata,magnemite,staraptor,blastoise,bidoof,roselia,quickAttack,ironTail,thunderbolt,thunderWave,tackle,tailWhip,growl,fakeOut,payDay,slash,wingAttack,braveBird,scaryFace,yawn,earthquake,bodySlam,hyperBeam,confuseRay,curse,toxic,lick,bubbleBeam,waterGun,hydroPump,sandAttack,sweetScent,vineWhip,razorLeaf,solarBeam,iceBeam,icyWind,iceFang,blizzard,flamethrower,aerialAce,crunch,psychic,psybeam,kinesis,confusion,selfdestruct,explosion} from "./strategy.js";
 import {targetFly, beel, der, syr, mus} from "./Observer.js";
 import {showStats, proxy} from "./proxy.js"
-//import {invoker, hit, attack, receiver, cold} from "./command.js"
+
 
 // Observer
 targetFly.attach(beel);
@@ -18,9 +18,14 @@ showStats.request(); //로딩화면
 console.log("---------------------");
 proxy.request();
 
-
 pikachu.setSkill(thunderbolt)
 pikachu.execute(); // cold
+showStats.request(); //로딩화면
+console.log("---------------------");
+proxy.request();
+
+meowth.setSkill(payDay)
+meowth.execute(); // cold
 showStats.request(); //로딩화면
 console.log("---------------------");
 proxy.request();
