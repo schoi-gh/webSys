@@ -14,7 +14,7 @@ function AttackSkill() {  // 데미지를 주는 전술
 
 AttackSkill.prototype.execute = function() {
     this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
-    console.log('초파리에게 [%d] 물리공격!', attack.damage);
+    console.log('[초파리에게 %d 물리공격!]\n', attack.damage);
 }
 
 
@@ -26,7 +26,7 @@ function ColdSkill() {   // 방어력을 깎는 전술
 
 ColdSkill.prototype.execute = function() {
     this.downdef = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
-    console.log('초파리에게 [%d] 냉동빔!', cold.downdef);
+    console.log('[초파리에게 %d 냉동빔!]\n', cold.downdef);
 }
 
 

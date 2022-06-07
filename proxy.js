@@ -9,7 +9,7 @@ StatsInterface.prototype.request = function(){}
 function ShowStats() {}
 
 ShowStats.prototype.request = function() {
-    console.log("데미지 총합 : " + attack.damage) // 여기다 뭘 넣을까
+    console.log("죽은 파리 : ", targetFly.detachMobs) // 여기다 뭘 넣을까
 }
 
 
@@ -29,7 +29,7 @@ Proxy.prototype.beforeProc = function() {
 }
 
 Proxy.prototype.afterProc = function() {
-    //console.log("[Proxy] afterProc 메서드 호출")
+    console.log("살아 있는 파리 : ")
     console.table(targetFly.mobs)
     console.log("\n")
 
