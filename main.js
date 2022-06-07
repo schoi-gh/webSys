@@ -25,7 +25,7 @@ showStats.request(); //로딩화면
 console.log("---------------------");
 proxy.request();
 
-user.setSkill(attack)
+user.setSkill(cold)
 user.execute(); // attack
 showStats.request(); //로딩화면
 console.log("---------------------");

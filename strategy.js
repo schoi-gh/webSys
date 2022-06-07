@@ -21,6 +21,7 @@ AttackSkill.prototype.execute = function() {
 
 function ColdSkill() {   // 방어력을 깎는 전술
     Skill.this;  // function Skill()를 구현, like 인터페이스
+    this.name = "냉동빔"
     this.downdef
 }
 
@@ -31,16 +32,24 @@ ColdSkill.prototype.execute = function() {
 }
 
 
-function User(name) {
+function User(name,skill1,skill2,skill3,skill4) {
     this.name = name
-    this.skill = [];
+    this.skill;
+    this.skillslot = [skill1,skill2,skill3,skill4];
 }
 
 User.prototype.setSkill = function (skill) {
-    this.skill = skill;
+    if (this.skillslot.indexOf(skill.name) != -1) {
+        this.skill = skill
+        
+    }
+    else {
+        console.log("배우지 않은 스킬입니다.")
+    }
 }
 
 User.prototype.execute = function() {
+    console.log(this.skill)
     this.skill.execute()
     targetFly.notifyMobs(this);  // Observer.js의 notifyFlies()를 실행
 };
@@ -48,10 +57,8 @@ User.prototype.execute = function() {
 
 var attack = new AttackSkill();
 var cold = new ColdSkill();
-var user = new User("이브이");
-var user1 = new User("마자용")
-
-
+var user = new User("이브이","몸통박치기","냉동빔");
+var user1 = new User("마자용","냉동빔")
 
 
 export {user,user1,attack,cold}
