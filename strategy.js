@@ -46,9 +46,9 @@ User.prototype.execute = function() {
 
 var attack = new AttackSkill();
 var cold = new ColdSkill();
-var slot1 = new User();
+var user = new User();
 
 
 
 
-export {slot1,attack,cold}
+export {user,attack,cold}
