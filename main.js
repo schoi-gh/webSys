@@ -22,7 +22,3 @@ user.execute(); // cold
 showStats.request(); //로딩화면
 console.log("---------------------");
 proxy.request();
-
-function user() {
-
-}
