@@ -1,6 +1,3 @@
-import {user, attack, cold} from "./strategy.js"
-//import {attack, cold} from "./command.js";
-
 function Catch(){}
 Catch.prototype.attach = function(fly){}
 Catch.prototype.detach = function(fly){}
