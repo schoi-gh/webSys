@@ -1,4 +1,4 @@
-import {slot1, attack, cold} from "./strategy.js"
+import {user, attack, cold} from "./strategy.js"
 
 class Catch {
     constructor() { }
@@ -33,7 +33,7 @@ class DemonFly {
         this.def = def;
     }
     update() {
-        if (slot1.skill.constructor.name === "AttackSkill") {
+        if (user.skill.constructor.name === "AttackSkill") {
             console.log("%s의 현재 체력 : %d", this.name, this.hp);
             console.log('%s에게 체력 하락 : %d', this.name, attack.damage);
             console.log('%s의 체력 : %d\n', (this.name), (this.hp + attack.damage));
@@ -44,7 +44,7 @@ class DemonFly {
             console.log("%s은(는) 죽었습니다.\n", this.name);
             targetFly.detachMobs.push(this.name);
         }
-        else if (slot1.skill.constructor.name === "ColdSkill") {
+        else if (user.skill.constructor.name === "ColdSkill") {
             console.log("%s의 현재 방어력 : %d", this.name, this.def);
             console.log('%s에게 방어력 하락 : %d', this.name, cold.downdef);
             console.log('%s의 방어력 : %d\n', (this.name), (this.def + cold.downdef));
