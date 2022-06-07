@@ -8,7 +8,6 @@ Skill.prototype.execute = function () {} // 선택한 전략 실행 메소드
 function AttackSkill() {  // 데미지를 주는 전술
     Skill.this; // function Skill()를 구현, like 인터페이스
     this.damage
-    // 조건문 안쓰려면 여기에 공격전략 구현해야함
 
 }
 
