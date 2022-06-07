@@ -1,4 +1,4 @@
-import {slot1, attack, cold} from "./strategy.js";
+import {user, attack, cold} from "./strategy.js";
 import {targetFly, beel, der, syr, mus} from "./Observer.js";
 import {showStats, showStatsProxy} from "./proxy.js"
 
@@ -9,14 +9,14 @@ targetFly.attach(syr);
 targetFly.attach(mus);
 
 // Strategy
-slot1.setSkill(attack)
-slot1.execute(); // attack
+user.setSkill(attack)
+user.execute(); // attack
 showStats.request(); //로딩화면
 console.log("---------------------");
 showStatsProxy.request();
 
-slot1.setSkill(cold)
-slot1.execute(); // cold
+user.setSkill(cold)
+user.execute(); // cold
 showStats.request(); //로딩화면
 console.log("---------------------");
 showStatsProxy.request();
