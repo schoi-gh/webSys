@@ -1,38 +1,46 @@
-import {targetFly} from "./Observer.js";
+import {actionToTeamRocket} from "./Observer.js";
+
+class DBInterface {
+    constructor() { }
+    request() { }
+}
 
 
-class ShowStats {
-    constructor() {
-        StatsInterface.this;
-    }
+
+class DataUpdate {
+    constructor() { }
     request() {
-        console.log("[ShowStats] request 호출"); // 죽은 파리 console
+        console.log("2. 다음 턴을 진행하기 위해 DB에 접근하여 데이터를 update 후, read함");
     }
 }
 
 
-class ShowStatsProxy {
-    constructor(showState) {
-        StatsInterface.this;
-        this.showState = showState;
+
+class DataUpdateProxy {
+    constructor(dataUpdate) {
+        this.prototype = new DBInterface();
+        this.dataUpdate = dataUpdate;
     }
     request() {
         this.beforeProc();
-        this.showState.request();
+        this.dataUpdate.request();
         this.afterProc();
     }
     beforeProc() {
-        console.log("[Proxy] beforeProc 메서드 호출");
+        console.log("1. 로딩중, 최근 턴 결과를 출력");
+        console.table(actionToTeamRocket.enemy);
     }
     afterProc() {
-        console.log("[Proxy] afterProc 메서드 호출");
-        console.table(targetFly.flies);
+        console.log("3. 로딩 끝, 다음 턴 진행");
         console.log("\n");
     }
 }
 
 
-var showStats = new ShowStats();
-var showStatsProxy = new ShowStatsProxy(showStats);
 
-export {showStats, showStatsProxy}
+
+
+var dataUpdate = new DataUpdate();
+var dataUpdateProxy = new DataUpdateProxy(dataUpdate);
+
+export {dataUpdateProxy}

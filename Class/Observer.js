@@ -1,74 +1,57 @@
-import {user, attack, cold} from "./strategy.js"
-
-class Catch {
+class Action {
     constructor() { }
-    attach(fly) { }
-    detach(fly) { }
+    attach(member) { }
+    detach(member) { }
     notifyMobs() { }
 }
 
 
-class ActionToFly extends Catch {
+class ActionToTeamRocket extends Action{
     constructor() {
-        this.mobs = [];
-        this.detachMobs = [];
+        super();
+        this.enemy = [];
+        this.detachEnemy = [];
     }
-    attach(fly) {
-        this.mobs.push(fly);
+    attach(member) {
+        this.enemy.push(member);
     }
-    detach(fly) {
-        this.mobs = this.mobs.filter(attachedObserver => attachedObserver !== fly);
+    detach(member) {
+        this.enemy = this.enemy.filter(attachedObserver => attachedObserver !== member);
     }
-    notifyMobs() {
-        this.mobs.forEach(fly => fly.update());
+    notifyEnemy(User) {
+        this.enemy.forEach(member => member.update(User));
     }
 }
 
 
-class DemonFly {
-    constructor(name, hp, def) {
-        Fly.this; // function Observer()를 구현, like 인터페이스
+
+
+
+class TeamRocket {
+    constructor(name) {
         this.name = name;
-        this.hp = hp;
-        this.def = def;
     }
-    update() {
-        if (user.skill.constructor.name === "AttackSkill") {
-            console.log("%s의 현재 체력 : %d", this.name, this.hp);
-            console.log('%s에게 체력 하락 : %d', this.name, attack.damage);
-            console.log('%s의 체력 : %d\n', (this.name), (this.hp + attack.damage));
-            this.hp = this.hp + attack.damage;
-        }
-        if (this.hp <= 0) {
-            targetFly.detach(this);
-            console.log("%s은(는) 죽었습니다.\n", this.name);
-            targetFly.detachMobs.push(this.name);
-        }
-        else if (user.skill.constructor.name === "ColdSkill") {
-            console.log("%s의 현재 방어력 : %d", this.name, this.def);
-            console.log('%s에게 방어력 하락 : %d', this.name, cold.downdef);
-            console.log('%s의 방어력 : %d\n', (this.name), (this.def + cold.downdef));
-            this.def = this.def + cold.downdef;
-        }
+    update(User) {
+        this.last_skill = [];
+        this.last_skill.push(JSON.stringify(User));
     }
 }
 
 
-// 프로토타입공유
-class Syrphid extends DemonFly {
-    constructor(name, hp, def) {
+
+class Syrphid extends TeamRocket{
+    constructor(name) {
+        super();
         this.name = name;
-        this.hp = hp;
-        this.def = def;
     }
 }
 
 
-var targetFly = new ActionToFly();
-var beel = new DemonFly("바알제붑",1000,1000);
-var der = new DemonFly("데르마토비아",10,10);
-var mus = new Syrphid("무스카", 50, 10);
-var syr = new Syrphid("서피드", 15, 20);
+var actionToTeamRocket = new ActionToTeamRocket();
+var james = new TeamRocket("로이");
+var jessie = new TeamRocket("로사");
+var meowth = new Syrphid("나옹");
+var wobbuffet = new Syrphid("마자용");
 
 
-export {targetFly, beel, der, syr, mus, DemonFly}
+export {actionToTeamRocket, james, jessie, wobbuffet, meowth, TeamRocket}
