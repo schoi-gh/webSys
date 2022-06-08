@@ -33,9 +33,9 @@ class HyperBeam extends Skill {
 
 
 
-class QuickAttack {
+class QuickAttack extends Skill {
     constructor() {
-        this.prototype = new Skill();
+        super();
         this.skillName = "전광석화";
     }
     execute() {
@@ -46,9 +46,9 @@ class QuickAttack {
 
 
 
-class IronTail {
+class IronTail extends Skill {
     constructor() {
-        this.prototype = new Skill();
+        super();
         this.skillName = "아이언테일";
     }
     execute() {
@@ -59,9 +59,9 @@ class IronTail {
 
 
 
-class Thunderbolt {
+class Thunderbolt extends Skill {
     constructor() {
-        this.prototype = new Skill();
+        super();
         this.skillName = "10만볼트";
     }
     execute() {
@@ -72,9 +72,9 @@ class Thunderbolt {
 
 
 
-class ThunderWave {
+class ThunderWave extends Skill {
     constructor() {
-        this.prototype = new Skill();
+        super();
         this.skillName = "전기자석파";
         this.downdef;
     }
@@ -86,9 +86,9 @@ class ThunderWave {
 
 
 
-class TailWhip {
+class TailWhip extends Skill {
     constructor() {
-        this.prototype = new Skill();
+        super();
         this.skillName = "꼬리흔들기";
         this.downdef;
     }
@@ -100,9 +100,9 @@ class TailWhip {
 
 
 
-class Growl {
+class Growl extends Skill {
     constructor() {
-        this.prototype = new Skill();
+        super();
         this.skillName = "울음소리";
         this.downdef;
     }
@@ -114,9 +114,9 @@ class Growl {
 
 
 
-class FakeOut {
+class FakeOut extends Skill {
     constructor() {
-        this.prototype = new Skill();
+        super();
         this.skillName = "속이다";
     }
     execute() {
@@ -127,9 +127,9 @@ class FakeOut {
 
 
 
-class PayDay {
+class PayDay extends Skill {
     constructor() {
-        this.prototype = new Skill();
+        super();
         this.skillName = "고양이돈받기";
     }
     execute() {
@@ -140,9 +140,9 @@ class PayDay {
 
 
 
-class Slash {
+class Slash extends Skill {
     constructor() {
-        this.prototype = new Skill();
+        super();
         this.skillName = "베어가르기";
     }
     execute() {
@@ -153,9 +153,9 @@ class Slash {
 
 
 
-class WingAttack {
+class WingAttack extends Skill {
     constructor() {
-        this.prototype = new Skill();
+        super();
         this.skillName = "날개치기";
     }
     execute() {
@@ -166,9 +166,9 @@ class WingAttack {
 
 
 
-class BraveBird {
+class BraveBird extends Skill {
     constructor() {
-        this.prototype = new Skill();
+        super();
         this.skillName = "브레이브버드";
     }
     execute() {
@@ -179,9 +179,9 @@ class BraveBird {
 
 
 
-class ScaryFace {
+class ScaryFace extends Skill {
     constructor() {
-        this.prototype = new Skill();
+        super();
         this.skillName = "겁나는얼굴";
         this.downdef;
     }
@@ -192,9 +192,9 @@ class ScaryFace {
 }
 
 
-class Yawn {
+class Yawn extends Skill {
     constructor() {
-        this.prototype = new Skill();
+        super();
         this.skillName = "하품";
         this.downdef;
     }
@@ -206,9 +206,9 @@ class Yawn {
 
 
 
-class Earthquake {
+class Earthquake extends Skill {
     constructor() {
-        this.prototype = new Skill();
+        super();
         this.skillName = "지진";
     }
     execute() {
@@ -219,9 +219,9 @@ class Earthquake {
 
 
 
-class BodySlam {
+class BodySlam extends Skill {
     constructor() {
-        this.prototype = new Skill();
+        super();
         this.skillName = "누르기";
     }
     execute() {
@@ -232,9 +232,9 @@ class BodySlam {
 
 
 
-class ConfuseRay {
+class ConfuseRay extends Skill {
     constructor() {
-        this.prototype = new Skill();
+        super();
         this.skillName = "이상한빛";
         this.downdef;
     }
@@ -246,9 +246,9 @@ class ConfuseRay {
 
 
 
-class Curse {
+class Curse extends Skill {
     constructor() {
-        this.prototype = new Skill();
+        super();
         this.skillName = "저주";
         this.downdef;
     }
@@ -260,9 +260,9 @@ class Curse {
 
 
 
-class Toxic {
+class Toxic extends Skill {
     constructor() {
-        this.prototype = new Skill();
+        super();
         this.skillName = "맹독";
     }
     execute() {
@@ -273,9 +273,9 @@ class Toxic {
 
 
 
-class Lick {
+class Lick extends Skill {
     constructor() {
-        this.prototype = new Skill();
+        super();
         this.skillName = "핥기";
         this.downdef;
     }
@@ -287,9 +287,9 @@ class Lick {
 
 
 
-class BubbleBeam {
+class BubbleBeam extends Skill {
     constructor() {
-        this.prototype = new Skill();
+        super();
         this.skillName = "거품광선";
     }
     execute() {
@@ -300,9 +300,9 @@ class BubbleBeam {
 
 
 
-class WaterGun {
+class WaterGun extends Skill {
     constructor() {
-        this.prototype = new Skill();
+        super();
         this.skillName = "물대포";
     }
     execute() {
@@ -313,9 +313,9 @@ class WaterGun {
 
 
 
-class HydroPump {
+class HydroPump extends Skill {
     constructor() {
-        this.prototype = new Skill();
+        super();
         this.skillName = "하이드로펌프";
     }
     execute() {
@@ -326,9 +326,9 @@ class HydroPump {
 
 
 
-class SandAttack {
+class SandAttack extends Skill {
     constructor() {
-        this.prototype = new Skill();
+        super();
         this.skillName = "모래뿌리기";
         this.downdef;
     }
@@ -340,9 +340,9 @@ class SandAttack {
 
 
 
-class SweetScent {
+class SweetScent extends Skill {
     constructor() {
-        this.prototype = new Skill();
+        super();
         this.skillName = "달콤한향기";
         this.downdef;
     }
@@ -354,9 +354,9 @@ class SweetScent {
 
 
 
-class VineWhip {
+class VineWhip extends Skill {
     constructor() {
-        this.prototype = new Skill();
+        super();
         this.skillName = "덩쿨채찍";
     }
     execute() {
@@ -367,9 +367,9 @@ class VineWhip {
 
 
 
-class RazorLeaf {
+class RazorLeaf extends Skill {
     constructor() {
-        this.prototype = new Skill();
+        super();
         this.skillName = "잎날가르기";
     }
     execute() {
@@ -380,9 +380,9 @@ class RazorLeaf {
 
 
 
-class SolarBeam {
+class SolarBeam extends Skill {
     constructor() {
-        this.prototype = new Skill();
+        super();
         this.skillName = "솔라빔";
     }
     execute() {
@@ -393,9 +393,9 @@ class SolarBeam {
 
 
 
-class IceBeam {
+class IceBeam extends Skill {
     constructor() {
-        this.prototype = new Skill();
+        super();
         this.skillName = "냉동빔";
     }
     execute() {
@@ -406,9 +406,9 @@ class IceBeam {
 
 
 
-class IcyWind {
+class IcyWind extends Skill {
     constructor() {
-        this.prototype = new Skill();
+        super();
         this.skillName = "얼다바람";
     }
     execute() {
@@ -419,9 +419,9 @@ class IcyWind {
 
 
 
-class IceFang {
+class IceFang extends Skill {
     constructor() {
-        this.prototype = new Skill();
+        super();
         this.skillName = "얼음엄니";
     }
     execute() {
@@ -432,9 +432,9 @@ class IceFang {
 
 
 
-class Blizzard {
+class Blizzard extends Skill {
     constructor() {
-        this.prototype = new Skill();
+        super();
         this.skillName = "눈보라";
     }
     execute() {
@@ -445,9 +445,9 @@ class Blizzard {
 
 
 
-class Flamethrower {
+class Flamethrower extends Skill {
     constructor() {
-        this.prototype = new Skill();
+        super();
         this.skillName = "화염방사";
     }
     execute() {
@@ -458,9 +458,9 @@ class Flamethrower {
 
 
 
-class AerialAce {
+class AerialAce extends Skill {
     constructor() {
-        this.prototype = new Skill();
+        super();
         this.skillName = "제비반환";
     }
     execute() {
@@ -471,9 +471,9 @@ class AerialAce {
 
 
 
-class Crunch {
+class Crunch extends Skill {
     constructor() {
-        this.prototype = new Skill();
+        super();
         this.skillName = "깨물어부수기";
     }
     execute() {
@@ -484,9 +484,9 @@ class Crunch {
 
 
 
-class Psychic {
+class Psychic extends Skill {
     constructor() {
-        this.prototype = new Skill();
+        super();
         this.skillName = "사이코키네시스";
     }
     execute() {
@@ -497,9 +497,9 @@ class Psychic {
 
 
 
-class Psybeam {
+class Psybeam extends Skill {
     constructor() {
-        this.prototype = new Skill();
+        super();
         this.skillName = "환상빔";
     }
     execute() {
@@ -510,9 +510,9 @@ class Psybeam {
 
 
 
-class Kinesis {
+class Kinesis extends Skill {
     constructor() {
-        this.prototype = new Skill();
+        super();
         this.skillName = "숟가락휘기";
         this.downdef;
     }
@@ -524,9 +524,9 @@ class Kinesis {
 
 
 
-class Confusion {
+class Confusion extends Skill {
     constructor() {
-        this.prototype = new Skill();
+        super();
         this.skillName = "염동력";
     }
     execute() {
@@ -537,9 +537,9 @@ class Confusion {
 
 
 
-class Selfdestruct {
+class Selfdestruct extends Skill {
     constructor() {
-        this.prototype = new Skill();
+        super();
         this.skillName = "자폭";
     }
     execute() {
@@ -550,9 +550,9 @@ class Selfdestruct {
 
 
 
-class Explosion {
+class Explosion extends Skill {
     constructor() {
-        this.prototype = new Skill();
+        super();
         this.skillName = "대폭발";
     }
     execute() {
@@ -562,9 +562,9 @@ class Explosion {
 }
 
 
-class MagicalLeaf {
+class MagicalLeaf extends Skill {
     constructor() {
-        this.prototype = new Skill();
+        super();
         this.skillName = "메지컬리프";
     }
     execute() {
@@ -575,9 +575,9 @@ class MagicalLeaf {
 
 
 
-class Supersonic {
+class Supersonic extends Skill {
     constructor() {
-        this.prototype = new Skill();
+        super();
         this.skillName = "초음파";
         this.downdef;
     }
@@ -589,9 +589,9 @@ class Supersonic {
 
 
 
-class LeechLife {
+class LeechLife extends Skill {
     constructor() {
-        this.prototype = new Skill();
+        super();
         this.skillName = "흡혈";
     }
     execute() {
@@ -602,9 +602,9 @@ class LeechLife {
 
 
 
-class Bite {
+class Bite extends Skill {
     constructor() {
-        this.prototype = new Skill();
+        super();
         this.skillName = "물기";
     }
     execute() {
@@ -615,9 +615,9 @@ class Bite {
 
 
 
-class RockThrow {
+class RockThrow extends Skill {
     constructor() {
-        this.prototype = new Skill();
+        super();
         this.skillName = "돌떨구기";
     }
     execute() {
@@ -628,9 +628,9 @@ class RockThrow {
 
 
 
-class Ember {
+class Ember extends Skill {
     constructor() {
-        this.prototype = new Skill();
+        super();
         this.skillName = "불꽃세례";
     }
     execute() {
@@ -641,9 +641,9 @@ class Ember {
 
 
 
-class Charm {
+class Charm extends Skill {
     constructor() {
-        this.prototype = new Skill();
+        super();
         this.skillName = "애교부리기";
         this.downdef;
     }
@@ -655,9 +655,9 @@ class Charm {
 
 
 
-class FireFang {
+class FireFang extends Skill {
     constructor() {
-        this.prototype = new Skill();
+        super();
         this.skillName = "불꽃엄니";
     }
     execute() {
@@ -668,9 +668,9 @@ class FireFang {
 
 
 
-class Wrap {
+class Wrap extends Skill {
     constructor() {
-        this.prototype = new Skill();
+        super();
         this.skillName = "김밥말이";
     }
     execute() {
@@ -681,9 +681,9 @@ class Wrap {
 
 
 
-class Acid {
+class Acid extends Skill {
     constructor() {
-        this.prototype = new Skill();
+        super();
         this.skillName = "용해액";
     }
     execute() {
@@ -694,9 +694,9 @@ class Acid {
 
 
 
-class LowKick {
+class LowKick extends Skill {
     constructor() {
-        this.prototype = new Skill();
+        super();
         this.skillName = "안다리걸기";
     }
     execute() {
@@ -707,9 +707,9 @@ class LowKick {
 
 
 
-class Strength {
+class Strength extends Skill {
     constructor() {
-        this.prototype = new Skill();
+        super();
         this.skillName = "괴력";
     }
     execute() {
@@ -720,9 +720,9 @@ class Strength {
 
 
 
-class SeismicToss {
+class SeismicToss extends Skill {
     constructor() {
-        this.prototype = new Skill();
+        super();
         this.skillName = "지구던지기";
     }
     execute() {
@@ -733,9 +733,9 @@ class SeismicToss {
 
 
 
-class FirePunch {
+class FirePunch extends Skill {
     constructor() {
-        this.prototype = new Skill();
+        super();
         this.skillName = "불꽃펀치";
     }
     execute() {

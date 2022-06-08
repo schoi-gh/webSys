@@ -16,9 +16,9 @@ class DataUpdate {
 
 
 
-class DataUpdateProxy {
+class DataUpdateProxy extends DBInterface {
     constructor(dataUpdate) {
-        this.prototype = new DBInterface();
+        super();
         this.dataUpdate = dataUpdate;
     }
     request() {
