@@ -1,17 +1,17 @@
 import {actionToTeamRocket} from "./Observer.js";
 
 
-function Skill(){} //interface
+function Skill(){}
 Skill.prototype.execute = function () {} // 선택한 전략 실행 메소드
 
 
 function Tackle() {
     this.prototype = new Skill();
     this.skillName = "몸통박치기"
+    this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
 }
 
 Tackle.prototype.execute = function() {
-    this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
     console.log('[로켓단에게 %d 몸통박치기!]', tackle.damage);
 }
 
@@ -19,10 +19,10 @@ Tackle.prototype.execute = function() {
 function HyperBeam() {
     this.prototype = new Skill();
     this.skillName = "파괴광선"
+    this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
 }
 
 HyperBeam.prototype.execute = function() {
-    this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
     console.log('[로켓단에게 %d 파괴광선!]', hyperBeam.damage);
 }
 
@@ -30,10 +30,10 @@ HyperBeam.prototype.execute = function() {
 function QuickAttack() {
     this.prototype = new Skill();
     this.skillName = "전광석화"
+    this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
 }
 
 QuickAttack.prototype.execute = function() {
-    this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
     console.log('[로켓단에게 %d 전광석화!]', quickAttack.damage);
 }
 
@@ -41,10 +41,10 @@ QuickAttack.prototype.execute = function() {
 function IronTail() {
     this.prototype = new Skill();
     this.skillName = "아이언테일"
+    this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
 }
 
 IronTail.prototype.execute = function() {
-    this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
     console.log('[로켓단에게 %d 아이언테일!]', ironTail.damage);
 }
 
@@ -52,10 +52,10 @@ IronTail.prototype.execute = function() {
 function Thunderbolt() {
     this.prototype = new Skill();
     this.skillName = "10만볼트"
+    this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
 }
 
 Thunderbolt.prototype.execute = function() {
-    this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
     console.log('[로켓단에게 %d 10만볼트!]', thunderbolt.damage);
 }
 
@@ -63,11 +63,10 @@ Thunderbolt.prototype.execute = function() {
 function ThunderWave() {
     this.prototype = new Skill();
     this.skillName = "전기자석파"
-    this.downdef
+    this.downdef = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
 }
 
 ThunderWave.prototype.execute = function() {
-    this.downdef = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
     console.log('[로켓단에게 %d 전기자석파!]', thunderWave.downdef);
 }
 
@@ -75,11 +74,10 @@ ThunderWave.prototype.execute = function() {
 function TailWhip() {
     this.prototype = new Skill();
     this.skillName = "꼬리흔들기"
-    this.downdef
+    this.downdef = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
 }
 
 TailWhip.prototype.execute = function() {
-    this.downdef = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
     console.log('[로켓단에게 %d 꼬리흔들기!]', tailWhip.downdef);
 }
 
@@ -87,11 +85,10 @@ TailWhip.prototype.execute = function() {
 function Growl() {
     this.prototype = new Skill();
     this.skillName = "울음소리"
-    this.downdef
+    this.downdef = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
 }
 
 Growl.prototype.execute = function() {
-    this.downdef = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
     console.log('[로켓단에게 %d 울음소리!]', growl.downdef);
 }
 
@@ -99,10 +96,10 @@ Growl.prototype.execute = function() {
 function FakeOut() {
     this.prototype = new Skill();
     this.skillName = "속이다"
+    this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
 }
 
 FakeOut.prototype.execute = function() {
-    this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
     console.log('[로켓단에게 %d 속이다!]', fakeOut.damage);
 }
 
@@ -110,10 +107,10 @@ FakeOut.prototype.execute = function() {
 function PayDay() {
     this.prototype = new Skill();
     this.skillName = "고양이돈받기"
+    this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
 }
 
 PayDay.prototype.execute = function() {
-    this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
     console.log('[로켓단에게 %d 고양이돈받기!]', payDay.damage);
 }
 
@@ -121,10 +118,10 @@ PayDay.prototype.execute = function() {
 function Slash() {
     this.prototype = new Skill();
     this.skillName = "베어가르기"
+    this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
 }
 
 Slash.prototype.execute = function() {
-    this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
     console.log('[로켓단에게 %d 베어가르기!]', slash.damage);
 }
 
@@ -132,10 +129,10 @@ Slash.prototype.execute = function() {
 function WingAttack() {
     this.prototype = new Skill();
     this.skillName = "날개치기"
+    this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
 }
 
 WingAttack.prototype.execute = function() {
-    this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
     console.log('[로켓단에게 %d 날개치기!]', wingAttack.damage);
 }
 
@@ -143,10 +140,10 @@ WingAttack.prototype.execute = function() {
 function BraveBird() {
     this.prototype = new Skill();
     this.skillName = "브레이브버드"
+    this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
 }
 
 BraveBird.prototype.execute = function() {
-    this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
     console.log('[로켓단에게 %d 브레이브버드!]', braveBird.damage);
 }
 
@@ -154,22 +151,20 @@ BraveBird.prototype.execute = function() {
 function ScaryFace() {
     this.prototype = new Skill();
     this.skillName = "겁나는얼굴"
-    this.downdef
+    this.downdef = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
 }
 
 ScaryFace.prototype.execute = function() {
-    this.downdef = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
     console.log('[로켓단에게 %d 겁나는얼굴!]', scaryFace.downdef);
 }
 
 function Yawn() {
     this.prototype = new Skill();
     this.skillName = "하품"
-    this.downdef
+    this.downdef = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
 }
 
 Yawn.prototype.execute = function() {
-    this.downdef = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
     console.log('[로켓단에게 %d 하품!]', yawn.downdef);
 }
 
@@ -177,10 +172,10 @@ Yawn.prototype.execute = function() {
 function Earthquake() {
     this.prototype = new Skill();
     this.skillName = "지진"
+    this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
 }
 
 Earthquake.prototype.execute = function() {
-    this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
     console.log('[로켓단에게 %d 지진!]', earthquake.damage);
 }
 
@@ -188,10 +183,10 @@ Earthquake.prototype.execute = function() {
 function BodySlam() {
     this.prototype = new Skill();
     this.skillName = "누르기"
+    this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
 }
 
 BodySlam.prototype.execute = function() {
-    this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
     console.log('[로켓단에게 %d 누르기!]', bodySlam.damage);
 }
 
@@ -199,11 +194,10 @@ BodySlam.prototype.execute = function() {
 function ConfuseRay() {
     this.prototype = new Skill();
     this.skillName = "이상한빛"
-    this.downdef
+    this.downdef = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
 }
 
 ConfuseRay.prototype.execute = function() {
-    this.downdef = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
     console.log('[로켓단에게 %d 이상한빛!]', confuseRay.downdef);
 }
 
@@ -211,11 +205,10 @@ ConfuseRay.prototype.execute = function() {
 function Curse() {
     this.prototype = new Skill();
     this.skillName = "저주"
-    this.downdef
+    this.downdef = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
 }
 
 Curse.prototype.execute = function() {
-    this.downdef = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
     console.log('[로켓단에게 %d 저주!]', curse.downdef);
 }
 
@@ -223,10 +216,10 @@ Curse.prototype.execute = function() {
 function Toxic() {
     this.prototype = new Skill();
     this.skillName = "맹독"
+    this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
 }
 
 Toxic.prototype.execute = function() {
-    this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
     console.log('[로켓단에게 %d 맹독!]', toxic.damage);
 }
 
@@ -234,11 +227,10 @@ Toxic.prototype.execute = function() {
 function Lick() {
     this.prototype = new Skill();
     this.skillName = "핥기"
-    this.downdef
+    this.downdef = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
 }
 
 Lick.prototype.execute = function() {
-    this.downdef = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
     console.log('[로켓단에게 %d 핥기!]', lick.downdef);
 }
 
@@ -246,10 +238,10 @@ Lick.prototype.execute = function() {
 function BubbleBeam() {
     this.prototype = new Skill();
     this.skillName = "거품광선"
+    this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
 }
 
 BubbleBeam.prototype.execute = function() {
-    this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
     console.log('[로켓단에게 %d 거품광선!]', bubbleBeam.damage);
 }
 
@@ -257,10 +249,10 @@ BubbleBeam.prototype.execute = function() {
 function WaterGun() {
     this.prototype = new Skill();
     this.skillName = "물대포"
+    this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
 }
 
 WaterGun.prototype.execute = function() {
-    this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
     console.log('[로켓단에게 %d 물대포!]', waterGun.damage);
 }
 
@@ -268,10 +260,10 @@ WaterGun.prototype.execute = function() {
 function HydroPump() {
     this.prototype = new Skill();
     this.skillName = "하이드로펌프"
+    this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
 }
 
 HydroPump.prototype.execute = function() {
-    this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
     console.log('[로켓단에게 %d 하이드로펌프!]', hydroPump.damage);
 }
 
@@ -279,11 +271,10 @@ HydroPump.prototype.execute = function() {
 function SandAttack() {
     this.prototype = new Skill();
     this.skillName = "모래뿌리기"
-    this.downdef
+    this.downdef = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
 }
 
 SandAttack.prototype.execute = function() {
-    this.downdef = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
     console.log('[로켓단에게 %d 모래뿌리기!]', sandAttack.downdef);
 }
 
@@ -291,11 +282,10 @@ SandAttack.prototype.execute = function() {
 function SweetScent() {
     this.prototype = new Skill();
     this.skillName = "달콤한향기"
-    this.downdef
+    this.downdef = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
 }
 
 SweetScent.prototype.execute = function() {
-    this.downdef = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
     console.log('[로켓단에게 %d 달콤한향기!]', sweetScent.downdef);
 }
 
@@ -303,10 +293,10 @@ SweetScent.prototype.execute = function() {
 function VineWhip() {
     this.prototype = new Skill();
     this.skillName = "덩쿨채찍"
+    this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
 }
 
 VineWhip.prototype.execute = function() {
-    this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
     console.log('[로켓단에게 %d 덩쿨채찍!]', vineWhip.damage);
 }
 
@@ -314,10 +304,10 @@ VineWhip.prototype.execute = function() {
 function RazorLeaf() {
     this.prototype = new Skill();
     this.skillName = "잎날가르기"
+    this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
 }
 
 RazorLeaf.prototype.execute = function() {
-    this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
     console.log('[로켓단에게 %d 잎날가르기!]', razorLeaf.damage);
 }
 
@@ -325,10 +315,10 @@ RazorLeaf.prototype.execute = function() {
 function SolarBeam() {
     this.prototype = new Skill();
     this.skillName = "솔라빔"
+    this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
 }
 
 SolarBeam.prototype.execute = function() {
-    this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
     console.log('[로켓단에게 %d 솔라빔!]', solarBeam.damage);
 }
 
@@ -336,10 +326,10 @@ SolarBeam.prototype.execute = function() {
 function IceBeam() {
     this.prototype = new Skill();
     this.skillName = "냉동빔"
+    this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
 }
 
 IceBeam.prototype.execute = function() {
-    this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
     console.log('[로켓단에게 %d 냉동빔!]', iceBeam.damage);
 }
 
@@ -347,10 +337,10 @@ IceBeam.prototype.execute = function() {
 function IcyWind() {
     this.prototype = new Skill();
     this.skillName = "얼다바람"
+    this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
 }
 
 IcyWind.prototype.execute = function() {
-    this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
     console.log('[로켓단에게 %d 얼다바람!]', icyWind.damage);
 }
 
@@ -358,10 +348,10 @@ IcyWind.prototype.execute = function() {
 function IceFang() {
     this.prototype = new Skill();
     this.skillName = "얼음엄니"
+    this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
 }
 
 IceFang.prototype.execute = function() {
-    this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
     console.log('[로켓단에게 %d 얼음엄니!]', iceFang.damage);
 }
 
@@ -369,10 +359,10 @@ IceFang.prototype.execute = function() {
 function Blizzard() {
     this.prototype = new Skill();
     this.skillName = "눈보라"
+    this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
 }
 
 Blizzard.prototype.execute = function() {
-    this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
     console.log('[로켓단에게 %d 눈보라!]', blizzard.damage);
 }
 
@@ -380,10 +370,10 @@ Blizzard.prototype.execute = function() {
 function Flamethrower() {
     this.prototype = new Skill();
     this.skillName = "화염방사"
+    this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
 }
 
 Flamethrower.prototype.execute = function() {
-    this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
     console.log('[로켓단에게 %d 화염방사!]', flamethrower.damage);
 }
 
@@ -391,10 +381,10 @@ Flamethrower.prototype.execute = function() {
 function AerialAce() {
     this.prototype = new Skill();
     this.skillName = "제비반환"
+    this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
 }
 
 AerialAce.prototype.execute = function() {
-    this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
     console.log('[로켓단에게 %d 제비반환!]', aerialAce.damage);
 }
 
@@ -402,10 +392,10 @@ AerialAce.prototype.execute = function() {
 function Crunch() {
     this.prototype = new Skill();
     this.skillName = "깨물어부수기"
+    this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
 }
 
 Crunch.prototype.execute = function() {
-    this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
     console.log('[로켓단에게 %d 깨물어부수기!]', crunch.damage);
 }
 
@@ -413,10 +403,10 @@ Crunch.prototype.execute = function() {
 function Psychic() {
     this.prototype = new Skill();
     this.skillName = "사이코키네시스"
+    this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
 }
 
 Psychic.prototype.execute = function() {
-    this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
     console.log('[로켓단에게 %d 사이코키네시스!]', psychic.damage);
 }
 
@@ -424,10 +414,10 @@ Psychic.prototype.execute = function() {
 function Psybeam() {
     this.prototype = new Skill();
     this.skillName = "환상빔"
+    this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
 }
 
 Psybeam.prototype.execute = function() {
-    this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
     console.log('[로켓단에게 %d 환상빔!]', psybeam.damage);
 }
 
@@ -435,11 +425,10 @@ Psybeam.prototype.execute = function() {
 function Kinesis() {
     this.prototype = new Skill();
     this.skillName = "숟가락휘기"
-    this.downdef
+    this.downdef = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
 }
 
 Kinesis.prototype.execute = function() {
-    this.downdef = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
     console.log('[로켓단에게 %d 숟가락휘기!]', kinesis.downdef);
 }
 
@@ -447,10 +436,10 @@ Kinesis.prototype.execute = function() {
 function Confusion() {
     this.prototype = new Skill();
     this.skillName = "염동력"
+    this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
 }
 
 Confusion.prototype.execute = function() {
-    this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
     console.log('[로켓단에게 %d 염동력!]', confusion.damage);
 }
 
@@ -458,10 +447,10 @@ Confusion.prototype.execute = function() {
 function Selfdestruct() {
     this.prototype = new Skill();
     this.skillName = "자폭"
+    this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
 }
 
 Selfdestruct.prototype.execute = function() {
-    this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
     console.log('[로켓단에게 %d 자폭!]', selfdestruct.damage);
 }
 
@@ -469,20 +458,20 @@ Selfdestruct.prototype.execute = function() {
 function Explosion() {
     this.prototype = new Skill();
     this.skillName = "대폭발"
+    this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
 }
 
 Explosion.prototype.execute = function() {
-    this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
     console.log('[로켓단에게 %d 대폭발!]', explosion.damage);
 }
 
 function MagicalLeaf() {
     this.prototype = new Skill();
     this.skillName = "메지컬리프"
+    this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
 }
 
 MagicalLeaf.prototype.execute = function() {
-    this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
     console.log('[로켓단에게 %d 메지컬리프!]', magicalLeaf.damage);
 }
 
@@ -490,11 +479,10 @@ MagicalLeaf.prototype.execute = function() {
 function Supersonic() {
     this.prototype = new Skill();
     this.skillName = "초음파"
-    this.downdef
+    this.downdef = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
 }
 
 Supersonic.prototype.execute = function() {
-    this.downdef = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
     console.log('[로켓단에게 %d 초음파!]', supersonic.downdef);
 }
 
@@ -502,10 +490,10 @@ Supersonic.prototype.execute = function() {
 function LeechLife() {
     this.prototype = new Skill();
     this.skillName = "흡혈"
+    this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
 }
 
 LeechLife.prototype.execute = function() {
-    this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
     console.log('[로켓단에게 %d 흡혈!]', leechLife.damage);
 }
 
@@ -513,10 +501,10 @@ LeechLife.prototype.execute = function() {
 function Bite() {
     this.prototype = new Skill();
     this.skillName = "물기"
+    this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
 }
 
 Bite.prototype.execute = function() {
-    this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
     console.log('[로켓단에게 %d 물기!]', bite.damage);
 }
 
@@ -524,10 +512,10 @@ Bite.prototype.execute = function() {
 function RockThrow() {
     this.prototype = new Skill();
     this.skillName = "돌떨구기"
+    this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
 }
 
 RockThrow.prototype.execute = function() {
-    this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
     console.log('[로켓단에게 %d 돌떨구기!]', rockThrow.damage);
 }
 
@@ -535,10 +523,10 @@ RockThrow.prototype.execute = function() {
 function Ember() {
     this.prototype = new Skill();
     this.skillName = "불꽃세례"
+    this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
 }
 
 Ember.prototype.execute = function() {
-    this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
     console.log('[로켓단에게 %d 불꽃세례!]', ember.damage);
 }
 
@@ -546,11 +534,10 @@ Ember.prototype.execute = function() {
 function Charm() {
     this.prototype = new Skill();
     this.skillName = "애교부리기"
-    this.downdef
+    this.downdef = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
 }
 
 Charm.prototype.execute = function() {
-    this.downdef = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
     console.log('[로켓단에게 %d 애교부리기!]', charm.downdef);
 }
 
@@ -558,10 +545,10 @@ Charm.prototype.execute = function() {
 function FireFang() {
     this.prototype = new Skill();
     this.skillName = "불꽃엄니"
+    this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
 }
 
 FireFang.prototype.execute = function() {
-    this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
     console.log('[로켓단에게 %d 불꽃엄니!]', fireFang.damage);
 }
 
@@ -569,10 +556,10 @@ FireFang.prototype.execute = function() {
 function Wrap() {
     this.prototype = new Skill();
     this.skillName = "김밥말이"
+    this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
 }
 
 Wrap.prototype.execute = function() {
-    this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
     console.log('[로켓단에게 %d 김밥말이!]', $wrap.damage);
 }
 
@@ -580,10 +567,10 @@ Wrap.prototype.execute = function() {
 function Acid() {
     this.prototype = new Skill();
     this.skillName = "용해액"
+    this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
 }
 
 Acid.prototype.execute = function() {
-    this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
     console.log('[로켓단에게 %d 용해액!]', acid.damage);
 }
 
@@ -591,10 +578,10 @@ Acid.prototype.execute = function() {
 function LowKick() {
     this.prototype = new Skill();
     this.skillName = "안다리걸기"
+    this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
 }
 
 LowKick.prototype.execute = function() {
-    this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
     console.log('[로켓단에게 %d 안다리걸기!]', lowKick.damage);
 }
 
@@ -602,10 +589,10 @@ LowKick.prototype.execute = function() {
 function Strength() {
     this.prototype = new Skill();
     this.skillName = "괴력"
+    this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
 }
 
 Strength.prototype.execute = function() {
-    this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
     console.log('[로켓단에게 %d 괴력!]', strength.damage);
 }
 
@@ -613,10 +600,10 @@ Strength.prototype.execute = function() {
 function SeismicToss() {
     this.prototype = new Skill();
     this.skillName = "지구던지기"
+    this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
 }
 
 SeismicToss.prototype.execute = function() {
-    this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
     console.log('[로켓단에게 %d 지구던지기!]', seismicToss.damage);
 }
 
@@ -624,10 +611,10 @@ SeismicToss.prototype.execute = function() {
 function FirePunch() {
     this.prototype = new Skill();
     this.skillName = "불꽃펀치"
+    this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
 }
 
 FirePunch.prototype.execute = function() {
-    this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
     console.log('[로켓단에게 %d 불꽃펀치!]', firePunch.damage);
 }
 
