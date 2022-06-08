@@ -7,8 +7,7 @@ Skill.prototype.execute = function () {} // 선택한 전략 실행 메소드
 
 function Tackle() {
     this.prototype = new Skill();
-    this.name = "몸통박치기"
-    this.damage
+    this.skillName = "몸통박치기"
 }
 
 Tackle.prototype.execute = function() {
@@ -19,8 +18,7 @@ Tackle.prototype.execute = function() {
 
 function HyperBeam() {
     this.prototype = new Skill();
-    this.name = "파괴광선"
-    this.damage
+    this.skillName = "파괴광선"
 }
 
 HyperBeam.prototype.execute = function() {
@@ -31,8 +29,7 @@ HyperBeam.prototype.execute = function() {
 
 function QuickAttack() {
     this.prototype = new Skill();
-    this.name = "전광석화"
-    this.damage
+    this.skillName = "전광석화"
 }
 
 QuickAttack.prototype.execute = function() {
@@ -43,8 +40,7 @@ QuickAttack.prototype.execute = function() {
 
 function IronTail() {
     this.prototype = new Skill();
-    this.name = "아이언테일"
-    this.damage
+    this.skillName = "아이언테일"
 }
 
 IronTail.prototype.execute = function() {
@@ -55,8 +51,7 @@ IronTail.prototype.execute = function() {
 
 function Thunderbolt() {
     this.prototype = new Skill();
-    this.name = "10만볼트"
-    this.damage
+    this.skillName = "10만볼트"
 }
 
 Thunderbolt.prototype.execute = function() {
@@ -67,7 +62,7 @@ Thunderbolt.prototype.execute = function() {
 
 function ThunderWave() {
     this.prototype = new Skill();
-    this.name = "전기자석파"
+    this.skillName = "전기자석파"
     this.downdef
 }
 
@@ -79,7 +74,7 @@ ThunderWave.prototype.execute = function() {
 
 function TailWhip() {
     this.prototype = new Skill();
-    this.name = "꼬리흔들기"
+    this.skillName = "꼬리흔들기"
     this.downdef
 }
 
@@ -91,7 +86,7 @@ TailWhip.prototype.execute = function() {
 
 function Growl() {
     this.prototype = new Skill();
-    this.name = "울음소리"
+    this.skillName = "울음소리"
     this.downdef
 }
 
@@ -103,8 +98,7 @@ Growl.prototype.execute = function() {
 
 function FakeOut() {
     this.prototype = new Skill();
-    this.name = "속이다"
-    this.damage
+    this.skillName = "속이다"
 }
 
 FakeOut.prototype.execute = function() {
@@ -115,8 +109,7 @@ FakeOut.prototype.execute = function() {
 
 function PayDay() {
     this.prototype = new Skill();
-    this.name = "고양이돈받기"
-    this.damage
+    this.skillName = "고양이돈받기"
 }
 
 PayDay.prototype.execute = function() {
@@ -127,8 +120,7 @@ PayDay.prototype.execute = function() {
 
 function Slash() {
     this.prototype = new Skill();
-    this.name = "베어가르기"
-    this.damage
+    this.skillName = "베어가르기"
 }
 
 Slash.prototype.execute = function() {
@@ -139,8 +131,7 @@ Slash.prototype.execute = function() {
 
 function WingAttack() {
     this.prototype = new Skill();
-    this.name = "날개치기"
-    this.damage
+    this.skillName = "날개치기"
 }
 
 WingAttack.prototype.execute = function() {
@@ -151,8 +142,7 @@ WingAttack.prototype.execute = function() {
 
 function BraveBird() {
     this.prototype = new Skill();
-    this.name = "브레이브버드"
-    this.damage
+    this.skillName = "브레이브버드"
 }
 
 BraveBird.prototype.execute = function() {
@@ -163,7 +153,7 @@ BraveBird.prototype.execute = function() {
 
 function ScaryFace() {
     this.prototype = new Skill();
-    this.name = "겁나는얼굴"
+    this.skillName = "겁나는얼굴"
     this.downdef
 }
 
@@ -174,7 +164,7 @@ ScaryFace.prototype.execute = function() {
 
 function Yawn() {
     this.prototype = new Skill();
-    this.name = "하품"
+    this.skillName = "하품"
     this.downdef
 }
 
@@ -186,8 +176,7 @@ Yawn.prototype.execute = function() {
 
 function Earthquake() {
     this.prototype = new Skill();
-    this.name = "지진"
-    this.damage
+    this.skillName = "지진"
 }
 
 Earthquake.prototype.execute = function() {
@@ -198,8 +187,7 @@ Earthquake.prototype.execute = function() {
 
 function BodySlam() {
     this.prototype = new Skill();
-    this.name = "누르기"
-    this.damage
+    this.skillName = "누르기"
 }
 
 BodySlam.prototype.execute = function() {
@@ -210,7 +198,7 @@ BodySlam.prototype.execute = function() {
 
 function ConfuseRay() {
     this.prototype = new Skill();
-    this.name = "이상한빛"
+    this.skillName = "이상한빛"
     this.downdef
 }
 
@@ -222,7 +210,7 @@ ConfuseRay.prototype.execute = function() {
 
 function Curse() {
     this.prototype = new Skill();
-    this.name = "저주"
+    this.skillName = "저주"
     this.downdef
 }
 
@@ -234,8 +222,7 @@ Curse.prototype.execute = function() {
 
 function Toxic() {
     this.prototype = new Skill();
-    this.name = "맹독"
-    this.damage
+    this.skillName = "맹독"
 }
 
 Toxic.prototype.execute = function() {
@@ -246,7 +233,7 @@ Toxic.prototype.execute = function() {
 
 function Lick() {
     this.prototype = new Skill();
-    this.name = "핥기"
+    this.skillName = "핥기"
     this.downdef
 }
 
@@ -258,8 +245,7 @@ Lick.prototype.execute = function() {
 
 function BubbleBeam() {
     this.prototype = new Skill();
-    this.name = "거품광선"
-    this.damage
+    this.skillName = "거품광선"
 }
 
 BubbleBeam.prototype.execute = function() {
@@ -270,8 +256,7 @@ BubbleBeam.prototype.execute = function() {
 
 function WaterGun() {
     this.prototype = new Skill();
-    this.name = "물대포"
-    this.damage
+    this.skillName = "물대포"
 }
 
 WaterGun.prototype.execute = function() {
@@ -282,8 +267,7 @@ WaterGun.prototype.execute = function() {
 
 function HydroPump() {
     this.prototype = new Skill();
-    this.name = "하이드로펌프"
-    this.damage
+    this.skillName = "하이드로펌프"
 }
 
 HydroPump.prototype.execute = function() {
@@ -294,7 +278,7 @@ HydroPump.prototype.execute = function() {
 
 function SandAttack() {
     this.prototype = new Skill();
-    this.name = "모래뿌리기"
+    this.skillName = "모래뿌리기"
     this.downdef
 }
 
@@ -306,7 +290,7 @@ SandAttack.prototype.execute = function() {
 
 function SweetScent() {
     this.prototype = new Skill();
-    this.name = "달콤한향기"
+    this.skillName = "달콤한향기"
     this.downdef
 }
 
@@ -318,8 +302,7 @@ SweetScent.prototype.execute = function() {
 
 function VineWhip() {
     this.prototype = new Skill();
-    this.name = "덩쿨채찍"
-    this.damage
+    this.skillName = "덩쿨채찍"
 }
 
 VineWhip.prototype.execute = function() {
@@ -330,8 +313,7 @@ VineWhip.prototype.execute = function() {
 
 function RazorLeaf() {
     this.prototype = new Skill();
-    this.name = "잎날가르기"
-    this.damage
+    this.skillName = "잎날가르기"
 }
 
 RazorLeaf.prototype.execute = function() {
@@ -342,8 +324,7 @@ RazorLeaf.prototype.execute = function() {
 
 function SolarBeam() {
     this.prototype = new Skill();
-    this.name = "솔라빔"
-    this.damage
+    this.skillName = "솔라빔"
 }
 
 SolarBeam.prototype.execute = function() {
@@ -354,8 +335,7 @@ SolarBeam.prototype.execute = function() {
 
 function IceBeam() {
     this.prototype = new Skill();
-    this.name = "냉동빔"
-    this.damage
+    this.skillName = "냉동빔"
 }
 
 IceBeam.prototype.execute = function() {
@@ -366,8 +346,7 @@ IceBeam.prototype.execute = function() {
 
 function IcyWind() {
     this.prototype = new Skill();
-    this.name = "얼다바람"
-    this.damage
+    this.skillName = "얼다바람"
 }
 
 IcyWind.prototype.execute = function() {
@@ -378,8 +357,7 @@ IcyWind.prototype.execute = function() {
 
 function IceFang() {
     this.prototype = new Skill();
-    this.name = "얼음엄니"
-    this.damage
+    this.skillName = "얼음엄니"
 }
 
 IceFang.prototype.execute = function() {
@@ -390,8 +368,7 @@ IceFang.prototype.execute = function() {
 
 function Blizzard() {
     this.prototype = new Skill();
-    this.name = "눈보라"
-    this.damage
+    this.skillName = "눈보라"
 }
 
 Blizzard.prototype.execute = function() {
@@ -402,8 +379,7 @@ Blizzard.prototype.execute = function() {
 
 function Flamethrower() {
     this.prototype = new Skill();
-    this.name = "화염방사"
-    this.damage
+    this.skillName = "화염방사"
 }
 
 Flamethrower.prototype.execute = function() {
@@ -414,8 +390,7 @@ Flamethrower.prototype.execute = function() {
 
 function AerialAce() {
     this.prototype = new Skill();
-    this.name = "제비반환"
-    this.damage
+    this.skillName = "제비반환"
 }
 
 AerialAce.prototype.execute = function() {
@@ -426,8 +401,7 @@ AerialAce.prototype.execute = function() {
 
 function Crunch() {
     this.prototype = new Skill();
-    this.name = "깨물어부수기"
-    this.damage
+    this.skillName = "깨물어부수기"
 }
 
 Crunch.prototype.execute = function() {
@@ -438,8 +412,7 @@ Crunch.prototype.execute = function() {
 
 function Psychic() {
     this.prototype = new Skill();
-    this.name = "사이코키네시스"
-    this.damage
+    this.skillName = "사이코키네시스"
 }
 
 Psychic.prototype.execute = function() {
@@ -450,8 +423,7 @@ Psychic.prototype.execute = function() {
 
 function Psybeam() {
     this.prototype = new Skill();
-    this.name = "환상빔"
-    this.damage
+    this.skillName = "환상빔"
 }
 
 Psybeam.prototype.execute = function() {
@@ -462,7 +434,7 @@ Psybeam.prototype.execute = function() {
 
 function Kinesis() {
     this.prototype = new Skill();
-    this.name = "숟가락휘기"
+    this.skillName = "숟가락휘기"
     this.downdef
 }
 
@@ -474,8 +446,7 @@ Kinesis.prototype.execute = function() {
 
 function Confusion() {
     this.prototype = new Skill();
-    this.name = "염동력"
-    this.damage
+    this.skillName = "염동력"
 }
 
 Confusion.prototype.execute = function() {
@@ -486,8 +457,7 @@ Confusion.prototype.execute = function() {
 
 function Selfdestruct() {
     this.prototype = new Skill();
-    this.name = "자폭"
-    this.damage
+    this.skillName = "자폭"
 }
 
 Selfdestruct.prototype.execute = function() {
@@ -498,8 +468,7 @@ Selfdestruct.prototype.execute = function() {
 
 function Explosion() {
     this.prototype = new Skill();
-    this.name = "대폭발"
-    this.damage
+    this.skillName = "대폭발"
 }
 
 Explosion.prototype.execute = function() {
@@ -509,8 +478,7 @@ Explosion.prototype.execute = function() {
 
 function MagicalLeaf() {
     this.prototype = new Skill();
-    this.name = "메지컬리프"
-    this.damage
+    this.skillName = "메지컬리프"
 }
 
 MagicalLeaf.prototype.execute = function() {
@@ -521,7 +489,7 @@ MagicalLeaf.prototype.execute = function() {
 
 function Supersonic() {
     this.prototype = new Skill();
-    this.name = "초음파"
+    this.skillName = "초음파"
     this.downdef
 }
 
@@ -533,8 +501,7 @@ Supersonic.prototype.execute = function() {
 
 function LeechLife() {
     this.prototype = new Skill();
-    this.name = "흡혈"
-    this.damage
+    this.skillName = "흡혈"
 }
 
 LeechLife.prototype.execute = function() {
@@ -545,8 +512,7 @@ LeechLife.prototype.execute = function() {
 
 function Bite() {
     this.prototype = new Skill();
-    this.name = "물기"
-    this.damage
+    this.skillName = "물기"
 }
 
 Bite.prototype.execute = function() {
@@ -557,8 +523,7 @@ Bite.prototype.execute = function() {
 
 function RockThrow() {
     this.prototype = new Skill();
-    this.name = "돌떨구기"
-    this.damage
+    this.skillName = "돌떨구기"
 }
 
 RockThrow.prototype.execute = function() {
@@ -569,8 +534,7 @@ RockThrow.prototype.execute = function() {
 
 function Ember() {
     this.prototype = new Skill();
-    this.name = "불꽃세례"
-    this.damage
+    this.skillName = "불꽃세례"
 }
 
 Ember.prototype.execute = function() {
@@ -581,7 +545,7 @@ Ember.prototype.execute = function() {
 
 function Charm() {
     this.prototype = new Skill();
-    this.name = "애교부리기"
+    this.skillName = "애교부리기"
     this.downdef
 }
 
@@ -593,8 +557,7 @@ Charm.prototype.execute = function() {
 
 function FireFang() {
     this.prototype = new Skill();
-    this.name = "불꽃엄니"
-    this.damage
+    this.skillName = "불꽃엄니"
 }
 
 FireFang.prototype.execute = function() {
@@ -605,8 +568,7 @@ FireFang.prototype.execute = function() {
 
 function Wrap() {
     this.prototype = new Skill();
-    this.name = "김밥말이"
-    this.damage
+    this.skillName = "김밥말이"
 }
 
 Wrap.prototype.execute = function() {
@@ -617,8 +579,7 @@ Wrap.prototype.execute = function() {
 
 function Acid() {
     this.prototype = new Skill();
-    this.name = "용해액"
-    this.damage
+    this.skillName = "용해액"
 }
 
 Acid.prototype.execute = function() {
@@ -629,8 +590,7 @@ Acid.prototype.execute = function() {
 
 function LowKick() {
     this.prototype = new Skill();
-    this.name = "안다리걸기"
-    this.damage
+    this.skillName = "안다리걸기"
 }
 
 LowKick.prototype.execute = function() {
@@ -641,8 +601,7 @@ LowKick.prototype.execute = function() {
 
 function Strength() {
     this.prototype = new Skill();
-    this.name = "괴력"
-    this.damage
+    this.skillName = "괴력"
 }
 
 Strength.prototype.execute = function() {
@@ -653,8 +612,7 @@ Strength.prototype.execute = function() {
 
 function SeismicToss() {
     this.prototype = new Skill();
-    this.name = "지구던지기"
-    this.damage
+    this.skillName = "지구던지기"
 }
 
 SeismicToss.prototype.execute = function() {
@@ -665,8 +623,7 @@ SeismicToss.prototype.execute = function() {
 
 function FirePunch() {
     this.prototype = new Skill();
-    this.name = "불꽃펀치"
-    this.damage
+    this.skillName = "불꽃펀치"
 }
 
 FirePunch.prototype.execute = function() {
@@ -675,14 +632,13 @@ FirePunch.prototype.execute = function() {
 }
 
 // User
-function User(name,skill1,skill2,skill3,skill4) {
-    this.name = name
-    this.skill;
+function User(pokemonName,skill1,skill2,skill3,skill4) {
+    this.pokemonName = pokemonName
     this.skillslot = [skill1,skill2,skill3,skill4];
 }
 
 User.prototype.setSkill = function (skill) {
-    if (this.skillslot.indexOf(skill.name) !== -1) {
+    if (this.skillslot.indexOf(skill.skillName) !== -1) {
         this.skill = skill
     }
     else {
@@ -696,7 +652,7 @@ User.prototype.execute = function() {
     actionToTeamRocket.notifyEnemy(this);  // Observer.js의 notifyFlies()를 실행
 };
 
-
+// Skill
 var tackle = new Tackle();
 var quickAttack = new QuickAttack();
 var ironTail = new IronTail();
@@ -754,7 +710,7 @@ var strength = new Strength();
 var seismicToss = new SeismicToss();
 var firePunch = new FirePunch();
 
-
+// User : pokemon
 var eevee = new User("이브이","몸통박치기","전광석화","꼬리흔들기","울음소리");
 var pikachu = new User("피카츄","전광석화","아이언테일","10만볼트","전기자석파");
 var persian = new User("페르시온","속이다","울음소리","고양이돈받기","베어가르기");
