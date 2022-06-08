@@ -762,7 +762,7 @@ class Pokemon {
     execute() {
         console.log(this.skill);
         this.skill.execute();
-        actionToTeamRocket.notifyEnemy(this); // Observer.js의 notifyFlies()를 실행
+        actionToTeamRocket.notifyEnemy(this); // Observer.js의 notifyEnemy()를 실행
     }
 }
 

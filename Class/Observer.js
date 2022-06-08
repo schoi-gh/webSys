@@ -18,8 +18,8 @@ class ActionToTeamRocket extends Action{
     detach(member) {
         this.enemy = this.enemy.filter(attachedObserver => attachedObserver !== member);
     }
-    notifyEnemy(User) {
-        this.enemy.forEach(member => member.update(User));
+    notifyEnemy(Pokemon) {
+        this.enemy.forEach(member => member.update(Pokemon));
     }
 }
 
@@ -31,9 +31,9 @@ class TeamRocket {
     constructor(name) {
         this.name = name;
     }
-    update(User) {
+    update(Pokemon) {
         this.last_skill = [];
-        this.last_skill.push(JSON.stringify(User));
+        this.last_skill.push(JSON.stringify(Pokemon)); //이부분은  this.last_skill.push(JSON.stringify(Pokemon.skill)); 로 하면 푸키몬의 모든 정보가 아니라 스킬만 들어감. 아니면 이름이랑 스킬만 푸시하면 그 두개만 들어가겠지
     }
 }
 
