@@ -18,8 +18,8 @@ ActionToTeamRocket.prototype.detach = function(member) {
     this.enemy = this.enemy.filter(attachedObserver => attachedObserver !== member);
 }
 
-ActionToTeamRocket.prototype.notifyEnemy = function(User) {
-    this.enemy.forEach(member => member.update(User));
+ActionToTeamRocket.prototype.notifyEnemy = function(Pokemon) {
+    this.enemy.forEach(member => member.update(Pokemon));
 }
 
 
@@ -27,9 +27,9 @@ function TeamRocket(name) {
     this.name = name;
 }
 
-TeamRocket.prototype.update = function(User) {
+TeamRocket.prototype.update = function(Pokemon) {
     this.last_skill = [];
-    this.last_skill.push(JSON.stringify(User))
+    this.last_skill.push(JSON.stringify(Pokemon))
 }
 
 
