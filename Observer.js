@@ -1,54 +1,49 @@
-function Catch(){}
-Catch.prototype.attach = function(fly){}
-Catch.prototype.detach = function(fly){}
-Catch.prototype.notifyMobs = function(){}
+function Action(){}
+Action.prototype.attach = function(member){}
+Action.prototype.detach = function(member){}
+Action.prototype.notifyMobs = function(){}
 
 
-function ActionToFly() {
-    Catch.this;
-    this.mobs = [];
-    this.detachMobs = [];
+function ActionToTeamRocket() {
+    this.prototype = new Action();
+    this.enemy = [];
+    this.detachEnemy = [];
 }
 
-ActionToFly.prototype.attach = function(fly) { //mobs 배열에 fly 추가
-    this.mobs.push(fly);
+ActionToTeamRocket.prototype.attach = function(member) {
+    this.enemy.push(member);
 }
 
-ActionToFly.prototype.detach = function(fly) { //mobs 배열에서 fly 제거
-    this.mobs = this.mobs.filter(attachedObserver => attachedObserver !== fly);
+ActionToTeamRocket.prototype.detach = function(member) {
+    this.enemy = this.enemy.filter(attachedObserver => attachedObserver !== member);
 }
 
-ActionToFly.prototype.notifyMobs = function(User) {    //mobs 배열에 있는 fly들의 update() 실행
-    this.mobs.forEach(fly => fly.update(User));
+ActionToTeamRocket.prototype.notifyEnemy = function(User) {
+    this.enemy.forEach(member => member.update(User));
 }
 
 
-function DemonFly(name, hp, def) {
+function TeamRocket(name) {
     this.name = name;
-    // this.hp = hp;
-    // this.def = def;
 }
 
-DemonFly.prototype.update = function(User) {
+TeamRocket.prototype.update = function(User) {
     this.last_skill = [];
     this.last_skill.push(JSON.stringify(User))
 }
 
 
-// 프로토타입공유
-function Syrphid(name, hp, def){   // 노션에 설명 있음
+function Syrphid(name){
     this.name = name;
-    // this.hp = hp;
-    // this.def = def;
 }
-Syrphid.prototype = DemonFly.prototype;
+Syrphid.prototype = TeamRocket.prototype;
 
 
-var targetFly = new ActionToFly();
-var beel = new DemonFly("바알제붑",1000,1000);
-var der = new DemonFly("데르마토비아",10,10);
-var mus = new Syrphid("무스카", 50, 10);
-var syr = new Syrphid("서피드", 15, 20);
+var actionToTeamRocket = new ActionToTeamRocket();
+var james = new TeamRocket("로이");
+var jessie = new TeamRocket("로사");
+var meowth = new Syrphid("나옹");
+var wobbuffet = new Syrphid("마자용");
 
 
-export {targetFly, beel, der, syr, mus, DemonFly}
+export {actionToTeamRocket, james, jessie, wobbuffet, meowth, TeamRocket}

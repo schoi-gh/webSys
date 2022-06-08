@@ -1,163 +1,167 @@
-import {eevee,pikachu,meowth,pidgeot,snorlax,gengar,squirtle,bulbasaur,snorunt,charizard,gyarados,alakazam,koffing,rattata,magnemite,staraptor,blastoise,bidoof,roselia,quickAttack,ironTail,thunderbolt,thunderWave,tackle,tailWhip,growl,fakeOut,payDay,slash,wingAttack,braveBird,scaryFace,yawn,earthquake,bodySlam,hyperBeam,confuseRay,curse,toxic,lick,bubbleBeam,waterGun,hydroPump,sandAttack,sweetScent,vineWhip,razorLeaf,solarBeam,iceBeam,icyWind,iceFang,blizzard,flamethrower,aerialAce,crunch,psychic,psybeam,kinesis,confusion,selfdestruct,explosion,chikorita,zubat,geodude,flareon,bellsprout,machop,magicalLeaf,supersonic,leechLife,bite,rockThrow,ember,charm,fireFang,$wrap,acid,lowKick,strength,seismicToss} from "./strategy.js";
-import {targetFly, beel, der, syr, mus} from "./Observer.js";
-import {showStats, proxy} from "./proxy.js"
+import {eevee,pikachu,persian,pidgeot,snorlax,gengar,squirtle,bulbasaur,snorunt,charizard,gyarados,alakazam,koffing,rattata,magnemite,staraptor,blastoise,bidoof,roselia,quickAttack,ironTail,thunderbolt,thunderWave,tackle,tailWhip,growl,fakeOut,payDay,slash,wingAttack,braveBird,scaryFace,yawn,earthquake,bodySlam,hyperBeam,confuseRay,curse,toxic,lick,bubbleBeam,waterGun,hydroPump,sandAttack,sweetScent,vineWhip,razorLeaf,solarBeam,iceBeam,icyWind,iceFang,blizzard,flamethrower,aerialAce,crunch,psychic,psybeam,kinesis,confusion,selfdestruct,explosion,chikorita,zubat,geodude,flareon,bellsprout,machop,magicalLeaf,supersonic,leechLife,bite,rockThrow,ember,charm,fireFang,$wrap,acid,lowKick,strength,seismicToss,firePunch,slowpoke,growlithe,gardevoir,machoke,butterfree,arbok} from "./strategy.js";
+import {actionToTeamRocket, james, jessie, wobbuffet, meowth} from "./Observer.js";
+import {dataUpdateProxy} from "./proxy.js"
 
 
 // Observer
-targetFly.attach(beel);
-targetFly.attach(der);
-targetFly.attach(syr);
-targetFly.attach(mus);
+actionToTeamRocket.attach(james);
+actionToTeamRocket.attach(jessie);
+actionToTeamRocket.attach(meowth);
+actionToTeamRocket.attach(wobbuffet);
 
 
 // Strategy
-
 eevee.setSkill(tackle)
-eevee.execute(); // attack
-showStats.request(); //로딩화면
+eevee.execute();
 console.log("---------------------");
-proxy.request();
+dataUpdateProxy.request();
 
 pikachu.setSkill(thunderbolt)
 pikachu.execute(); // cold
-showStats.request(); //로딩화면
 console.log("---------------------");
-proxy.request();
+dataUpdateProxy.request();
 
-meowth.setSkill(payDay)
-meowth.execute(); // cold
-showStats.request(); //로딩화면
+persian.setSkill(payDay)
+persian.execute(); // cold
 console.log("---------------------");
-proxy.request();
+dataUpdateProxy.request();
 
 pidgeot.setSkill(wingAttack)
-pidgeot.execute(); // attack
-showStats.request(); //로딩화면
+pidgeot.execute();
 console.log("---------------------");
-proxy.request();
+dataUpdateProxy.request();
 
 snorlax.setSkill(yawn)
-snorlax.execute(); // attack
-showStats.request(); //로딩화면
+snorlax.execute();
 console.log("---------------------");
-proxy.request();
+dataUpdateProxy.request();
 
 gengar.setSkill(lick)
-gengar.execute(); // attack
-showStats.request(); //로딩화면
+gengar.execute();
 console.log("---------------------");
-proxy.request();
+dataUpdateProxy.request();
 
 squirtle.setSkill(bubbleBeam)
-squirtle.execute(); // attack
-showStats.request(); //로딩화면
+squirtle.execute();
 console.log("---------------------");
-proxy.request();
+dataUpdateProxy.request();
 
 bulbasaur.setSkill(vineWhip)
-bulbasaur.execute(); // attack
-showStats.request(); //로딩화면
+bulbasaur.execute();
 console.log("---------------------");
-proxy.request();
+dataUpdateProxy.request();
 
 snorunt.setSkill(blizzard)
-snorunt.execute(); // attack
-showStats.request(); //로딩화면
+snorunt.execute();
 console.log("---------------------");
-proxy.request();
+dataUpdateProxy.request();
 
 charizard.setSkill(flamethrower)
-charizard.execute(); // attack
-showStats.request(); //로딩화면
+charizard.execute();
 console.log("---------------------");
-proxy.request();
+dataUpdateProxy.request();
 
 gyarados.setSkill(crunch)
-gyarados.execute(); // attack
-showStats.request(); //로딩화면
+gyarados.execute();
 console.log("---------------------");
-proxy.request();
+dataUpdateProxy.request();
 
 alakazam.setSkill(kinesis)
-alakazam.execute(); // attack
-showStats.request(); //로딩화면
+alakazam.execute();
 console.log("---------------------");
-proxy.request();
+dataUpdateProxy.request();
 
 koffing.setSkill(explosion)
-koffing.execute(); // attack
-showStats.request(); //로딩화면
+koffing.execute();
 console.log("---------------------");
-proxy.request();
+dataUpdateProxy.request();
 
 rattata.setSkill(tailWhip)
-rattata.execute(); // attack
-showStats.request(); //로딩화면
+rattata.execute();
 console.log("---------------------");
-proxy.request();
+dataUpdateProxy.request();
 
 magnemite.setSkill(thunderWave)
-magnemite.execute(); // attack
-showStats.request(); //로딩화면
+magnemite.execute();
 console.log("---------------------");
-proxy.request();
+dataUpdateProxy.request();
 
 staraptor.setSkill(braveBird)
-staraptor.execute(); // attack
-showStats.request(); //로딩화면
+staraptor.execute();
 console.log("---------------------");
-proxy.request();
+dataUpdateProxy.request();
 
 blastoise.setSkill(earthquake)
-blastoise.execute(); // attack
-showStats.request(); //로딩화면
+blastoise.execute();
 console.log("---------------------");
-proxy.request();
+dataUpdateProxy.request();
 
 bidoof.setSkill(growl)
-bidoof.execute(); // attack
-showStats.request(); //로딩화면
+bidoof.execute();
 console.log("---------------------");
-proxy.request();
+dataUpdateProxy.request();
 
 roselia.setSkill(razorLeaf)
-roselia.execute(); // attack
-showStats.request(); //로딩화면
+roselia.execute();
 console.log("---------------------");
-proxy.request();
+dataUpdateProxy.request();
 
 chikorita.setSkill(magicalLeaf)
-chikorita.execute(); // attack
-showStats.request(); //로딩화면
+chikorita.execute();
 console.log("---------------------");
-proxy.request();
+dataUpdateProxy.request();
 
 zubat.setSkill(leechLife)
-zubat.execute(); // attack
-showStats.request(); //로딩화면
+zubat.execute();
 console.log("---------------------");
-proxy.request();
+dataUpdateProxy.request();
 
 geodude.setSkill(rockThrow)
-geodude.execute(); // attack
-showStats.request(); //로딩화면
+geodude.execute();
 console.log("---------------------");
-proxy.request();
+dataUpdateProxy.request();
 
 flareon.setSkill(ember)
-flareon.execute(); // attack
-showStats.request(); //로딩화면
+flareon.execute();
 console.log("---------------------");
-proxy.request();
+dataUpdateProxy.request();
 
 bellsprout.setSkill($wrap)
-bellsprout.execute(); // attack
-showStats.request(); //로딩화면
+bellsprout.execute();
 console.log("---------------------");
-proxy.request();
+dataUpdateProxy.request();
 
 machop.setSkill(lowKick)
-machop.execute(); // attack
-showStats.request(); //로딩화면
+machop.execute();
 console.log("---------------------");
-proxy.request();
+dataUpdateProxy.request();
+
+slowpoke.setSkill(acid)
+slowpoke.execute();
+console.log("---------------------");
+dataUpdateProxy.request();
+
+growlithe.setSkill(flamethrower)
+growlithe.execute();
+console.log("---------------------");
+dataUpdateProxy.request();
+
+gardevoir.setSkill(psybeam)
+gardevoir.execute();
+console.log("---------------------");
+dataUpdateProxy.request();
+
+machoke.setSkill(seismicToss)
+machoke.execute();
+console.log("---------------------");
+dataUpdateProxy.request();
+
+butterfree.setSkill(confusion)
+butterfree.execute();
+console.log("---------------------");
+dataUpdateProxy.request();
+
+arbok.setSkill(bite)
+arbok.execute();
+console.log("---------------------");
+dataUpdateProxy.request();

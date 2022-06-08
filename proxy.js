@@ -1,54 +1,40 @@
-import {targetFly} from "./Observer.js";
+import {actionToTeamRocket} from "./Observer.js";
 
-function StatsInterface(){}
+function DBInterface(){}
 
-StatsInterface.prototype.request = function(){}
+DBInterface.prototype.request = function(){}
 
 
-function ShowStats() {}
+function DataUpdate() {}
 
-ShowStats.prototype.request = function() {
-    console.log("죽은 파리 : ", targetFly.detachMobs) // 여기다 뭘 넣을까
+DataUpdate.prototype.request = function() {
+    console.log("2. 다음 턴을 진행하기 위해 DB에 접근하여 데이터를 update 후, read함")
 }
 
 
-function Proxy(showState) {
-    StatsInterface.this;
-    this.showState = showState;
+function DataUpdateProxy(dataUpdate) {
+    this.prototype = new DBInterface();
+    this.dataUpdate = dataUpdate;
 }
 
-Proxy.prototype.request = function() {
+DataUpdateProxy.prototype.request = function() {
     this.beforeProc();
-    this.showState.request();
+    this.dataUpdate.request();
     this.afterProc();
 }
 
-Proxy.prototype.beforeProc = function() {
-    console.log("befor데미지를 많이 입었어요");
+DataUpdateProxy.prototype.beforeProc = function() {
+    console.log("1. 로딩중, 최근 턴 결과를 출력");
+    console.table(actionToTeamRocket.enemy)
 }
 
-Proxy.prototype.afterProc = function() {
-    console.log("살아 있는 파리 : ")
-    console.table(targetFly.mobs)
+DataUpdateProxy.prototype.afterProc = function() {
+    console.log("3. 로딩 끝, 다음 턴 진행")
     console.log("\n")
-
-
 }
 
 
-var showStats = new ShowStats();
-var proxy = new Proxy(showStats);
+var dataUpdate = new DataUpdate();
+var dataUpdateProxy = new DataUpdateProxy(dataUpdate);
 
-export {showStats, proxy}
-
-// 결과 출력
-
-// [ShowStats 클래스] request 메서드 호출
-
-// ---------------------
-
-// [Proxy] beforeProc 메서드 호출
-
-// [ShowStats 클래스] request 메서드 호출
-
-// [Proxy] afterProc 메서드 호출
+export {dataUpdateProxy}
