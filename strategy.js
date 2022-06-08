@@ -6,7 +6,7 @@ Skill.prototype.execute = function () {} // 선택한 전략 실행 메소드
 
 
 function Tackle() {  // 데미지를 주는 전술
-    Skill.this; // function Skill()를 구현, like 인터페이스
+    this.prototype = new Skill();
     this.name = "몸통박치기"
     this.damage
 }
@@ -18,7 +18,7 @@ Tackle.prototype.execute = function() {
 
 
 function HyperBeam() {  // 데미지를 주는 전술
-    Skill.this; // function Skill()를 구현, like 인터페이스
+    this.prototype = new Skill();
     this.name = "파괴광선"
     this.damage
 }
@@ -30,7 +30,7 @@ HyperBeam.prototype.execute = function() {
 
 
 function QuickAttack() {  // 데미지를 주는 전술
-    Skill.this; // function Skill()를 구현, like 인터페이스
+    this.prototype = new Skill();
     this.name = "전광석화"
     this.damage
 }
@@ -42,7 +42,7 @@ QuickAttack.prototype.execute = function() {
 
 
 function IronTail() {  // 데미지를 주는 전술
-    Skill.this; // function Skill()를 구현, like 인터페이스
+    this.prototype = new Skill();
     this.name = "아이언테일"
     this.damage
 }
@@ -54,7 +54,7 @@ IronTail.prototype.execute = function() {
 
 
 function Thunderbolt() {  // 데미지를 주는 전술
-    Skill.this; // function Skill()를 구현, like 인터페이스
+    this.prototype = new Skill();
     this.name = "10만볼트"
     this.damage
 }
@@ -66,7 +66,7 @@ Thunderbolt.prototype.execute = function() {
 
 
 function ThunderWave() {  // 데미지를 주는 전술
-    Skill.this; // function Skill()를 구현, like 인터페이스
+    this.prototype = new Skill();
     this.name = "전기자석파"
     this.downdef
 }
@@ -78,7 +78,7 @@ ThunderWave.prototype.execute = function() {
 
 
 function TailWhip() {  // 데미지를 주는 전술
-    Skill.this; // function Skill()를 구현, like 인터페이스
+    this.prototype = new Skill();
     this.name = "꼬리흔들기"
     this.downdef
 }
@@ -90,7 +90,7 @@ TailWhip.prototype.execute = function() {
 
 
 function Growl() {  // 데미지를 주는 전술
-    Skill.this; // function Skill()를 구현, like 인터페이스
+    this.prototype = new Skill();
     this.name = "울음소리"
     this.downdef
 }
@@ -102,7 +102,7 @@ Growl.prototype.execute = function() {
 
 
 function FakeOut() {  // 데미지를 주는 전술
-    Skill.this; // function Skill()를 구현, like 인터페이스
+    this.prototype = new Skill();
     this.name = "속이다"
     this.damage
 }
@@ -114,7 +114,7 @@ FakeOut.prototype.execute = function() {
 
 
 function PayDay() {  // 데미지를 주는 전술
-    Skill.this; // function Skill()를 구현, like 인터페이스
+    this.prototype = new Skill();
     this.name = "고양이돈받기"
     this.damage
 }
@@ -126,7 +126,7 @@ PayDay.prototype.execute = function() {
 
 
 function Slash() {  // 데미지를 주는 전술
-    Skill.this; // function Skill()를 구현, like 인터페이스
+    this.prototype = new Skill();
     this.name = "베어가르기"
     this.damage
 }
@@ -138,7 +138,7 @@ Slash.prototype.execute = function() {
 
 
 function WingAttack() {  // 데미지를 주는 전술
-    Skill.this; // function Skill()를 구현, like 인터페이스
+    this.prototype = new Skill();
     this.name = "날개치기"
     this.damage
 }
@@ -150,7 +150,7 @@ WingAttack.prototype.execute = function() {
 
 
 function BraveBird() {  // 데미지를 주는 전술
-    Skill.this; // function Skill()를 구현, like 인터페이스
+    this.prototype = new Skill();
     this.name = "브레이브버드"
     this.damage
 }
@@ -162,7 +162,7 @@ BraveBird.prototype.execute = function() {
 
 
 function ScaryFace() {   // 방어력을 깎는 전술
-    Skill.this;  // function Skill()를 구현, like 인터페이스
+    this.prototype = new Skill();
     this.name = "겁나는얼굴"
     this.downdef
 }
@@ -174,7 +174,7 @@ ScaryFace.prototype.execute = function() {
 }
 
 function Yawn() {   // 방어력을 깎는 전술
-    Skill.this;  // function Skill()를 구현, like 인터페이스
+    this.prototype = new Skill();
     this.name = "하품"
     this.downdef
 }
@@ -187,7 +187,7 @@ Yawn.prototype.execute = function() {
 
 
 function Earthquake() {   // 방어력을 깎는 전술
-    Skill.this;  // function Skill()를 구현, like 인터페이스
+    this.prototype = new Skill();
     this.name = "지진"
     this.damage
 }
@@ -200,7 +200,7 @@ Earthquake.prototype.execute = function() {
 
 
 function BodySlam() {   // 방어력을 깎는 전술
-    Skill.this;  // function Skill()를 구현, like 인터페이스
+    this.prototype = new Skill();
     this.name = "누르기"
     this.damage
 }
@@ -213,7 +213,7 @@ BodySlam.prototype.execute = function() {
 
 
 function ConfuseRay() {   // 방어력을 깎는 전술
-    Skill.this;  // function Skill()를 구현, like 인터페이스
+    this.prototype = new Skill();
     this.name = "이상한빛"
     this.downdef
 }
@@ -226,7 +226,7 @@ ConfuseRay.prototype.execute = function() {
 
 
 function Curse() {   // 방어력을 깎는 전술
-    Skill.this;  // function Skill()를 구현, like 인터페이스
+    this.prototype = new Skill();
     this.name = "저주"
     this.downdef
 }
@@ -239,7 +239,7 @@ Curse.prototype.execute = function() {
 
 
 function Toxic() {   // 방어력을 깎는 전술
-    Skill.this;  // function Skill()를 구현, like 인터페이스
+    this.prototype = new Skill();
     this.name = "맹독"
     this.damage
 }
@@ -252,7 +252,7 @@ Toxic.prototype.execute = function() {
 
 
 function Lick() {   // 방어력을 깎는 전술
-    Skill.this;  // function Skill()를 구현, like 인터페이스
+    this.prototype = new Skill();
     this.name = "핥기"
     this.downdef
 }
@@ -265,7 +265,7 @@ Lick.prototype.execute = function() {
 
 
 function BubbleBeam() {   // 방어력을 깎는 전술
-    Skill.this;  // function Skill()를 구현, like 인터페이스
+    this.prototype = new Skill();
     this.name = "거품광선"
     this.damage
 }
@@ -278,7 +278,7 @@ BubbleBeam.prototype.execute = function() {
 
 
 function WaterGun() {   // 방어력을 깎는 전술
-    Skill.this;  // function Skill()를 구현, like 인터페이스
+    this.prototype = new Skill();
     this.name = "물대포"
     this.damage
 }
@@ -291,7 +291,7 @@ WaterGun.prototype.execute = function() {
 
 
 function HydroPump() {   // 방어력을 깎는 전술
-    Skill.this;  // function Skill()를 구현, like 인터페이스
+    this.prototype = new Skill();
     this.name = "하이드로펌프"
     this.damage
 }
@@ -304,7 +304,7 @@ HydroPump.prototype.execute = function() {
 
 
 function SandAttack() {   // 방어력을 깎는 전술
-    Skill.this;  // function Skill()를 구현, like 인터페이스
+    this.prototype = new Skill();
     this.name = "모래뿌리기"
     this.downdef
 }
@@ -317,7 +317,7 @@ SandAttack.prototype.execute = function() {
 
 
 function SweetScent() {   // 방어력을 깎는 전술
-    Skill.this;  // function Skill()를 구현, like 인터페이스
+    this.prototype = new Skill();
     this.name = "달콤한향기"
     this.downdef
 }
@@ -330,7 +330,7 @@ SweetScent.prototype.execute = function() {
 
 
 function VineWhip() {   // 방어력을 깎는 전술
-    Skill.this;  // function Skill()를 구현, like 인터페이스
+    this.prototype = new Skill();
     this.name = "덩쿨채찍"
     this.damage
 }
@@ -343,7 +343,7 @@ VineWhip.prototype.execute = function() {
 
 
 function RazorLeaf() {   // 방어력을 깎는 전술
-    Skill.this;  // function Skill()를 구현, like 인터페이스
+    this.prototype = new Skill();
     this.name = "잎날가르기"
     this.damage
 }
@@ -356,7 +356,7 @@ RazorLeaf.prototype.execute = function() {
 
 
 function SolarBeam() {   // 방어력을 깎는 전술
-    Skill.this;  // function Skill()를 구현, like 인터페이스
+    this.prototype = new Skill();
     this.name = "솔라빔"
     this.damage
 }
@@ -369,7 +369,7 @@ SolarBeam.prototype.execute = function() {
 
 
 function IceBeam() {   // 방어력을 깎는 전술
-    Skill.this;  // function Skill()를 구현, like 인터페이스
+    this.prototype = new Skill();
     this.name = "냉동빔"
     this.damage
 }
@@ -382,7 +382,7 @@ IceBeam.prototype.execute = function() {
 
 
 function IcyWind() {   // 방어력을 깎는 전술
-    Skill.this;  // function Skill()를 구현, like 인터페이스
+    this.prototype = new Skill();
     this.name = "얼다바람"
     this.damage
 }
@@ -395,7 +395,7 @@ IcyWind.prototype.execute = function() {
 
 
 function IceFang() {   // 방어력을 깎는 전술
-    Skill.this;  // function Skill()를 구현, like 인터페이스
+    this.prototype = new Skill();
     this.name = "얼음엄니"
     this.damage
 }
@@ -408,7 +408,7 @@ IceFang.prototype.execute = function() {
 
 
 function Blizzard() {   // 방어력을 깎는 전술
-    Skill.this;  // function Skill()를 구현, like 인터페이스
+    this.prototype = new Skill();
     this.name = "눈보라"
     this.damage
 }
@@ -421,7 +421,7 @@ Blizzard.prototype.execute = function() {
 
 
 function Flamethrower() {   // 방어력을 깎는 전술
-    Skill.this;  // function Skill()를 구현, like 인터페이스
+    this.prototype = new Skill();
     this.name = "화염방사"
     this.damage
 }
@@ -434,7 +434,7 @@ Flamethrower.prototype.execute = function() {
 
 
 function AerialAce() {   // 방어력을 깎는 전술
-    Skill.this;  // function Skill()를 구현, like 인터페이스
+    this.prototype = new Skill();
     this.name = "제비반환"
     this.damage
 }
@@ -447,7 +447,7 @@ AerialAce.prototype.execute = function() {
 
 
 function Crunch() {   // 방어력을 깎는 전술
-    Skill.this;  // function Skill()를 구현, like 인터페이스
+    this.prototype = new Skill();
     this.name = "깨물어부수기"
     this.damage
 }
@@ -460,7 +460,7 @@ Crunch.prototype.execute = function() {
 
 
 function Psychic() {   // 방어력을 깎는 전술
-    Skill.this;  // function Skill()를 구현, like 인터페이스
+    this.prototype = new Skill();
     this.name = "사이코키네시스"
     this.damage
 }
@@ -473,7 +473,7 @@ Psychic.prototype.execute = function() {
 
 
 function Psybeam() {   // 방어력을 깎는 전술
-    Skill.this;  // function Skill()를 구현, like 인터페이스
+    this.prototype = new Skill();
     this.name = "환상빔"
     this.damage
 }
@@ -486,7 +486,7 @@ Psybeam.prototype.execute = function() {
 
 
 function Kinesis() {   // 방어력을 깎는 전술
-    Skill.this;  // function Skill()를 구현, like 인터페이스
+    this.prototype = new Skill();
     this.name = "숟가락휘기"
     this.downdef
 }
@@ -499,7 +499,7 @@ Kinesis.prototype.execute = function() {
 
 
 function Confusion() {   // 방어력을 깎는 전술
-    Skill.this;  // function Skill()를 구현, like 인터페이스
+    this.prototype = new Skill();
     this.name = "염동력"
     this.damage
 }
@@ -512,7 +512,7 @@ Confusion.prototype.execute = function() {
 
 
 function Selfdestruct() {   // 방어력을 깎는 전술
-    Skill.this;  // function Skill()를 구현, like 인터페이스
+    this.prototype = new Skill();
     this.name = "자폭"
     this.damage
 }
@@ -525,7 +525,7 @@ Selfdestruct.prototype.execute = function() {
 
 
 function Explosion() {   // 방어력을 깎는 전술
-    Skill.this;  // function Skill()를 구현, like 인터페이스
+    this.prototype = new Skill();
     this.name = "대폭발"
     this.damage
 }
@@ -536,6 +536,173 @@ Explosion.prototype.execute = function() {
     console.log('[초파리에게 %d 대폭발!]\n', explosion.damage);
 }
 
+function MagicalLeaf() {   // 방어력을 깎는 전술
+    this.prototype = new Skill();
+    this.name = "메지컬리프"
+    this.damage
+}
+
+
+MagicalLeaf.prototype.execute = function() {
+    this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
+    console.log('[초파리에게 %d 메지컬리프!]\n', magicalLeaf.damage);
+}
+
+
+function Supersonic() {   // 방어력을 깎는 전술
+    this.prototype = new Skill();
+    this.name = "초음파"
+    this.downdef
+}
+
+
+Supersonic.prototype.execute = function() {
+    this.downdef = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
+    console.log('[초파리에게 %d 초음파!]\n', supersonic.downdef);
+}
+
+
+function LeechLife() {   // 방어력을 깎는 전술
+    this.prototype = new Skill();
+    this.name = "흡혈"
+    this.damage
+}
+
+
+LeechLife.prototype.execute = function() {
+    this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
+    console.log('[초파리에게 %d 흡혈!]\n', leechLife.damage);
+}
+
+
+function Bite() {   // 방어력을 깎는 전술
+    this.prototype = new Skill();
+    this.name = "물기"
+    this.damage
+}
+
+
+Bite.prototype.execute = function() {
+    this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
+    console.log('[초파리에게 %d 물기!]\n', bite.damage);
+}
+
+
+function RockThrow() {   // 방어력을 깎는 전술
+    this.prototype = new Skill();
+    this.name = "돌떨구기"
+    this.damage
+}
+
+
+RockThrow.prototype.execute = function() {
+    this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
+    console.log('[초파리에게 %d 돌떨구기!]\n', rockThrow.damage);
+}
+
+
+function Ember() {   // 방어력을 깎는 전술
+    this.prototype = new Skill();
+    this.name = "불꽃세례"
+    this.damage
+}
+
+
+Ember.prototype.execute = function() {
+    this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
+    console.log('[초파리에게 %d 불꽃세례!]\n', ember.damage);
+}
+
+
+function Charm() {   // 방어력을 깎는 전술
+    this.prototype = new Skill();
+    this.name = "애교부리기"
+    this.downdef
+}
+
+
+Charm.prototype.execute = function() {
+    this.downdef = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
+    console.log('[초파리에게 %d 애교부리기!]\n', charm.downdef);
+}
+
+
+function FireFang() {   // 방어력을 깎는 전술
+    this.prototype = new Skill();
+    this.name = "불꽃엄니"
+    this.damage
+}
+
+
+FireFang.prototype.execute = function() {
+    this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
+    console.log('[초파리에게 %d 불꽃엄니!]\n', fireFang.damage);
+}
+
+
+function Wrap() {   // 방어력을 깎는 전술
+    this.prototype = new Skill();
+    this.name = "김밥말이"
+    this.damage
+}
+
+
+Wrap.prototype.execute = function() {
+    this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
+    console.log('[초파리에게 %d 김밥말이!]\n', $wrap.damage);
+}
+
+
+function Acid() {   // 방어력을 깎는 전술
+    this.prototype = new Skill();
+    this.name = "용해액"
+    this.damage
+}
+
+
+Acid.prototype.execute = function() {
+    this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
+    console.log('[초파리에게 %d 용해액!]\n', acid.damage);
+}
+
+
+function LowKick() {   // 방어력을 깎는 전술
+    this.prototype = new Skill();
+    this.name = "안다리걸기"
+    this.damage
+}
+
+
+LowKick.prototype.execute = function() {
+    this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
+    console.log('[초파리에게 %d 안다리걸기!]\n', lowKick.damage);
+}
+
+
+function Strength() {   // 방어력을 깎는 전술
+    this.prototype = new Skill();
+    this.name = "괴력"
+    this.damage
+}
+
+
+Strength.prototype.execute = function() {
+    this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
+    console.log('[초파리에게 %d 괴력!]\n', strength.damage);
+}
+
+
+function SeismicToss() {   // 방어력을 깎는 전술
+    this.prototype = new Skill();
+    this.name = "지구던지기"
+    this.damage
+}
+
+
+SeismicToss.prototype.execute = function() {
+    this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
+    console.log('[초파리에게 %d 지구던지기!]\n', seismicToss.damage);
+}
 
 function User(name,skill1,skill2,skill3,skill4) {
     this.name = name
@@ -544,7 +711,7 @@ function User(name,skill1,skill2,skill3,skill4) {
 }
 
 User.prototype.setSkill = function (skill) {
-    if (this.skillslot.indexOf(skill.name) != -1) {
+    if (this.skillslot.indexOf(skill.name) !== -1) {
         this.skill = skill
         
     }
@@ -602,7 +769,19 @@ var kinesis = new Kinesis();
 var confusion = new Confusion();
 var selfdestruct = new Selfdestruct();
 var explosion = new Explosion();
-
+var magicalLeaf = new MagicalLeaf();
+var supersonic = new Supersonic();
+var leechLife = new LeechLife();
+var bite = new Bite();
+var rockThrow = new RockThrow();
+var ember = new Ember();
+var charm = new Charm();
+var fireFang = new FireFang();
+var $wrap = new Wrap();
+var acid = new Acid();
+var lowKick = new LowKick();
+var strength = new Strength();
+var seismicToss = new SeismicToss();
 
 
 var eevee = new User("이브이","몸통박치기","전광석화","꼬리흔들기","울음소리");
@@ -624,6 +803,12 @@ var staraptor = new User("찌르호크","브레이브버드","날개치기","베
 var blastoise = new User("거북왕","지진","거품광선","하이드로펌프","파괴광선");
 var bidoof = new User("비버니","울음소리","꼬리흔들기","몸통박치기","전광석화");
 var roselia = new User("로젤리아","달콤한향기","잎날가르기","솔라빔","모래뿌리기");
+var chikorita = new User("치코리타","잎날가르기","솔라빔","메지컬리프","울음소리")
+var zubat = new User("주뱃","초음파","흡혈","물기","이상한빛");
+var geodude = new User("꼬마돌","몸통박치기","모래뿌리기","지진","돌떨구기");
+var flareon = new User("부스터","울음소리","불꽃세례","애교부리기","불꽃엄니");
+var bellsprout = new User("모다피","덩굴채찍","김밥말이","잎날가르기","용해액");
+var machop = new User("알통몬","안다리걸기","겁나는얼굴","괴력","지구던지기");
 
 
-export {eevee,pikachu,meowth,pidgeot,snorlax,gengar,squirtle,bulbasaur,snorunt,charizard,gyarados,alakazam,koffing,rattata,magnemite,staraptor,blastoise,bidoof,roselia,quickAttack,ironTail,thunderbolt,thunderWave,tackle,tailWhip,growl,fakeOut,payDay,slash,wingAttack,braveBird,scaryFace,yawn,earthquake,bodySlam,hyperBeam,confuseRay,curse,toxic,lick,bubbleBeam,waterGun,hydroPump,sandAttack,sweetScent,vineWhip,razorLeaf,solarBeam,iceBeam,icyWind,iceFang,blizzard,flamethrower,aerialAce,crunch,psychic,psybeam,kinesis,confusion,selfdestruct,explosion}
+export {eevee,pikachu,meowth,pidgeot,snorlax,gengar,squirtle,bulbasaur,snorunt,charizard,gyarados,alakazam,koffing,rattata,magnemite,staraptor,blastoise,bidoof,roselia,quickAttack,ironTail,thunderbolt,thunderWave,tackle,tailWhip,growl,fakeOut,payDay,slash,wingAttack,braveBird,scaryFace,yawn,earthquake,bodySlam,hyperBeam,confuseRay,curse,toxic,lick,bubbleBeam,waterGun,hydroPump,sandAttack,sweetScent,vineWhip,razorLeaf,solarBeam,iceBeam,icyWind,iceFang,blizzard,flamethrower,aerialAce,crunch,psychic,psybeam,kinesis,confusion,selfdestruct,explosion,chikorita,zubat,geodude,flareon,bellsprout,machop,magicalLeaf,supersonic,leechLife,bite,rockThrow,ember,charm,fireFang,$wrap,acid,lowKick,strength,seismicToss}
