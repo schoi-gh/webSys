@@ -618,13 +618,13 @@ FirePunch.prototype.execute = function() {
     console.log('[로켓단에게 %d 불꽃펀치!]', firePunch.damage);
 }
 
-// User
-function User(pokemonName,skill1,skill2,skill3,skill4) {
+// Pokemon
+function Pokemon(pokemonName,skill1,skill2,skill3,skill4) {
     this.pokemonName = pokemonName
     this.skillslot = [skill1,skill2,skill3,skill4];
 }
 
-User.prototype.setSkill = function (skill) {
+Pokemon.prototype.setSkill = function (skill) {
     if (this.skillslot.indexOf(skill.skillName) !== -1) {
         this.skill = skill
     }
@@ -633,7 +633,7 @@ User.prototype.setSkill = function (skill) {
     }
 }
 
-User.prototype.execute = function() {
+Pokemon.prototype.execute = function() {
     console.log(this.skill)
     this.skill.execute()
     actionToTeamRocket.notifyEnemy(this);  // Observer.js의 notifyFlies()를 실행
@@ -697,38 +697,38 @@ var strength = new Strength();
 var seismicToss = new SeismicToss();
 var firePunch = new FirePunch();
 
-// User : pokemon
-var eevee = new User("이브이","몸통박치기","전광석화","꼬리흔들기","울음소리");
-var pikachu = new User("피카츄","전광석화","아이언테일","10만볼트","전기자석파");
-var persian = new User("페르시온","속이다","울음소리","고양이돈받기","베어가르기");
-var pidgeot = new User("피죤투","전광석화","날개치기","브레이브버드","겁나는얼굴");
-var snorlax = new User("잠만보","하품","지진","누르기","파괴광선");
-var gengar = new User("팬텀","이상한빛","저주","맹독","핥기");
-var squirtle = new User("꼬북이","거품광선","물대포","하이드로펌프","모래뿌리기");
-var bulbasaur = new User("이상해씨","달콤한향기","덩쿨채찍","잎날가르기","솔라빔");
-var snorunt = new User("눈꼬마","냉동빔","얼다바람","얼음엄니","눈보라");
-var charizard = new User("리자몽","겁나는얼굴","화염방사","파괴광선","공중날기");
-var gyarados = new User("갸라도스","깨물어부수기","하이드로펌프","겁나는얼굴","파괴광선");
-var alakazam = new User("후딘","사이코키네시스","환상빔","숟가락휘기","염동력");
-var koffing = new User("또가스","자폭","대폭발","맹독","모래뿌리기");
-var rattata = new User("꼬렛","꼬리흔들기","몸통박치기","울음소리","전광석화");
-var magnemite = new User("코일","10만볼트","전기자석파","울음소리","파괴광선");
-var staraptor = new User("찌르호크","브레이브버드","날개치기","베어가르기","겁나는얼굴");
-var blastoise = new User("거북왕","지진","거품광선","하이드로펌프","파괴광선");
-var bidoof = new User("비버니","울음소리","꼬리흔들기","몸통박치기","전광석화");
-var roselia = new User("로젤리아","달콤한향기","잎날가르기","솔라빔","모래뿌리기");
-var chikorita = new User("치코리타","잎날가르기","솔라빔","메지컬리프","울음소리")
-var zubat = new User("주뱃","초음파","흡혈","물기","이상한빛");
-var geodude = new User("꼬마돌","몸통박치기","모래뿌리기","지진","돌떨구기");
-var flareon = new User("부스터","울음소리","불꽃세례","애교부리기","불꽃엄니");
-var bellsprout = new User("모다피","덩굴채찍","김밥말이","잎날가르기","용해액");
-var machop = new User("알통몬","안다리걸기","겁나는얼굴","괴력","지구던지기");
-var slowpoke = new User("야돈","용해액","몸통박치기","하품","울음소리");
-var growlithe = new User("가디","불꽃세례","겁나는얼굴","화염방사","깨물어부수기");
-var gardevoir = new User("가디안","애교부리기","염동력","사이코키네시스","환상빔");
-var machoke = new User("근육몬","지구던지기","겁나는얼굴","괴력","불꽃펀치");
-var butterfree = new User("버터플","초음파","몸통박치기","환상빔","염동력");
-var arbok = new User("아보크","용해액","김밥말이","물기","깨물어부수기");
+// Pokemon : pokemon
+var eevee = new Pokemon("이브이","몸통박치기","전광석화","꼬리흔들기","울음소리");
+var pikachu = new Pokemon("피카츄","전광석화","아이언테일","10만볼트","전기자석파");
+var persian = new Pokemon("페르시온","속이다","울음소리","고양이돈받기","베어가르기");
+var pidgeot = new Pokemon("피죤투","전광석화","날개치기","브레이브버드","겁나는얼굴");
+var snorlax = new Pokemon("잠만보","하품","지진","누르기","파괴광선");
+var gengar = new Pokemon("팬텀","이상한빛","저주","맹독","핥기");
+var squirtle = new Pokemon("꼬북이","거품광선","물대포","하이드로펌프","모래뿌리기");
+var bulbasaur = new Pokemon("이상해씨","달콤한향기","덩쿨채찍","잎날가르기","솔라빔");
+var snorunt = new Pokemon("눈꼬마","냉동빔","얼다바람","얼음엄니","눈보라");
+var charizard = new Pokemon("리자몽","겁나는얼굴","화염방사","파괴광선","공중날기");
+var gyarados = new Pokemon("갸라도스","깨물어부수기","하이드로펌프","겁나는얼굴","파괴광선");
+var alakazam = new Pokemon("후딘","사이코키네시스","환상빔","숟가락휘기","염동력");
+var koffing = new Pokemon("또가스","자폭","대폭발","맹독","모래뿌리기");
+var rattata = new Pokemon("꼬렛","꼬리흔들기","몸통박치기","울음소리","전광석화");
+var magnemite = new Pokemon("코일","10만볼트","전기자석파","울음소리","파괴광선");
+var staraptor = new Pokemon("찌르호크","브레이브버드","날개치기","베어가르기","겁나는얼굴");
+var blastoise = new Pokemon("거북왕","지진","거품광선","하이드로펌프","파괴광선");
+var bidoof = new Pokemon("비버니","울음소리","꼬리흔들기","몸통박치기","전광석화");
+var roselia = new Pokemon("로젤리아","달콤한향기","잎날가르기","솔라빔","모래뿌리기");
+var chikorita = new Pokemon("치코리타","잎날가르기","솔라빔","메지컬리프","울음소리")
+var zubat = new Pokemon("주뱃","초음파","흡혈","물기","이상한빛");
+var geodude = new Pokemon("꼬마돌","몸통박치기","모래뿌리기","지진","돌떨구기");
+var flareon = new Pokemon("부스터","울음소리","불꽃세례","애교부리기","불꽃엄니");
+var bellsprout = new Pokemon("모다피","덩굴채찍","김밥말이","잎날가르기","용해액");
+var machop = new Pokemon("알통몬","안다리걸기","겁나는얼굴","괴력","지구던지기");
+var slowpoke = new Pokemon("야돈","용해액","몸통박치기","하품","울음소리");
+var growlithe = new Pokemon("가디","불꽃세례","겁나는얼굴","화염방사","깨물어부수기");
+var gardevoir = new Pokemon("가디안","애교부리기","염동력","사이코키네시스","환상빔");
+var machoke = new Pokemon("근육몬","지구던지기","겁나는얼굴","괴력","불꽃펀치");
+var butterfree = new Pokemon("버터플","초음파","몸통박치기","환상빔","염동력");
+var arbok = new Pokemon("아보크","용해액","김밥말이","물기","깨물어부수기");
 
 
 export {eevee,pikachu,persian,pidgeot,snorlax,gengar,squirtle,bulbasaur,snorunt,charizard,gyarados,alakazam,koffing,rattata,magnemite,staraptor,blastoise,bidoof,roselia,quickAttack,ironTail,thunderbolt,thunderWave,tackle,tailWhip,growl,fakeOut,payDay,slash,wingAttack,braveBird,scaryFace,yawn,earthquake,bodySlam,hyperBeam,confuseRay,curse,toxic,lick,bubbleBeam,waterGun,hydroPump,sandAttack,sweetScent,vineWhip,razorLeaf,solarBeam,iceBeam,icyWind,iceFang,blizzard,flamethrower,aerialAce,crunch,psychic,psybeam,kinesis,confusion,selfdestruct,explosion,chikorita,zubat,geodude,flareon,bellsprout,machop,magicalLeaf,supersonic,leechLife,bite,rockThrow,ember,charm,fireFang,$wrap,acid,lowKick,strength,seismicToss,firePunch,slowpoke,growlithe,gardevoir,machoke,butterfree,arbok}
