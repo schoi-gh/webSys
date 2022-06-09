@@ -11,9 +11,9 @@ class Tackle extends Skill {
     constructor() {
         super();
         this.skillName = "몸통박치기";
+        this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
     }
     execute() {
-        this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
         console.log('[로켓단에게 %d 몸통박치기!]', tackle.damage);
     }
 }
@@ -24,9 +24,9 @@ class HyperBeam extends Skill {
     constructor() {
         super();
         this.skillName = "파괴광선";
+        this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
     }
     execute() {
-        this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
         console.log('[로켓단에게 %d 파괴광선!]', hyperBeam.damage);
     }
 }
@@ -37,9 +37,9 @@ class QuickAttack extends Skill {
     constructor() {
         super();
         this.skillName = "전광석화";
+        this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
     }
     execute() {
-        this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
         console.log('[로켓단에게 %d 전광석화!]', quickAttack.damage);
     }
 }
@@ -50,9 +50,9 @@ class IronTail extends Skill {
     constructor() {
         super();
         this.skillName = "아이언테일";
+        this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
     }
     execute() {
-        this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
         console.log('[로켓단에게 %d 아이언테일!]', ironTail.damage);
     }
 }
@@ -63,9 +63,9 @@ class Thunderbolt extends Skill {
     constructor() {
         super();
         this.skillName = "10만볼트";
+        this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
     }
     execute() {
-        this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
         console.log('[로켓단에게 %d 10만볼트!]', thunderbolt.damage);
     }
 }
@@ -76,10 +76,9 @@ class ThunderWave extends Skill {
     constructor() {
         super();
         this.skillName = "전기자석파";
-        this.downdef;
+        this.downdef = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
     }
     execute() {
-        this.downdef = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
         console.log('[로켓단에게 %d 전기자석파!]', thunderWave.downdef);
     }
 }
@@ -90,10 +89,9 @@ class TailWhip extends Skill {
     constructor() {
         super();
         this.skillName = "꼬리흔들기";
-        this.downdef;
+        this.downdef = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
     }
     execute() {
-        this.downdef = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
         console.log('[로켓단에게 %d 꼬리흔들기!]', tailWhip.downdef);
     }
 }
@@ -104,10 +102,9 @@ class Growl extends Skill {
     constructor() {
         super();
         this.skillName = "울음소리";
-        this.downdef;
+        this.downdef = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
     }
     execute() {
-        this.downdef = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
         console.log('[로켓단에게 %d 울음소리!]', growl.downdef);
     }
 }
@@ -118,9 +115,9 @@ class FakeOut extends Skill {
     constructor() {
         super();
         this.skillName = "속이다";
+        this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
     }
     execute() {
-        this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
         console.log('[로켓단에게 %d 속이다!]', fakeOut.damage);
     }
 }
@@ -131,9 +128,9 @@ class PayDay extends Skill {
     constructor() {
         super();
         this.skillName = "고양이돈받기";
+        this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
     }
     execute() {
-        this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
         console.log('[로켓단에게 %d 고양이돈받기!]', payDay.damage);
     }
 }
@@ -144,9 +141,9 @@ class Slash extends Skill {
     constructor() {
         super();
         this.skillName = "베어가르기";
+        this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
     }
     execute() {
-        this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
         console.log('[로켓단에게 %d 베어가르기!]', slash.damage);
     }
 }
@@ -157,9 +154,9 @@ class WingAttack extends Skill {
     constructor() {
         super();
         this.skillName = "날개치기";
+        this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
     }
     execute() {
-        this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
         console.log('[로켓단에게 %d 날개치기!]', wingAttack.damage);
     }
 }
@@ -170,9 +167,9 @@ class BraveBird extends Skill {
     constructor() {
         super();
         this.skillName = "브레이브버드";
+        this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
     }
     execute() {
-        this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
         console.log('[로켓단에게 %d 브레이브버드!]', braveBird.damage);
     }
 }
@@ -183,10 +180,9 @@ class ScaryFace extends Skill {
     constructor() {
         super();
         this.skillName = "겁나는얼굴";
-        this.downdef;
+        this.downdef = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
     }
     execute() {
-        this.downdef = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
         console.log('[로켓단에게 %d 겁나는얼굴!]', scaryFace.downdef);
     }
 }
@@ -196,10 +192,9 @@ class Yawn extends Skill {
     constructor() {
         super();
         this.skillName = "하품";
-        this.downdef;
+        this.downdef = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
     }
     execute() {
-        this.downdef = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
         console.log('[로켓단에게 %d 하품!]', yawn.downdef);
     }
 }
@@ -210,9 +205,9 @@ class Earthquake extends Skill {
     constructor() {
         super();
         this.skillName = "지진";
+        this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
     }
     execute() {
-        this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
         console.log('[로켓단에게 %d 지진!]', earthquake.damage);
     }
 }
@@ -223,9 +218,9 @@ class BodySlam extends Skill {
     constructor() {
         super();
         this.skillName = "누르기";
+        this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
     }
     execute() {
-        this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
         console.log('[로켓단에게 %d 누르기!]', bodySlam.damage);
     }
 }
@@ -236,10 +231,9 @@ class ConfuseRay extends Skill {
     constructor() {
         super();
         this.skillName = "이상한빛";
-        this.downdef;
+        this.downdef = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
     }
     execute() {
-        this.downdef = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
         console.log('[로켓단에게 %d 이상한빛!]', confuseRay.downdef);
     }
 }
@@ -250,10 +244,9 @@ class Curse extends Skill {
     constructor() {
         super();
         this.skillName = "저주";
-        this.downdef;
+        this.downdef = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
     }
     execute() {
-        this.downdef = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
         console.log('[로켓단에게 %d 저주!]', curse.downdef);
     }
 }
@@ -264,9 +257,9 @@ class Toxic extends Skill {
     constructor() {
         super();
         this.skillName = "맹독";
+        this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
     }
     execute() {
-        this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
         console.log('[로켓단에게 %d 맹독!]', toxic.damage);
     }
 }
@@ -277,10 +270,9 @@ class Lick extends Skill {
     constructor() {
         super();
         this.skillName = "핥기";
-        this.downdef;
+        this.downdef = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
     }
     execute() {
-        this.downdef = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
         console.log('[로켓단에게 %d 핥기!]', lick.downdef);
     }
 }
@@ -291,9 +283,9 @@ class BubbleBeam extends Skill {
     constructor() {
         super();
         this.skillName = "거품광선";
+        this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
     }
     execute() {
-        this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
         console.log('[로켓단에게 %d 거품광선!]', bubbleBeam.damage);
     }
 }
@@ -304,9 +296,9 @@ class WaterGun extends Skill {
     constructor() {
         super();
         this.skillName = "물대포";
+        this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
     }
     execute() {
-        this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
         console.log('[로켓단에게 %d 물대포!]', waterGun.damage);
     }
 }
@@ -317,9 +309,9 @@ class HydroPump extends Skill {
     constructor() {
         super();
         this.skillName = "하이드로펌프";
+        this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
     }
     execute() {
-        this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
         console.log('[로켓단에게 %d 하이드로펌프!]', hydroPump.damage);
     }
 }
@@ -330,10 +322,9 @@ class SandAttack extends Skill {
     constructor() {
         super();
         this.skillName = "모래뿌리기";
-        this.downdef;
+        this.downdef = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
     }
     execute() {
-        this.downdef = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
         console.log('[로켓단에게 %d 모래뿌리기!]', sandAttack.downdef);
     }
 }
@@ -344,10 +335,9 @@ class SweetScent extends Skill {
     constructor() {
         super();
         this.skillName = "달콤한향기";
-        this.downdef;
+        this.downdef = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
     }
     execute() {
-        this.downdef = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
         console.log('[로켓단에게 %d 달콤한향기!]', sweetScent.downdef);
     }
 }
@@ -358,9 +348,9 @@ class VineWhip extends Skill {
     constructor() {
         super();
         this.skillName = "덩쿨채찍";
+        this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
     }
     execute() {
-        this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
         console.log('[로켓단에게 %d 덩쿨채찍!]', vineWhip.damage);
     }
 }
@@ -371,9 +361,9 @@ class RazorLeaf extends Skill {
     constructor() {
         super();
         this.skillName = "잎날가르기";
+        this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
     }
     execute() {
-        this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
         console.log('[로켓단에게 %d 잎날가르기!]', razorLeaf.damage);
     }
 }
@@ -384,9 +374,9 @@ class SolarBeam extends Skill {
     constructor() {
         super();
         this.skillName = "솔라빔";
+        this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
     }
     execute() {
-        this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
         console.log('[로켓단에게 %d 솔라빔!]', solarBeam.damage);
     }
 }
@@ -397,9 +387,9 @@ class IceBeam extends Skill {
     constructor() {
         super();
         this.skillName = "냉동빔";
+        this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
     }
     execute() {
-        this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
         console.log('[로켓단에게 %d 냉동빔!]', iceBeam.damage);
     }
 }
@@ -410,9 +400,9 @@ class IcyWind extends Skill {
     constructor() {
         super();
         this.skillName = "얼다바람";
+        this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
     }
     execute() {
-        this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
         console.log('[로켓단에게 %d 얼다바람!]', icyWind.damage);
     }
 }
@@ -423,9 +413,9 @@ class IceFang extends Skill {
     constructor() {
         super();
         this.skillName = "얼음엄니";
+        this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
     }
     execute() {
-        this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
         console.log('[로켓단에게 %d 얼음엄니!]', iceFang.damage);
     }
 }
@@ -436,9 +426,9 @@ class Blizzard extends Skill {
     constructor() {
         super();
         this.skillName = "눈보라";
+        this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
     }
     execute() {
-        this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
         console.log('[로켓단에게 %d 눈보라!]', blizzard.damage);
     }
 }
@@ -449,9 +439,9 @@ class Flamethrower extends Skill {
     constructor() {
         super();
         this.skillName = "화염방사";
+        this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
     }
     execute() {
-        this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
         console.log('[로켓단에게 %d 화염방사!]', flamethrower.damage);
     }
 }
@@ -462,9 +452,9 @@ class AerialAce extends Skill {
     constructor() {
         super();
         this.skillName = "제비반환";
+        this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
     }
     execute() {
-        this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
         console.log('[로켓단에게 %d 제비반환!]', aerialAce.damage);
     }
 }
@@ -475,9 +465,9 @@ class Crunch extends Skill {
     constructor() {
         super();
         this.skillName = "깨물어부수기";
+        this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
     }
     execute() {
-        this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
         console.log('[로켓단에게 %d 깨물어부수기!]', crunch.damage);
     }
 }
@@ -488,9 +478,9 @@ class Psychic extends Skill {
     constructor() {
         super();
         this.skillName = "사이코키네시스";
+        this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
     }
     execute() {
-        this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
         console.log('[로켓단에게 %d 사이코키네시스!]', psychic.damage);
     }
 }
@@ -501,9 +491,9 @@ class Psybeam extends Skill {
     constructor() {
         super();
         this.skillName = "환상빔";
+        this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
     }
     execute() {
-        this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
         console.log('[로켓단에게 %d 환상빔!]', psybeam.damage);
     }
 }
@@ -514,10 +504,9 @@ class Kinesis extends Skill {
     constructor() {
         super();
         this.skillName = "숟가락휘기";
-        this.downdef;
+        this.downdef = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
     }
     execute() {
-        this.downdef = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
         console.log('[로켓단에게 %d 숟가락휘기!]', kinesis.downdef);
     }
 }
@@ -528,9 +517,9 @@ class Confusion extends Skill {
     constructor() {
         super();
         this.skillName = "염동력";
+        this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
     }
     execute() {
-        this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
         console.log('[로켓단에게 %d 염동력!]', confusion.damage);
     }
 }
@@ -541,9 +530,9 @@ class Selfdestruct extends Skill {
     constructor() {
         super();
         this.skillName = "자폭";
+        this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
     }
     execute() {
-        this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
         console.log('[로켓단에게 %d 자폭!]', selfdestruct.damage);
     }
 }
@@ -554,9 +543,9 @@ class Explosion extends Skill {
     constructor() {
         super();
         this.skillName = "대폭발";
+        this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
     }
     execute() {
-        this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
         console.log('[로켓단에게 %d 대폭발!]', explosion.damage);
     }
 }
@@ -566,9 +555,9 @@ class MagicalLeaf extends Skill {
     constructor() {
         super();
         this.skillName = "메지컬리프";
+        this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
     }
     execute() {
-        this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
         console.log('[로켓단에게 %d 메지컬리프!]', magicalLeaf.damage);
     }
 }
@@ -579,10 +568,9 @@ class Supersonic extends Skill {
     constructor() {
         super();
         this.skillName = "초음파";
-        this.downdef;
+        this.downdef = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
     }
     execute() {
-        this.downdef = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
         console.log('[로켓단에게 %d 초음파!]', supersonic.downdef);
     }
 }
@@ -593,9 +581,9 @@ class LeechLife extends Skill {
     constructor() {
         super();
         this.skillName = "흡혈";
+        this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
     }
     execute() {
-        this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
         console.log('[로켓단에게 %d 흡혈!]', leechLife.damage);
     }
 }
@@ -606,9 +594,9 @@ class Bite extends Skill {
     constructor() {
         super();
         this.skillName = "물기";
+        this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
     }
     execute() {
-        this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
         console.log('[로켓단에게 %d 물기!]', bite.damage);
     }
 }
@@ -619,9 +607,9 @@ class RockThrow extends Skill {
     constructor() {
         super();
         this.skillName = "돌떨구기";
+        this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
     }
     execute() {
-        this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
         console.log('[로켓단에게 %d 돌떨구기!]', rockThrow.damage);
     }
 }
@@ -632,9 +620,9 @@ class Ember extends Skill {
     constructor() {
         super();
         this.skillName = "불꽃세례";
+        this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
     }
     execute() {
-        this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
         console.log('[로켓단에게 %d 불꽃세례!]', ember.damage);
     }
 }
@@ -645,10 +633,9 @@ class Charm extends Skill {
     constructor() {
         super();
         this.skillName = "애교부리기";
-        this.downdef;
+        this.downdef = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
     }
     execute() {
-        this.downdef = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
         console.log('[로켓단에게 %d 애교부리기!]', charm.downdef);
     }
 }
@@ -659,9 +646,9 @@ class FireFang extends Skill {
     constructor() {
         super();
         this.skillName = "불꽃엄니";
+        this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
     }
     execute() {
-        this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
         console.log('[로켓단에게 %d 불꽃엄니!]', fireFang.damage);
     }
 }
@@ -672,9 +659,9 @@ class Wrap extends Skill {
     constructor() {
         super();
         this.skillName = "김밥말이";
+        this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
     }
     execute() {
-        this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
         console.log('[로켓단에게 %d 김밥말이!]', $wrap.damage);
     }
 }
@@ -685,9 +672,9 @@ class Acid extends Skill {
     constructor() {
         super();
         this.skillName = "용해액";
+        this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
     }
     execute() {
-        this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
         console.log('[로켓단에게 %d 용해액!]', acid.damage);
     }
 }
@@ -698,9 +685,9 @@ class LowKick extends Skill {
     constructor() {
         super();
         this.skillName = "안다리걸기";
+        this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
     }
     execute() {
-        this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
         console.log('[로켓단에게 %d 안다리걸기!]', lowKick.damage);
     }
 }
@@ -711,9 +698,9 @@ class Strength extends Skill {
     constructor() {
         super();
         this.skillName = "괴력";
+        this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
     }
     execute() {
-        this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
         console.log('[로켓단에게 %d 괴력!]', strength.damage);
     }
 }
@@ -724,9 +711,9 @@ class SeismicToss extends Skill {
     constructor() {
         super();
         this.skillName = "지구던지기";
+        this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
     }
     execute() {
-        this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
         console.log('[로켓단에게 %d 지구던지기!]', seismicToss.damage);
     }
 }
@@ -737,9 +724,9 @@ class FirePunch extends Skill {
     constructor() {
         super();
         this.skillName = "불꽃펀치";
+        this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
     }
     execute() {
-        this.damage = Math.floor(Math.random() * ((-10) - (-1)) + (-1));
         console.log('[로켓단에게 %d 불꽃펀치!]', firePunch.damage);
     }
 }
