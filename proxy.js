@@ -2,12 +2,12 @@ import {actionToTeamRocket} from "./Observer.js";
 
 function DBInterface(){}
 
-DBInterface.prototype.request = function(){}
+DBInterface.prototype.requestNextTurn = function(){}
 
 
 function DataUpdate() {}
 
-DataUpdate.prototype.request = function() {
+DataUpdate.prototype.requestNextTurn = function() {
     console.log("2. 다음 턴을 진행하기 위해 DB에 접근하여 데이터를 update 후, read함")
 }
 
@@ -17,9 +17,9 @@ function DataUpdateProxy(dataUpdate) {
     this.dataUpdate = dataUpdate;
 }
 
-DataUpdateProxy.prototype.request = function() {
+DataUpdateProxy.prototype.requestNextTurn = function() {
     this.beforeProc();
-    this.dataUpdate.request();
+    this.dataUpdate.requestNextTurn();
     this.afterProc();
 }
 
