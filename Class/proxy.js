@@ -2,14 +2,14 @@ import {actionToTeamRocket} from "./Observer.js";
 
 class DBInterface {
     constructor() { }
-    request() { }
+    requestNextTurn() { }
 }
 
 
 
 class DataUpdate {
     constructor() { }
-    request() {
+    requestNextTurn() {
         console.log("2. 다음 턴을 진행하기 위해 DB에 접근하여 데이터를 update 후, read함");
     }
 }
@@ -21,9 +21,9 @@ class DataUpdateProxy extends DBInterface {
         super();
         this.dataUpdate = dataUpdate;
     }
-    request() {
+    requestNextTurn() {
         this.beforeProc();
-        this.dataUpdate.request();
+        this.dataUpdate.requestNextTurn();
         this.afterProc();
     }
     beforeProc() {

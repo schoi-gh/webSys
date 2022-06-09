@@ -14,154 +14,154 @@ actionToTeamRocket.attach(wobbuffet);
 eevee.setSkill(tackle)
 eevee.execute();
 console.log("---------------------");
-dataUpdateProxy.request();
+dataUpdateProxy.requestNextTurn();
 
 pikachu.setSkill(thunderbolt)
 pikachu.execute(); // cold
 console.log("---------------------");
-dataUpdateProxy.request();
+dataUpdateProxy.requestNextTurn();
 
 persian.setSkill(payDay)
 persian.execute(); // cold
 console.log("---------------------");
-dataUpdateProxy.request();
+dataUpdateProxy.requestNextTurn();
 
 pidgeot.setSkill(wingAttack)
 pidgeot.execute();
 console.log("---------------------");
-dataUpdateProxy.request();
+dataUpdateProxy.requestNextTurn();
 
 snorlax.setSkill(yawn)
 snorlax.execute();
 console.log("---------------------");
-dataUpdateProxy.request();
+dataUpdateProxy.requestNextTurn();
 
 gengar.setSkill(lick)
 gengar.execute();
 console.log("---------------------");
-dataUpdateProxy.request();
+dataUpdateProxy.requestNextTurn();
 
 squirtle.setSkill(bubbleBeam)
 squirtle.execute();
 console.log("---------------------");
-dataUpdateProxy.request();
+dataUpdateProxy.requestNextTurn();
 
 bulbasaur.setSkill(vineWhip)
 bulbasaur.execute();
 console.log("---------------------");
-dataUpdateProxy.request();
+dataUpdateProxy.requestNextTurn();
 
 snorunt.setSkill(blizzard)
 snorunt.execute();
 console.log("---------------------");
-dataUpdateProxy.request();
+dataUpdateProxy.requestNextTurn();
 
 charizard.setSkill(flamethrower)
 charizard.execute();
 console.log("---------------------");
-dataUpdateProxy.request();
+dataUpdateProxy.requestNextTurn();
 
 gyarados.setSkill(crunch)
 gyarados.execute();
 console.log("---------------------");
-dataUpdateProxy.request();
+dataUpdateProxy.requestNextTurn();
 
 alakazam.setSkill(kinesis)
 alakazam.execute();
 console.log("---------------------");
-dataUpdateProxy.request();
+dataUpdateProxy.requestNextTurn();
 
 koffing.setSkill(explosion)
 koffing.execute();
 console.log("---------------------");
-dataUpdateProxy.request();
+dataUpdateProxy.requestNextTurn();
 
 rattata.setSkill(tailWhip)
 rattata.execute();
 console.log("---------------------");
-dataUpdateProxy.request();
+dataUpdateProxy.requestNextTurn();
 
 magnemite.setSkill(thunderWave)
 magnemite.execute();
 console.log("---------------------");
-dataUpdateProxy.request();
+dataUpdateProxy.requestNextTurn();
 
 staraptor.setSkill(braveBird)
 staraptor.execute();
 console.log("---------------------");
-dataUpdateProxy.request();
+dataUpdateProxy.requestNextTurn();
 
 blastoise.setSkill(earthquake)
 blastoise.execute();
 console.log("---------------------");
-dataUpdateProxy.request();
+dataUpdateProxy.requestNextTurn();
 
 bidoof.setSkill(growl)
 bidoof.execute();
 console.log("---------------------");
-dataUpdateProxy.request();
+dataUpdateProxy.requestNextTurn();
 
 roselia.setSkill(razorLeaf)
 roselia.execute();
 console.log("---------------------");
-dataUpdateProxy.request();
+dataUpdateProxy.requestNextTurn();
 
 chikorita.setSkill(magicalLeaf)
 chikorita.execute();
 console.log("---------------------");
-dataUpdateProxy.request();
+dataUpdateProxy.requestNextTurn();
 
 zubat.setSkill(leechLife)
 zubat.execute();
 console.log("---------------------");
-dataUpdateProxy.request();
+dataUpdateProxy.requestNextTurn();
 
 geodude.setSkill(rockThrow)
 geodude.execute();
 console.log("---------------------");
-dataUpdateProxy.request();
+dataUpdateProxy.requestNextTurn();
 
 flareon.setSkill(ember)
 flareon.execute();
 console.log("---------------------");
-dataUpdateProxy.request();
+dataUpdateProxy.requestNextTurn();
 
 bellsprout.setSkill($wrap)
 bellsprout.execute();
 console.log("---------------------");
-dataUpdateProxy.request();
+dataUpdateProxy.requestNextTurn();
 
 machop.setSkill(lowKick)
 machop.execute();
 console.log("---------------------");
-dataUpdateProxy.request();
+dataUpdateProxy.requestNextTurn();
 
 slowpoke.setSkill(acid)
 slowpoke.execute();
 console.log("---------------------");
-dataUpdateProxy.request();
+dataUpdateProxy.requestNextTurn();
 
 growlithe.setSkill(flamethrower)
 growlithe.execute();
 console.log("---------------------");
-dataUpdateProxy.request();
+dataUpdateProxy.requestNextTurn();
 
 gardevoir.setSkill(psybeam)
 gardevoir.execute();
 console.log("---------------------");
-dataUpdateProxy.request();
+dataUpdateProxy.requestNextTurn();
 
 machoke.setSkill(seismicToss)
 machoke.execute();
 console.log("---------------------");
-dataUpdateProxy.request();
+dataUpdateProxy.requestNextTurn();
 
 butterfree.setSkill(confusion)
 butterfree.execute();
 console.log("---------------------");
-dataUpdateProxy.request();
+dataUpdateProxy.requestNextTurn();
 
 arbok.setSkill(bite)
 arbok.execute();
 console.log("---------------------");
-dataUpdateProxy.request();
+dataUpdateProxy.requestNextTurn();
