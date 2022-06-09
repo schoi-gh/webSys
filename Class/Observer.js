@@ -30,6 +30,7 @@ class ActionToTeamRocket extends Action{
 class TeamRocket {
     constructor(name) {
         this.name = name;
+        // this.last_skill = []; //
     }
     update(Pokemon) {
         this.last_skill = [];

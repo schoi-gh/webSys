@@ -1,4 +1,6 @@
 import {actionToTeamRocket} from "./Observer.js";
+import {dataUpdateProxy} from "./proxy.js";
+
 
 
 class Skill {
@@ -750,6 +752,10 @@ class Pokemon {
         console.log(this.skill);
         this.skill.execute();
         actionToTeamRocket.notifyEnemy(this); // Observer.js의 notifyEnemy()를 실행
+    }
+    requestNextTurn() {
+        console.log("---------------------");
+        dataUpdateProxy.requestNextTurn();
     }
 }
 
