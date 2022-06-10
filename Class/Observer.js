@@ -10,7 +10,6 @@ class ActionToTeamRocket extends Action{
     constructor() {
         super();
         this.enemy = [];
-        this.detachEnemy = [];
     }
     attach(member) {
         this.enemy.push(member);

@@ -7,7 +7,6 @@ Action.prototype.notifyMobs = function(){}
 function ActionToTeamRocket() {
     this.prototype = new Action();
     this.enemy = [];
-    this.detachEnemy = [];
 }
 
 ActionToTeamRocket.prototype.attach = function(member) {

@@ -1,6 +1,6 @@
 import {actionToTeamRocket} from "./Observer.js";
 
-class DBInterface {
+class NextTurnButton {
     constructor() { }
     requestNextTurn() { }
 }
@@ -16,7 +16,7 @@ class DataUpdate {
 
 
 
-class DataUpdateProxy extends DBInterface {
+class DataUpdateProxy extends NextTurnButton {
     constructor(dataUpdate) {
         super();
         this.dataUpdate = dataUpdate;
