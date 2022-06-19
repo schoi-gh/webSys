@@ -639,6 +639,12 @@ Pokemon.prototype.execute = function() {
     actionToTeamRocket.notifyEnemy(this);  // Observer.js의 notifyEnemy()를 실행
 };
 
+
+
+
+
+
+
 // Skill
 var tackle = new Tackle();
 var quickAttack = new QuickAttack();
