@@ -1,4 +1,4 @@
-import {actionToTeamRocket} from "./Observer.js";
+import {actionToTeamRocket, meowthRobot} from "./Observer.js";
 
 function DBInterface(){}
 
@@ -18,8 +18,14 @@ function DataUpdateProxy(dataUpdate) {
 }
 
 DataUpdateProxy.prototype.requestNextTurn = function() {
-    this.beforeProc();
-    this.dataUpdate.requestNextTurn();
+    switch (meowthRobot.avoidCount) {
+        case 0:
+            this.beforeProc();
+            this.dataUpdate.requestNextTurn();
+        case 1:
+            console.log("1. 나옹로봇이 공격을 회피합니다")
+            meowthRobot.avoidCount = 0;
+    };
     this.afterProc();
 }
 

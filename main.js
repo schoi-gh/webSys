@@ -15,6 +15,7 @@ meowthRobot.fly();
 eevee.setSkill(tackle)
 eevee.execute();
 console.log("---------------------");
+meowthRobot.avoidAttack();
 dataUpdateProxy.requestNextTurn();
 
 pikachu.setSkill(thunderbolt)
@@ -152,14 +153,15 @@ gardevoir.execute();
 console.log("---------------------");
 dataUpdateProxy.requestNextTurn();
 
-
 machoke.setSkill(seismicToss)
 machoke.execute();
 console.log("---------------------");
 dataUpdateProxy.requestNextTurn();
 
+
 // 로봇 파괴
 meowthRobot.destroyRobot();
+
 
 butterfree.setSkill(confusion)
 butterfree.execute();
@@ -168,16 +170,5 @@ dataUpdateProxy.requestNextTurn();
 
 arbok.setSkill(bite)
 arbok.execute();
-console.log("---------------------");
-dataUpdateProxy.requestNextTurn();
-
-
-booster.setSkill(firePunch)
-eevee.execute();
-console.log("---------------------");
-dataUpdateProxy.requestNextTurn();
-
-bboster.setSkill(ember)
-eevee.execute();
 console.log("---------------------");
 dataUpdateProxy.requestNextTurn();
