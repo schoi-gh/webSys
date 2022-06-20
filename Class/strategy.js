@@ -3,7 +3,9 @@ import {dataUpdateProxy} from "./proxy.js";
 
 
 class Skill {
-    constructor() { }
+    constructor() {
+        this.skillName;
+     }
     execute() { }
 }
 
