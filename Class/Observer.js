@@ -18,7 +18,7 @@ class ActionToTeamRocket extends Action{
         this.enemy = this.enemy.filter(attachedObserver => attachedObserver !== member);
     }
     notifyEnemy(Pokemon) {
-        this.enemy.forEach(member => member.update(Pokemon));
+        this.enemy.forEach(member => member.checkTeamRocketsStatus(Pokemon));
     }
 }
 
@@ -55,31 +55,38 @@ var wobbuffet = new TeamRocketPokemon("마자용");
 
 // 로봇
 class Robot extends TeamRocket {
-    constructor() { }
+    constructor() {
+        super();
+    }
 };
 class Arm extends Robot {
     constructor() {
+        super();
         this.hp = 10;
     }
 };
 class Leg extends Robot {
     constructor() {
+        super();
         this.hp = 10;
     }
 };
 class Body extends Robot  {
     constructor() {
+        super();
         this.hp = 10;
     }
 };
 class Head extends Robot {
     constructor() {
+        super();
         this.hp = 10;
     }
 };
 
 class MeowthRobot extends Robot {
     constructor() {
+        super();
         this.leftArm = new Arm;
         this.rightArm = new Arm;
         this.leftArmArmor = new Arm;
@@ -133,6 +140,6 @@ class MeowthRobot extends Robot {
 
 
 
-var meowthRobot = new MeowthRobot()
+var meowthRobot = new MeowthRobot();
 
 export {meowthRobot, actionToTeamRocket, james, jessie, wobbuffet, meowth, TeamRocket}
