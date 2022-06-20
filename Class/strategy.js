@@ -759,29 +759,8 @@ class Pokemon {
     }
 }
 
-class Machop extends Pokemon { //알통몬
-    pokemonName = Machop;
-    machopSkill() {
-        console.log("알통몬의 스킬")
-    }
-}
 
-class Machoke extends Machop { //근육몬
-    pokemonName = Machoke;
-    machokeSkill() {
-        console.log("근육몬의 스킬")
-    }
-}
 
-class Machamp extends Machoke { //괴력몬
-    pokemonName = Machamp;
-    machampSkill() {
-        console.log("괴력몬의 스킬")
-    }
-    execute() {
-
-    }
-}
 // Skill
 var tackle = new Tackle();
 var quickAttack = new QuickAttack();
@@ -872,5 +851,38 @@ var gardevoir = new Pokemon("가디안","애교부리기","염동력","사이코
 var machoke = new Pokemon("근육몬","지구던지기","겁나는얼굴","괴력","불꽃펀치");
 var butterfree = new Pokemon("버터플","초음파","몸통박치기","환상빔","염동력");
 var arbok = new Pokemon("아보크","용해액","김밥말이","물기","깨물어부수기");
+
+// 포켓몬 진화
+// 위에 Pokemon의 skillslot을 크기를 정하지 않은 array로 바꿔야함
+
+class 괴력몬 extends Pokemon {
+    constructor(pokemonName, skill1, skill2, skill3, skill4) {
+        super(pokemonName);
+        super.skillslot = [skill1, skill2, skill3, skill4]; // skillslot을 크기를 정하지 않은 array로 선언하고 스킬을 push한다
+    }
+};
+
+class 근육몬 extends 괴력몬 {
+    constructor(pokemonName, skill1, skill2, skill3, skill4) {
+        super(pokemonName);
+        super.skillslot = [skill1, skill2, skill3, skill4]; // skillslot을 크기를 정하지 않은 array로 선언하고 스킬을 push한다
+    }
+};
+
+class 알통몬 extends 근육몬 {
+    constructor(pokemonName, skill1, skill2, skill3, skill4) {
+        super(pokemonName);
+        super.skillslot = [skill1, skill2, skill3, skill4]; // skillslot을 크기를 정하지 않은 array로 선언하고 스킬을 push한다
+    }
+};
+
+var str = new 괴력몬("괴력몬","지구던지기","겁나는얼굴","괴력","집에 갈래");
+var str1 = new 근육몬("근육몬");
+var str2 = new 알통몬("알통몬");
+
+console.log(str.pokemonName);
+console.log(str.skillslot);
+console.log(str1.pokemonName);
+console.log(str2.pokemonName);
 
 export {eevee,pikachu,persian,pidgeot,snorlax,gengar,squirtle,bulbasaur,snorunt,charizard,gyarados,alakazam,koffing,rattata,magnemite,staraptor,blastoise,bidoof,roselia,quickAttack,ironTail,thunderbolt,thunderWave,tackle,tailWhip,growl,fakeOut,payDay,slash,wingAttack,braveBird,scaryFace,yawn,earthquake,bodySlam,hyperBeam,confuseRay,curse,toxic,lick,bubbleBeam,waterGun,hydroPump,sandAttack,sweetScent,vineWhip,razorLeaf,solarBeam,iceBeam,icyWind,iceFang,blizzard,flamethrower,aerialAce,crunch,psychic,psybeam,kinesis,confusion,selfdestruct,explosion,chikorita,zubat,geodude,flareon,bellsprout,machop,magicalLeaf,supersonic,leechLife,bite,rockThrow,ember,charm,fireFang,$wrap,acid,lowKick,strength,seismicToss,firePunch,slowpoke,growlithe,gardevoir,machoke,butterfree,arbok}

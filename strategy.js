@@ -622,22 +622,20 @@ FirePunch.prototype.execute = function() {
 function Pokemon(pokemonName,skill1,skill2,skill3,skill4) {
     this.pokemonName = pokemonName
     this.skillslot = [skill1,skill2,skill3,skill4];
-}
-
-Pokemon.prototype.setSkill = function (skill) {
-    if (this.skillslot.indexOf(skill.skillName) !== -1) {
-        this.skill = skill
+    this.setSkill = function (skill) {
+        if (this.skillslot.indexOf(skill.skillName) !== -1) {
+            this.skill = skill
+        }
+        else {
+            console.log("배우지 않은 스킬입니다.")
+        }
     }
-    else {
-        console.log("배우지 않은 스킬입니다.")
-    }
-}
-
-Pokemon.prototype.execute = function() {
+    this.execute = function() {
     console.log(this.skill)
     this.skill.execute()
-    actionToTeamRocket.notifyEnemy(this);  // Observer.js의 notifyEnemy()를 실행
-};
+    actionToTeamRocket.notifyEnemy(this);
+    };
+}
 
 
 
