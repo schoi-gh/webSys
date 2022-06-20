@@ -29,17 +29,16 @@ class ActionToTeamRocket extends Action{
 class TeamRocket {
     constructor(name) {
         this.name = name;
-        // this.last_skill = []; //
     }
-    update(Pokemon) {
+    checkTeamRocketsStatus(Pokemon) {
         this.last_skill = [];
-        this.last_skill.push(JSON.stringify(Pokemon)); //이부분은  this.last_skill.push(JSON.stringify(Pokemon.skill)); 로 하면 푸키몬의 모든 정보가 아니라 스킬만 들어감. 아니면 이름이랑 스킬만 푸시하면 그 두개만 들어가겠지
+        this.last_skill.push(JSON.stringify(Pokemon));
     }
 }
 
 
 
-class Syrphid extends TeamRocket{
+class TeamRocketPokemon extends TeamRocket{
     constructor(name) {
         super();
         this.name = name;
@@ -50,8 +49,90 @@ class Syrphid extends TeamRocket{
 var actionToTeamRocket = new ActionToTeamRocket();
 var james = new TeamRocket("로이");
 var jessie = new TeamRocket("로사");
-var meowth = new Syrphid("나옹");
-var wobbuffet = new Syrphid("마자용");
+var meowth = new TeamRocketPokemon("나옹");
+var wobbuffet = new TeamRocketPokemon("마자용");
 
 
-export {actionToTeamRocket, james, jessie, wobbuffet, meowth, TeamRocket}
+// 로봇
+class Robot extends TeamRocket {
+    constructor() { }
+};
+class Arm extends Robot {
+    constructor() {
+        this.hp = 10;
+    }
+};
+class Leg extends Robot {
+    constructor() {
+        this.hp = 10;
+    }
+};
+class Body extends Robot  {
+    constructor() {
+        this.hp = 10;
+    }
+};
+class Head extends Robot {
+    constructor() {
+        this.hp = 10;
+    }
+};
+
+class MeowthRobot extends Robot {
+    constructor() {
+        this.leftArm = new Arm;
+        this.rightArm = new Arm;
+        this.leftArmArmor = new Arm;
+        this.rightArmArmor = new Arm;
+        this.leftLeg = new Leg;
+        this.rightLeg = new Leg;
+        this.body = new Body;
+        this.head = new Head;
+        this.avoidCount = 0;
+    }
+    grabPokemons() {
+        console.log("포켓몬들을 납치합니다");
+        console.log("--------------------------------------------------------");
+        console.log("납치된 포켓몬들이 탈출했습니다.");
+    }
+    fly() {
+        console.log("나옹로봇이 하늘을 납니다");
+    }
+    avoidAttack() {
+        this.avoidCount++;
+    }
+    checkTeamRocketsStatus(Pokemon) {
+        if (meowthRobot.leftArm.hp === 0 && meowthRobot.rightArm.hp === 0 && meowthRobot.leftArmArmor.hp === 0 && meowthRobot.rightArmArmor.hp === 0 && meowthRobot.leftLeg.hp === 0 && meowthRobot.rightLeg.hp === 0 && meowthRobot.body.hp === 0 && meowthRobot.head.hp === 0) {
+            console.log("로봇이 펑~");
+            actionToTeamRocket.attach(james);
+            actionToTeamRocket.attach(jessie);
+            actionToTeamRocket.attach(meowth);
+            actionToTeamRocket.attach(wobbuffet);
+            actionToTeamRocket.detach(meowthRobot);
+        };
+        this.last_skill = [];
+        this.last_skill.push(JSON.stringify(Pokemon));
+    }
+    destroyRobot() {
+        console.log("자폭 버튼을 실수로 눌러버린 나옹!\n 로사 : 도대체 왜 자폭 버튼 같은걸 만든거야!!");
+        meowthRobot.leftArmArmor.hp = meowthRobot.leftArmArmor.hp - meowthRobot.leftArmArmor.hp;
+        meowthRobot.rightArmArmor.hp = meowthRobot.rightArmArmor.hp - meowthRobot.rightArmArmor.hp;
+        meowthRobot.leftArm.hp = meowthRobot.leftArm.hp - meowthRobot.leftArm.hp;
+        meowthRobot.rightArm.hp = meowthRobot.rightArm.hp - meowthRobot.rightArm.hp;
+        meowthRobot.leftLeg.hp = meowthRobot.leftLeg.hp - meowthRobot.leftLeg.hp;
+        meowthRobot.rightLeg.hp = meowthRobot.rightLeg.hp - meowthRobot.rightLeg.hp;
+        meowthRobot.body.hp = meowthRobot.body.hp - meowthRobot.body.hp;
+        meowthRobot.head.hp = meowthRobot.head.hp - meowthRobot.head.hp;
+
+        meowthRobot.checkTeamRocketsStatus();
+    }
+};
+
+
+
+
+
+
+var meowthRobot = new MeowthRobot()
+
+export {meowthRobot, actionToTeamRocket, james, jessie, wobbuffet, meowth, TeamRocket}
