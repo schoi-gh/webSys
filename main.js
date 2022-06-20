@@ -1,4 +1,4 @@
-import {bboster,booster,eevee,pikachu,persian,pidgeot,snorlax,gengar,squirtle,bulbasaur,snorunt,charizard,gyarados,alakazam,koffing,rattata,magnemite,staraptor,blastoise,bidoof,roselia,quickAttack,ironTail,thunderbolt,thunderWave,tackle,tailWhip,growl,fakeOut,payDay,slash,wingAttack,braveBird,scaryFace,yawn,earthquake,bodySlam,hyperBeam,confuseRay,curse,toxic,lick,bubbleBeam,waterGun,hydroPump,sandAttack,sweetScent,vineWhip,razorLeaf,solarBeam,iceBeam,icyWind,iceFang,blizzard,flamethrower,aerialAce,crunch,psychic,psybeam,kinesis,confusion,selfdestruct,explosion,chikorita,zubat,geodude,flareon,bellsprout,machop,magicalLeaf,supersonic,leechLife,bite,rockThrow,ember,charm,fireFang,$wrap,acid,lowKick,strength,seismicToss,firePunch,slowpoke,growlithe,gardevoir,machoke,butterfree,arbok} from "./strategy.js";
+import {eevee,pikachu,persian,pidgeot,snorlax,gengar,squirtle,bulbasaur,snorunt,charizard,gyarados,alakazam,koffing,rattata,magnemite,staraptor,blastoise,bidoof,roselia,quickAttack,ironTail,thunderbolt,thunderWave,tackle,tailWhip,growl,fakeOut,payDay,slash,wingAttack,braveBird,scaryFace,yawn,earthquake,bodySlam,hyperBeam,confuseRay,curse,toxic,lick,bubbleBeam,waterGun,hydroPump,sandAttack,sweetScent,vineWhip,razorLeaf,solarBeam,iceBeam,icyWind,iceFang,blizzard,flamethrower,aerialAce,crunch,psychic,psybeam,kinesis,confusion,selfdestruct,explosion,chikorita,zubat,geodude,flareon,bellsprout,machop,magicalLeaf,supersonic,leechLife,bite,rockThrow,ember,charm,fireFang,$wrap,acid,lowKick,strength,seismicToss,firePunch,slowpoke,growlithe,gardevoir,machoke,butterfree,arbok} from "./strategy.js";
 import {meowthRobot, actionToTeamRocket, james, jessie, wobbuffet, meowth} from "./Observer.js";
 import {dataUpdateProxy} from "./proxy.js"
 
@@ -17,8 +17,6 @@ eevee.execute();
 console.log("---------------------");
 dataUpdateProxy.requestNextTurn();
 
-
-/*
 pikachu.setSkill(thunderbolt)
 pikachu.execute(); // cold
 console.log("---------------------");
@@ -153,7 +151,7 @@ gardevoir.setSkill(psybeam)
 gardevoir.execute();
 console.log("---------------------");
 dataUpdateProxy.requestNextTurn();
-*/
+
 
 machoke.setSkill(seismicToss)
 machoke.execute();
@@ -173,7 +171,7 @@ arbok.execute();
 console.log("---------------------");
 dataUpdateProxy.requestNextTurn();
 
-/*
+
 booster.setSkill(firePunch)
 eevee.execute();
 console.log("---------------------");
@@ -183,4 +181,3 @@ bboster.setSkill(ember)
 eevee.execute();
 console.log("---------------------");
 dataUpdateProxy.requestNextTurn();
-*/
