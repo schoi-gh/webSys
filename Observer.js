@@ -65,17 +65,34 @@ function Head() {
     this.prototype = new Robot();
     this.hp = 10;
 };
+function Caterpillar() {
+    this.prototype = new Robot();
+    this.hp = 10;
+}
+function Wheel() {
+    this.prototype = new Robot();
+    this.hp = 10;
+}
+function Tail() {
+    this.prototype = new Robot();
+    this.hp = 10;
+}
+function CaptureTool() {
+    this.prototype = new Robot();
+    this.hp = 10;
+}
 
 function MeowthRobot() {
     this.prototype = new Robot();
-    this.leftArm = new Arm
-    this.rightArm = new Arm
-    this.leftArmArmor = new Arm
-    this.rightArmArmor = new Arm
-    this.leftLeg = new Leg
-    this.rightLeg = new Leg
-    this.body = new Body
-    this.head = new Head
+    this.leftArm = new Arm;
+    this.rightArm = new Arm;
+    this.leftArmArmor = new Arm;
+    this.rightArmArmor = new Arm;
+    this.leftCaterpillar = new Caterpillar;
+    this.rightCaterpillar = new Caterpillar;
+    this.body = new Body;
+    this.head = new Head;
+    this.captureTool = new CaptureTool;
     this.avoidCount = 0;
 };
 

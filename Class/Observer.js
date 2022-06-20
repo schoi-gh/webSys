@@ -83,6 +83,30 @@ class Head extends Robot {
         this.hp = 10;
     }
 };
+class Caterpillar extends Robot {
+    constructor() {
+        super();
+        this.hp = 10;
+    }
+};
+class Wheel extends Robot {
+    constructor() {
+        super();
+        this.hp = 10;
+    }
+};
+class Tail extends Robot {
+    constructor() {
+        super();
+        this.hp = 10;
+    }
+};
+class CaptureTool extends Robot {
+    constructor() {
+        super();
+        this.hp = 10;
+    }
+};
 
 class MeowthRobot extends Robot {
     constructor() {
@@ -91,10 +115,11 @@ class MeowthRobot extends Robot {
         this.rightArm = new Arm;
         this.leftArmArmor = new Arm;
         this.rightArmArmor = new Arm;
-        this.leftLeg = new Leg;
-        this.rightLeg = new Leg;
+        this.leftCaterpillar = new Caterpillar;
+        this.rightCaterpillar = new Caterpillar;
         this.body = new Body;
         this.head = new Head;
+        this.captureTool = new CaptureTool;
         this.avoidCount = 0;
     }
     grabPokemons() {
