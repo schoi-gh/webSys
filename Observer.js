@@ -111,7 +111,9 @@ MeowthRobot.prototype.avoidAttack = function() {
 }
 
 MeowthRobot.prototype.checkTeamRocketsStatus = function(Pokemon) {
-    if (meowthRobot.leftArm.hp === 0 && meowthRobot.rightArm.hp === 0 && meowthRobot.leftArmArmor.hp === 0 && meowthRobot.rightArmArmor.hp === 0 && meowthRobot.leftLeg.hp === 0 && meowthRobot.rightLeg.hp === 0 && meowthRobot.body.hp === 0 && meowthRobot.head.hp === 0) {
+    if (meowthRobot.leftArm.hp === 0 && meowthRobot.rightArm.hp === 0 && meowthRobot.leftArmArmor.hp === 0
+        && meowthRobot.rightArmArmor.hp === 0 && meowthRobot.leftCaterpillar.hp === 0
+        && meowthRobot.rightCaterpillar.hp === 0 && meowthRobot.body.hp === 0 && meowthRobot.head.hp === 0) {
         console.log("로봇이 펑~");
         actionToTeamRocket.attach(james);
         actionToTeamRocket.attach(jessie);
@@ -129,10 +131,11 @@ MeowthRobot.prototype.destroyRobot = function() {
     meowthRobot.rightArmArmor.hp = meowthRobot.rightArmArmor.hp - meowthRobot.rightArmArmor.hp;
     meowthRobot.leftArm.hp = meowthRobot.leftArm.hp - meowthRobot.leftArm.hp;
     meowthRobot.rightArm.hp = meowthRobot.rightArm.hp - meowthRobot.rightArm.hp;
-    meowthRobot.leftLeg.hp = meowthRobot.leftLeg.hp - meowthRobot.leftLeg.hp;
-    meowthRobot.rightLeg.hp = meowthRobot.rightLeg.hp - meowthRobot.rightLeg.hp;
+    meowthRobot.leftCaterpillar.hp = meowthRobot.leftCaterpillar.hp - meowthRobot.leftCaterpillar.hp;
+    meowthRobot.rightCaterpillar.hp = meowthRobot.rightCaterpillar.hp - meowthRobot.rightCaterpillar.hp;
     meowthRobot.body.hp = meowthRobot.body.hp - meowthRobot.body.hp;
     meowthRobot.head.hp = meowthRobot.head.hp - meowthRobot.head.hp;
+    meowthRobot.captureTool.hp = meowthRobot.captureTool.hp - meowthRobot.captureTool.hp;
 
     meowthRobot.checkTeamRocketsStatus();
 }

@@ -15,7 +15,6 @@ class DataUpdate {
 }
 
 
-
 class DataUpdateProxy extends NextTurnButton {
     constructor(dataUpdate) {
         super();
