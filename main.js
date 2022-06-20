@@ -19,12 +19,13 @@ meowthRobot.avoidAttack();
 dataUpdateProxy.requestNextTurn();
 
 pikachu.setSkill(thunderbolt)
-pikachu.execute(); // cold
+pikachu.execute();
 console.log("---------------------");
 dataUpdateProxy.requestNextTurn();
 
+
 persian.setSkill(payDay)
-persian.execute(); // cold
+persian.execute();
 console.log("---------------------");
 dataUpdateProxy.requestNextTurn();
 

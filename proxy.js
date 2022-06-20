@@ -1,8 +1,8 @@
 import {actionToTeamRocket, meowthRobot} from "./Observer.js";
 
-function DBInterface(){}
+function NextTurnButton(){}
 
-DBInterface.prototype.requestNextTurn = function(){}
+NextTurnButton.prototype.requestNextTurn = function(){}
 
 
 function DataUpdate() {}
@@ -13,21 +13,21 @@ DataUpdate.prototype.requestNextTurn = function() {
 
 
 function DataUpdateProxy(dataUpdate) {
-    this.prototype = new DBInterface();
+    this.prototype = new NextTurnButton();
     this.dataUpdate = dataUpdate;
 }
 
 DataUpdateProxy.prototype.requestNextTurn = function() {
-    switch (meowthRobot.avoidCount) {
-        case 0:
-            this.beforeProc();
-            this.dataUpdate.requestNextTurn();
-        case 1:
-            console.log("1. 나옹로봇이 공격을 회피합니다")
-            meowthRobot.avoidCount = 0;
-    };
+    if (meowthRobot.avoidCount === 1) {
+        console.log("1. 나옹로봇이 공격을 회피합니다")
+        meowthRobot.avoidCount = 0;
+    }
+    else {
+        this.beforeProc();
+        this.dataUpdate.requestNextTurn();
+    }        
     this.afterProc();
-}
+};
 
 DataUpdateProxy.prototype.beforeProc = function() {
     console.log("1. 로딩중, 최근 턴 결과를 출력");
