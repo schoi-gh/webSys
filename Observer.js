@@ -11,7 +11,6 @@ function ActionToTeamRocket() {
 
 ActionToTeamRocket.prototype.attach = function(member) {
     this.enemy.push(member);
-    //console.log(this.enemy);
 }
 
 ActionToTeamRocket.prototype.detach = function(member) {
@@ -19,7 +18,7 @@ ActionToTeamRocket.prototype.detach = function(member) {
 }
 
 ActionToTeamRocket.prototype.notifyEnemy = function(Pokemon) {
-    this.enemy.forEach(member => member.update(Pokemon));
+    this.enemy.forEach(member => member.checkTeamRocketsStatus(Pokemon));
 }
 
 
@@ -27,22 +26,24 @@ function TeamRocket(name) {
     this.name = name;
 }
 
-TeamRocket.prototype.update = function(Pokemon) {
+TeamRocket.prototype.checkTeamRocketsStatus = function(Pokemon) {
     this.last_skill = [];
     this.last_skill.push(JSON.stringify(Pokemon))
 }
 
 
-function Syrphid(name){
+function TeamRocketPokemon(name){
     this.name = name;
 }
-Syrphid.prototype = TeamRocket.prototype;
+TeamRocketPokemon.prototype = TeamRocket.prototype;
+
 
 var actionToTeamRocket = new ActionToTeamRocket();
 var james = new TeamRocket("로이");
 var jessie = new TeamRocket("로사");
-var meowth = new Syrphid("나옹");
-var wobbuffet = new Syrphid("마자용");
+var meowth = new TeamRocketPokemon("나옹");
+var wobbuffet = new TeamRocketPokemon("마자용");
+
 
 // 로봇
 function Robot() {
@@ -75,8 +76,7 @@ function MeowthRobot() {
     this.rightLeg = new Leg
     this.body = new Body
     this.head = new Head
-
-
+    this.avoidCount = 0;
 };
 
 MeowthRobot.prototype.grabPokemons = function() {
@@ -86,10 +86,14 @@ MeowthRobot.prototype.grabPokemons = function() {
 }
 
 MeowthRobot.prototype.fly = function() {
-    console.log("로봇이 하늘을 납니다")
+    console.log("나옹로봇이 하늘을 납니다")
 }
 
-MeowthRobot.prototype.update = function(Pokemon) {
+MeowthRobot.prototype.avoidAttack = function() {
+    this.avoidCount++;
+}
+
+MeowthRobot.prototype.checkTeamRocketsStatus = function(Pokemon) {
     if (meowthRobot.leftArm.hp === 0 && meowthRobot.rightArm.hp === 0 && meowthRobot.leftArmArmor.hp === 0 && meowthRobot.rightArmArmor.hp === 0 && meowthRobot.leftLeg.hp === 0 && meowthRobot.rightLeg.hp === 0 && meowthRobot.body.hp === 0 && meowthRobot.head.hp === 0) {
         console.log("로봇이 펑~");
         actionToTeamRocket.attach(james);
@@ -113,7 +117,7 @@ MeowthRobot.prototype.destroyRobot = function() {
     meowthRobot.body.hp = meowthRobot.body.hp - meowthRobot.body.hp;
     meowthRobot.head.hp = meowthRobot.head.hp - meowthRobot.head.hp;
 
-    meowthRobot.update();
+    meowthRobot.checkTeamRocketsStatus();
 }
 
 var meowthRobot = new MeowthRobot()
