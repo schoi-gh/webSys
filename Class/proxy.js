@@ -1,4 +1,4 @@
-import {actionToTeamRocket} from "./Observer.js";
+import {actionToTeamRocket, meowthRobot} from "./Observer.js";
 
 class NextTurnButton {
     constructor() { }
@@ -22,8 +22,14 @@ class DataUpdateProxy extends NextTurnButton {
         this.dataUpdate = dataUpdate;
     }
     requestNextTurn() {
-        this.beforeProc();
-        this.dataUpdate.requestNextTurn();
+        if (meowthRobot.avoidCount === 1) {
+            console.log("1. 나옹로봇이 공격을 회피합니다");
+            meowthRobot.avoidCount = 0;
+        }
+        else {
+            this.beforeProc();
+            this.dataUpdate.requestNextTurn();
+        }
         this.afterProc();
     }
     beforeProc() {
