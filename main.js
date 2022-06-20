@@ -1,21 +1,24 @@
-import {eevee,pikachu,persian,pidgeot,snorlax,gengar,squirtle,bulbasaur,snorunt,charizard,gyarados,alakazam,koffing,rattata,magnemite,staraptor,blastoise,bidoof,roselia,quickAttack,ironTail,thunderbolt,thunderWave,tackle,tailWhip,growl,fakeOut,payDay,slash,wingAttack,braveBird,scaryFace,yawn,earthquake,bodySlam,hyperBeam,confuseRay,curse,toxic,lick,bubbleBeam,waterGun,hydroPump,sandAttack,sweetScent,vineWhip,razorLeaf,solarBeam,iceBeam,icyWind,iceFang,blizzard,flamethrower,aerialAce,crunch,psychic,psybeam,kinesis,confusion,selfdestruct,explosion,chikorita,zubat,geodude,flareon,bellsprout,machop,magicalLeaf,supersonic,leechLife,bite,rockThrow,ember,charm,fireFang,$wrap,acid,lowKick,strength,seismicToss,firePunch,slowpoke,growlithe,gardevoir,machoke,butterfree,arbok} from "./strategy.js";
-import {actionToTeamRocket, james, jessie, wobbuffet, meowth} from "./Observer.js";
+import {bboster,booster,eevee,pikachu,persian,pidgeot,snorlax,gengar,squirtle,bulbasaur,snorunt,charizard,gyarados,alakazam,koffing,rattata,magnemite,staraptor,blastoise,bidoof,roselia,quickAttack,ironTail,thunderbolt,thunderWave,tackle,tailWhip,growl,fakeOut,payDay,slash,wingAttack,braveBird,scaryFace,yawn,earthquake,bodySlam,hyperBeam,confuseRay,curse,toxic,lick,bubbleBeam,waterGun,hydroPump,sandAttack,sweetScent,vineWhip,razorLeaf,solarBeam,iceBeam,icyWind,iceFang,blizzard,flamethrower,aerialAce,crunch,psychic,psybeam,kinesis,confusion,selfdestruct,explosion,chikorita,zubat,geodude,flareon,bellsprout,machop,magicalLeaf,supersonic,leechLife,bite,rockThrow,ember,charm,fireFang,$wrap,acid,lowKick,strength,seismicToss,firePunch,slowpoke,growlithe,gardevoir,machoke,butterfree,arbok} from "./strategy.js";
+import {meowthRobot, actionToTeamRocket, james, jessie, wobbuffet, meowth} from "./Observer.js";
 import {dataUpdateProxy} from "./proxy.js"
 
 
 // Observer
-actionToTeamRocket.attach(james);
-actionToTeamRocket.attach(jessie);
-actionToTeamRocket.attach(meowth);
-actionToTeamRocket.attach(wobbuffet);
+actionToTeamRocket.attach(meowthRobot);
 
 
 // Strategy
+meowthRobot.grabPokemons();
+meowthRobot.fly();
+
+
 eevee.setSkill(tackle)
 eevee.execute();
 console.log("---------------------");
 dataUpdateProxy.requestNextTurn();
 
+
+/*
 pikachu.setSkill(thunderbolt)
 pikachu.execute(); // cold
 console.log("---------------------");
@@ -150,11 +153,15 @@ gardevoir.setSkill(psybeam)
 gardevoir.execute();
 console.log("---------------------");
 dataUpdateProxy.requestNextTurn();
+*/
 
 machoke.setSkill(seismicToss)
 machoke.execute();
 console.log("---------------------");
 dataUpdateProxy.requestNextTurn();
+
+// 로봇 파괴
+meowthRobot.destroyRobot();
 
 butterfree.setSkill(confusion)
 butterfree.execute();
@@ -165,3 +172,15 @@ arbok.setSkill(bite)
 arbok.execute();
 console.log("---------------------");
 dataUpdateProxy.requestNextTurn();
+
+/*
+booster.setSkill(firePunch)
+eevee.execute();
+console.log("---------------------");
+dataUpdateProxy.requestNextTurn();
+
+bboster.setSkill(ember)
+eevee.execute();
+console.log("---------------------");
+dataUpdateProxy.requestNextTurn();
+*/

@@ -622,22 +622,21 @@ FirePunch.prototype.execute = function() {
 function Pokemon(pokemonName,skill1,skill2,skill3,skill4) {
     this.pokemonName = pokemonName
     this.skillslot = [skill1,skill2,skill3,skill4];
-}
-
-Pokemon.prototype.setSkill = function (skill) {
-    if (this.skillslot.indexOf(skill.skillName) !== -1) {
-        this.skill = skill
+    this.setSkill = function (skill) {
+        if (this.skillslot.indexOf(skill.skillName) !== -1) {
+            this.skill = skill
+        }
+        else {
+            console.log("배우지 않은 스킬입니다.")
+        }
     }
-    else {
-        console.log("배우지 않은 스킬입니다.")
-    }
-}
-
-Pokemon.prototype.execute = function() {
+    this.execute = function() {
     console.log(this.skill)
     this.skill.execute()
     actionToTeamRocket.notifyEnemy(this);  // Observer.js의 notifyEnemy()를 실행
-};
+    
+    };
+}
 
 // Skill
 var tackle = new Tackle();
@@ -698,7 +697,7 @@ var seismicToss = new SeismicToss();
 var firePunch = new FirePunch();
 
 // Pokemon : pokemon
-var eevee = new Pokemon("이브이","몸통박치기","전광석화","꼬리흔들기","울음소리");
+var eevee = new Eevee();
 var pikachu = new Pokemon("피카츄","전광석화","아이언테일","10만볼트","전기자석파");
 var persian = new Pokemon("페르시온","속이다","울음소리","고양이돈받기","베어가르기");
 var pidgeot = new Pokemon("피죤투","전광석화","날개치기","브레이브버드","겁나는얼굴");
@@ -731,4 +730,49 @@ var butterfree = new Pokemon("버터플","초음파","몸통박치기","환상�
 var arbok = new Pokemon("아보크","용해액","김밥말이","물기","깨물어부수기");
 
 
-export {eevee,pikachu,persian,pidgeot,snorlax,gengar,squirtle,bulbasaur,snorunt,charizard,gyarados,alakazam,koffing,rattata,magnemite,staraptor,blastoise,bidoof,roselia,quickAttack,ironTail,thunderbolt,thunderWave,tackle,tailWhip,growl,fakeOut,payDay,slash,wingAttack,braveBird,scaryFace,yawn,earthquake,bodySlam,hyperBeam,confuseRay,curse,toxic,lick,bubbleBeam,waterGun,hydroPump,sandAttack,sweetScent,vineWhip,razorLeaf,solarBeam,iceBeam,icyWind,iceFang,blizzard,flamethrower,aerialAce,crunch,psychic,psybeam,kinesis,confusion,selfdestruct,explosion,chikorita,zubat,geodude,flareon,bellsprout,machop,magicalLeaf,supersonic,leechLife,bite,rockThrow,ember,charm,fireFang,$wrap,acid,lowKick,strength,seismicToss,firePunch,slowpoke,growlithe,gardevoir,machoke,butterfree,arbok}
+// 삼단 진화하는 알통몬
+function Eevee() {
+    this.prototype = new Pokemon()
+    this.pokemonName = "이브이"
+    this.skillslot = ["몸통박치기","전광석화","꼬리흔들기","울음소리"];
+}
+
+Eevee.prototype.setSkill = function (skill) {
+    if (this.skillslot.indexOf(skill.skillName) !== -1) {
+        this.skill = skill
+    }
+    else {
+        console.log("배우지 않은 스킬입니다.")
+    }
+}
+    
+Eevee.prototype.execute = function() {
+    console.log(this.skill)
+    this.skill.execute()
+    actionToTeamRocket.notifyEnemy(this);
+};
+
+
+function Booster() {
+    this.prototype = new Eevee();
+    this.pokemonName = "부스터"
+    this.skillslot = ["불꽃펀치"];
+    Array.prototype.push.apply(this.skillslot, eevee.skillslot);
+}
+
+
+function BBooster() {
+    this.prototype = new Booster()
+    this.pokemonName = "부부스터"
+    this.skillslot = ["불꽃세례"];
+    Array.prototype.push.apply(this.skillslot, booster.skillslot);
+}
+
+var booster = new Booster();
+
+var bboster = new BBooster();
+
+booster.setSkill
+
+
+export {bboster,booster,eevee,pikachu,persian,pidgeot,snorlax,gengar,squirtle,bulbasaur,snorunt,charizard,gyarados,alakazam,koffing,rattata,magnemite,staraptor,blastoise,bidoof,roselia,quickAttack,ironTail,thunderbolt,thunderWave,tackle,tailWhip,growl,fakeOut,payDay,slash,wingAttack,braveBird,scaryFace,yawn,earthquake,bodySlam,hyperBeam,confuseRay,curse,toxic,lick,bubbleBeam,waterGun,hydroPump,sandAttack,sweetScent,vineWhip,razorLeaf,solarBeam,iceBeam,icyWind,iceFang,blizzard,flamethrower,aerialAce,crunch,psychic,psybeam,kinesis,confusion,selfdestruct,explosion,chikorita,zubat,geodude,flareon,bellsprout,machop,magicalLeaf,supersonic,leechLife,bite,rockThrow,ember,charm,fireFang,$wrap,acid,lowKick,strength,seismicToss,firePunch,slowpoke,growlithe,gardevoir,machoke,butterfree,arbok}
